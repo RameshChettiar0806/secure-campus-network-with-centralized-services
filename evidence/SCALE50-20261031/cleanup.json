@@ -1,0 +1,11 @@
+{
+  "kept": "Secure Campus Network with Centralized Services\\Secure_Campus_Network_Submission.pkt",
+  "removed": [
+    "Secure Campus Network with Centralized Services\\Secure_Campus_Network.pkt",
+    "Secure Campus Network with Centralized Services\\evidence\\N3-checkpoint.pkt",
+    "Project\\Secure_Campus_Network.pkt",
+    "Project\\Secure_Campus_Network_Final.pkt",
+    "Lab\\Packet Tracer\\Secure_Campus_Network.pkt"
+  ],
+  "recoveryArchive": "Secure Campus Network with Centralized Services\\evidence\\SCALE50-20261031\\campus-before-expansion.zip"
+}

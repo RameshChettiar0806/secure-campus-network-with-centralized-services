@@ -1,0 +1,1081 @@
+{
+  "runId": "PING-20261031",
+  "submissionSha256": "e8a0aa8e0b7411073d4b29cae6a284c439a97f088aebecb9d42d3546d26d9905",
+  "observedAt": "2026-10-31T22:15:30+05:30",
+  "counterScope": "capture-batch",
+  "aclBefore": "Standard IP access list 1\n    10 permit host 192.168.10.98 (2 match(es))\n    20 deny any\nExtended IP access list ADMIN-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (40 match(es))\n    20 permit udp any eq bootpc host 192.168.10.127 eq bootps\n    30 permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo (129 match(es))\n    50 permit tcp host 192.168.10.98 host 192.168.10.97 eq 22 (21 match(es))\n    60 permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain (37 match(es))\n    70 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n    80 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www (124 match(es))\n    90 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo (96 match(es))\n    100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo (916 match(es))\n    110 permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo (1012 match(es))\n    120 deny ip any any (12 match(es))\nExtended IP access list FACULTY-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (67 match(es))\n    20 permit udp any eq bootpc host 192.168.10.95 eq bootps\n    30 permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo (144 match(es))\n    50 permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain (38 match(es))\n    60 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www (93 match(es))\n    80 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo (148 match(es))\n    90 permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply (868 match(es))\n    100 deny ip any any (2756 match(es))\nExtended IP access list STUDENTS-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (75 match(es))\n    20 permit udp any eq bootpc host 192.168.10.63 eq bootps\n    30 permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo (160 match(es))\n    50 permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain (60 match(es))\n    60 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www (207 match(es))\n    80 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo (163 match(es))\n    90 permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply (964 match(es))\n    100 deny ip any any (2895 match(es))\nExtended IP access list SERVICES-IN\n    10 permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps (25 match(es))\n    20 permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n    30 permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 (31 match(es))\n    40 permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n    50 permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established (85 match(es))\n    60 permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply (96 match(es))\n    70 permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps (39 match(es))\n    80 permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n    90 permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 (37 match(es))\n    100 permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n    110 permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established (58 match(es))\n    120 permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply (147 match(es))\n    130 permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps (40 match(es))\n    140 permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n    150 permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 (56 match(es))\n    160 permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n    170 permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established (142 match(es))\n    180 permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply (163 match(es))\n    190 permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n    200 permit icmp host 192.168.10.130 host 192.168.10.129 echo (4 match(es))\n    210 permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n    220 deny ip any any (329 match(es))\n\n\n",
+  "aclAfter": "Standard IP access list 1\n    10 permit host 192.168.10.98 (2 match(es))\n    20 deny any\nExtended IP access list ADMIN-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (40 match(es))\n    20 permit udp any eq bootpc host 192.168.10.127 eq bootps\n    30 permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo (129 match(es))\n    50 permit tcp host 192.168.10.98 host 192.168.10.97 eq 22 (21 match(es))\n    60 permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain (37 match(es))\n    70 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n    80 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www (124 match(es))\n    90 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo (96 match(es))\n    100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo (916 match(es))\n    110 permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo (1012 match(es))\n    120 deny ip any any (49 match(es))\nExtended IP access list FACULTY-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (67 match(es))\n    20 permit udp any eq bootpc host 192.168.10.95 eq bootps\n    30 permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo (144 match(es))\n    50 permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain (38 match(es))\n    60 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www (93 match(es))\n    80 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo (148 match(es))\n    90 permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply (868 match(es))\n    100 deny ip any any (2828 match(es))\nExtended IP access list STUDENTS-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (75 match(es))\n    20 permit udp any eq bootpc host 192.168.10.63 eq bootps\n    30 permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo (160 match(es))\n    50 permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain (60 match(es))\n    60 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www (207 match(es))\n    80 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo (163 match(es))\n    90 permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply (964 match(es))\n    100 deny ip any any (2971 match(es))\nExtended IP access list SERVICES-IN\n    10 permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps (25 match(es))\n    20 permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n    30 permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 (31 match(es))\n    40 permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n    50 permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established (85 match(es))\n    60 permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply (96 match(es))\n    70 permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps (39 match(es))\n    80 permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n    90 permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 (37 match(es))\n    100 permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n    110 permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established (58 match(es))\n    120 permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply (147 match(es))\n    130 permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps (40 match(es))\n    140 permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n    150 permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 (56 match(es))\n    160 permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n    170 permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established (142 match(es))\n    180 permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply (163 match(es))\n    190 permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n    200 permit icmp host 192.168.10.130 host 192.168.10.129 echo (8 match(es))\n    210 permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n    220 deny ip any any (329 match(es))\n\n\n",
+  "records": [
+    {
+      "id": "PING2-2908",
+      "testId": "P02",
+      "sourceDeviceId": "pc8",
+      "sourceIp": "192.168.10.98",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2909",
+      "testId": "P02",
+      "sourceDeviceId": "pc9",
+      "sourceIp": "192.168.10.108",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2910",
+      "testId": "P02",
+      "sourceDeviceId": "pc40",
+      "sourceIp": "192.168.10.113",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2911",
+      "testId": "P02",
+      "sourceDeviceId": "pc41",
+      "sourceIp": "192.168.10.111",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2912",
+      "testId": "P02",
+      "sourceDeviceId": "pc42",
+      "sourceIp": "192.168.10.109",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2913",
+      "testId": "P02",
+      "sourceDeviceId": "pc43",
+      "sourceIp": "192.168.10.112",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2914",
+      "testId": "P02",
+      "sourceDeviceId": "pc44",
+      "sourceIp": "192.168.10.114",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2915",
+      "testId": "P02",
+      "sourceDeviceId": "pc45",
+      "sourceIp": "192.168.10.107",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2916",
+      "testId": "P02",
+      "sourceDeviceId": "pc46",
+      "sourceIp": "192.168.10.105",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2917",
+      "testId": "P02",
+      "sourceDeviceId": "pc47",
+      "sourceIp": "192.168.10.110",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2918",
+      "testId": "P02",
+      "sourceDeviceId": "pc48",
+      "sourceIp": "192.168.10.106",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2919",
+      "testId": "P02",
+      "sourceDeviceId": "pc49",
+      "sourceIp": "192.168.10.103",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "ADMIN-IN | 120 deny ip any any": 37
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2920",
+      "testId": "P02",
+      "sourceDeviceId": "pc5",
+      "sourceIp": "192.168.10.78",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2921",
+      "testId": "P02",
+      "sourceDeviceId": "pc6",
+      "sourceIp": "192.168.10.81",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2922",
+      "testId": "P02",
+      "sourceDeviceId": "pc7",
+      "sourceIp": "192.168.10.77",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2923",
+      "testId": "P02",
+      "sourceDeviceId": "pc25",
+      "sourceIp": "192.168.10.70",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2924",
+      "testId": "P02",
+      "sourceDeviceId": "pc26",
+      "sourceIp": "192.168.10.66",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2925",
+      "testId": "P02",
+      "sourceDeviceId": "pc27",
+      "sourceIp": "192.168.10.69",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2926",
+      "testId": "P02",
+      "sourceDeviceId": "pc28",
+      "sourceIp": "192.168.10.79",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2927",
+      "testId": "P02",
+      "sourceDeviceId": "pc29",
+      "sourceIp": "192.168.10.83",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2928",
+      "testId": "P02",
+      "sourceDeviceId": "pc30",
+      "sourceIp": "192.168.10.67",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2929",
+      "testId": "P02",
+      "sourceDeviceId": "pc31",
+      "sourceIp": "192.168.10.73",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2930",
+      "testId": "P02",
+      "sourceDeviceId": "pc32",
+      "sourceIp": "192.168.10.80",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2931",
+      "testId": "P02",
+      "sourceDeviceId": "pc33",
+      "sourceIp": "192.168.10.71",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2932",
+      "testId": "P02",
+      "sourceDeviceId": "pc34",
+      "sourceIp": "192.168.10.72",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2933",
+      "testId": "P02",
+      "sourceDeviceId": "pc35",
+      "sourceIp": "192.168.10.68",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2934",
+      "testId": "P02",
+      "sourceDeviceId": "pc36",
+      "sourceIp": "192.168.10.76",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2935",
+      "testId": "P02",
+      "sourceDeviceId": "pc37",
+      "sourceIp": "192.168.10.75",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2936",
+      "testId": "P02",
+      "sourceDeviceId": "pc38",
+      "sourceIp": "192.168.10.74",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2937",
+      "testId": "P02",
+      "sourceDeviceId": "pc39",
+      "sourceIp": "192.168.10.82",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "FACULTY-IN | 100 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2938",
+      "testId": "P02",
+      "sourceDeviceId": "pc0",
+      "sourceIp": "192.168.10.19",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2939",
+      "testId": "P02",
+      "sourceDeviceId": "pc1",
+      "sourceIp": "192.168.10.20",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2940",
+      "testId": "P02",
+      "sourceDeviceId": "pc2",
+      "sourceIp": "192.168.10.21",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2941",
+      "testId": "P02",
+      "sourceDeviceId": "pc3",
+      "sourceIp": "192.168.10.4",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2942",
+      "testId": "P02",
+      "sourceDeviceId": "pc4",
+      "sourceIp": "192.168.10.25",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2943",
+      "testId": "P02",
+      "sourceDeviceId": "pc10",
+      "sourceIp": "192.168.10.18",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2944",
+      "testId": "P02",
+      "sourceDeviceId": "pc11",
+      "sourceIp": "192.168.10.11",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2945",
+      "testId": "P02",
+      "sourceDeviceId": "pc12",
+      "sourceIp": "192.168.10.17",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2946",
+      "testId": "P02",
+      "sourceDeviceId": "pc13",
+      "sourceIp": "192.168.10.16",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2947",
+      "testId": "P02",
+      "sourceDeviceId": "pc14",
+      "sourceIp": "192.168.10.10",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2948",
+      "testId": "P02",
+      "sourceDeviceId": "pc15",
+      "sourceIp": "192.168.10.3",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2949",
+      "testId": "P02",
+      "sourceDeviceId": "pc16",
+      "sourceIp": "192.168.10.7",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2950",
+      "testId": "P02",
+      "sourceDeviceId": "pc17",
+      "sourceIp": "192.168.10.22",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2951",
+      "testId": "P02",
+      "sourceDeviceId": "pc18",
+      "sourceIp": "192.168.10.2",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2952",
+      "testId": "P02",
+      "sourceDeviceId": "pc19",
+      "sourceIp": "192.168.10.15",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2953",
+      "testId": "P02",
+      "sourceDeviceId": "pc20",
+      "sourceIp": "192.168.10.23",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2954",
+      "testId": "P02",
+      "sourceDeviceId": "pc21",
+      "sourceIp": "192.168.10.24",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2955",
+      "testId": "P02",
+      "sourceDeviceId": "pc22",
+      "sourceIp": "192.168.10.8",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2956",
+      "testId": "P02",
+      "sourceDeviceId": "pc23",
+      "sourceIp": "192.168.10.9",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2957",
+      "testId": "P02",
+      "sourceDeviceId": "pc24",
+      "sourceIp": "192.168.10.5",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 76
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2958",
+      "testId": "P02",
+      "sourceDeviceId": "server0",
+      "sourceIp": "192.168.10.130",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.129",
+      "expected": "allow",
+      "counterDelta": {
+        "SERVICES-IN | 200 permit icmp host 192.168.10.130 host 192.168.10.129 echo": 4
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-58.json",
+      "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.129: bytes=32 time=10ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\nReply from 192.168.10.129: bytes=32 time=1ms TTL=255\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 2ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.129: bytes=32 time=10ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\nReply from 192.168.10.129: bytes=32 time=1ms TTL=255\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 2ms\n\nC:\\>"
+      ]
+    }
+  ]
+}

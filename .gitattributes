@@ -1,0 +1,8 @@
+# Preserve the exact bytes used by the evidence SHA-256 manifests.
+configs/** -text
+evidence/** -text
+
+*.pdf binary
+*.png binary
+*.zip binary
+*.pkt binary

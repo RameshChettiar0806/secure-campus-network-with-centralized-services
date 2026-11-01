@@ -1,0 +1,234 @@
+{
+  "devices": [
+    {
+      "name": "Power Distribution Device0",
+      "type": 45
+    },
+    {
+      "name": "SW1-CORE",
+      "type": 1
+    },
+    {
+      "name": "R1-CAMPUS",
+      "type": 0
+    },
+    {
+      "name": "PC0",
+      "type": 8
+    },
+    {
+      "name": "PC1",
+      "type": 8
+    },
+    {
+      "name": "PC2",
+      "type": 8
+    },
+    {
+      "name": "PC3",
+      "type": 8
+    },
+    {
+      "name": "PC4",
+      "type": 8
+    },
+    {
+      "name": "PC5",
+      "type": 8
+    },
+    {
+      "name": "PC6",
+      "type": 8
+    },
+    {
+      "name": "PC7",
+      "type": 8
+    },
+    {
+      "name": "PC8-MGMT",
+      "type": 8
+    },
+    {
+      "name": "PC9-ADMIN",
+      "type": 8
+    },
+    {
+      "name": "SRV-CAMPUS",
+      "type": 9
+    },
+    {
+      "name": "SW2-ACCESS",
+      "type": 1
+    },
+    {
+      "name": "PC10",
+      "type": 8
+    },
+    {
+      "name": "PC11",
+      "type": 8
+    },
+    {
+      "name": "PC12",
+      "type": 8
+    },
+    {
+      "name": "PC13",
+      "type": 8
+    },
+    {
+      "name": "PC14",
+      "type": 8
+    },
+    {
+      "name": "PC15",
+      "type": 8
+    },
+    {
+      "name": "PC16",
+      "type": 8
+    },
+    {
+      "name": "PC17",
+      "type": 8
+    },
+    {
+      "name": "PC18",
+      "type": 8
+    },
+    {
+      "name": "PC19",
+      "type": 8
+    },
+    {
+      "name": "PC20",
+      "type": 8
+    },
+    {
+      "name": "PC21",
+      "type": 8
+    },
+    {
+      "name": "PC22",
+      "type": 8
+    },
+    {
+      "name": "PC23",
+      "type": 8
+    },
+    {
+      "name": "PC24",
+      "type": 8
+    },
+    {
+      "name": "PC25",
+      "type": 8
+    },
+    {
+      "name": "PC26",
+      "type": 8
+    },
+    {
+      "name": "PC27",
+      "type": 8
+    },
+    {
+      "name": "PC28",
+      "type": 8
+    },
+    {
+      "name": "PC29",
+      "type": 8
+    },
+    {
+      "name": "PC30",
+      "type": 8
+    },
+    {
+      "name": "PC31",
+      "type": 8
+    },
+    {
+      "name": "PC32",
+      "type": 8
+    },
+    {
+      "name": "PC33",
+      "type": 8
+    },
+    {
+      "name": "PC34",
+      "type": 8
+    },
+    {
+      "name": "PC35",
+      "type": 8
+    },
+    {
+      "name": "PC36",
+      "type": 8
+    },
+    {
+      "name": "PC37",
+      "type": 8
+    },
+    {
+      "name": "PC38",
+      "type": 8
+    },
+    {
+      "name": "PC39",
+      "type": 8
+    },
+    {
+      "name": "PC40",
+      "type": 8
+    },
+    {
+      "name": "PC41",
+      "type": 8
+    },
+    {
+      "name": "PC42",
+      "type": 8
+    },
+    {
+      "name": "PC43",
+      "type": 8
+    },
+    {
+      "name": "PC44",
+      "type": 8
+    },
+    {
+      "name": "PC45",
+      "type": 8
+    },
+    {
+      "name": "PC46",
+      "type": 8
+    },
+    {
+      "name": "PC47",
+      "type": 8
+    },
+    {
+      "name": "PC48",
+      "type": 8
+    },
+    {
+      "name": "PC49",
+      "type": 8
+    },
+    {
+      "name": "SW3-FACULTY",
+      "type": 1
+    },
+    {
+      "name": "SW4-STUDENTS",
+      "type": 1
+    }
+  ],
+  "file": "C:/Users/Ramesh/Personal Folders/College/SRM/SEMESTERS/SEMESTER - 5/Subjects/21CSC302J - Computer Networks/Secure Campus Network with Centralized Services/Secure_Campus_Network_Submission.pkt",
+  "links": 55
+}

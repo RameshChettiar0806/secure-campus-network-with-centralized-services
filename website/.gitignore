@@ -1,0 +1,11 @@
+node_modules/
+dist/
+public/evidence/
+public/configs/
+public/downloads/
+*.local
+src/data/source-check.json
+src/data/ping-records.json
+
+public/data/
+*.tsbuildinfo

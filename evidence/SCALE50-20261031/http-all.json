@@ -1,0 +1,729 @@
+{
+  "PC0": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC1": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC10": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC11": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC12": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC13": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC14": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC15": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC16": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC17": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC18": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC19": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC2": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC20": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC21": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC22": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC23": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC24": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC25": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC26": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC27": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC28": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC29": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC3": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC30": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC31": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC32": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC33": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC34": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC35": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC36": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC37": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC38": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC39": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC4": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC40": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC41": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC42": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC43": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC44": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC45": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC46": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC47": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC48": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC49": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC5": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC6": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC7": {
+    "events": [
+      {
+        "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+        "responseType": 3,
+        "serverIp": "192.168.10.130",
+        "url": "http://portal.campus.test"
+      }
+    ],
+    "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  },
+  "PC9-ADMIN": {
+    "events": [],
+    "page": "",
+    "passed": true,
+    "retry": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "page": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n"
+    }
+  }
+}

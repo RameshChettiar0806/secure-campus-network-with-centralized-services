@@ -1,0 +1,43 @@
+{
+  "ipconfig": {
+    "passed": 50,
+    "total": 50
+  },
+  "gatewayPing": {
+    "passed": 50,
+    "total": 50
+  },
+  "serverPing": {
+    "passed": 50,
+    "total": 50
+  },
+  "dns": {
+    "passed": 41,
+    "total": 50
+  },
+  "http": {
+    "passed": 49,
+    "total": 50
+  },
+  "policyAllowed": {
+    "passed": 5,
+    "total": 5
+  },
+  "policyDenied": {
+    "passed": 5,
+    "total": 5
+  },
+  "sshAllowed": {
+    "passed": 5,
+    "total": 5
+  },
+  "sshDeniedAdmin": {
+    "passed": 5,
+    "total": 5
+  },
+  "sshDeniedDepartments": {
+    "passed": 2,
+    "total": 2
+  },
+  "allPassed": false
+}

@@ -1,0 +1,1081 @@
+{
+  "runId": "PING-20261031",
+  "submissionSha256": "e8a0aa8e0b7411073d4b29cae6a284c439a97f088aebecb9d42d3546d26d9905",
+  "observedAt": "2026-10-31T22:15:28+05:30",
+  "counterScope": "capture-batch",
+  "aclBefore": "Standard IP access list 1\n    10 permit host 192.168.10.98 (2 match(es))\n    20 deny any\nExtended IP access list ADMIN-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (40 match(es))\n    20 permit udp any eq bootpc host 192.168.10.127 eq bootps\n    30 permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo (129 match(es))\n    50 permit tcp host 192.168.10.98 host 192.168.10.97 eq 22 (21 match(es))\n    60 permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain (37 match(es))\n    70 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n    80 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www (124 match(es))\n    90 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo (96 match(es))\n    100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo (868 match(es))\n    110 permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo (964 match(es))\n    120 deny ip any any (12 match(es))\nExtended IP access list FACULTY-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (67 match(es))\n    20 permit udp any eq bootpc host 192.168.10.95 eq bootps\n    30 permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo (72 match(es))\n    50 permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain (38 match(es))\n    60 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www (93 match(es))\n    80 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo (148 match(es))\n    90 permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply (868 match(es))\n    100 deny ip any any (2684 match(es))\nExtended IP access list STUDENTS-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (75 match(es))\n    20 permit udp any eq bootpc host 192.168.10.63 eq bootps\n    30 permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo (80 match(es))\n    50 permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain (60 match(es))\n    60 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www (207 match(es))\n    80 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo (163 match(es))\n    90 permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply (964 match(es))\n    100 deny ip any any (2815 match(es))\nExtended IP access list SERVICES-IN\n    10 permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps (25 match(es))\n    20 permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n    30 permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 (31 match(es))\n    40 permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n    50 permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established (85 match(es))\n    60 permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply (96 match(es))\n    70 permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps (39 match(es))\n    80 permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n    90 permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 (37 match(es))\n    100 permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n    110 permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established (58 match(es))\n    120 permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply (147 match(es))\n    130 permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps (40 match(es))\n    140 permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n    150 permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 (56 match(es))\n    160 permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n    170 permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established (142 match(es))\n    180 permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply (163 match(es))\n    190 permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n    200 permit icmp host 192.168.10.130 host 192.168.10.129 echo (4 match(es))\n    210 permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n    220 deny ip any any (321 match(es))\n\n\n",
+  "aclAfter": "Standard IP access list 1\n    10 permit host 192.168.10.98 (2 match(es))\n    20 deny any\nExtended IP access list ADMIN-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (40 match(es))\n    20 permit udp any eq bootpc host 192.168.10.127 eq bootps\n    30 permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo (129 match(es))\n    50 permit tcp host 192.168.10.98 host 192.168.10.97 eq 22 (21 match(es))\n    60 permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain (37 match(es))\n    70 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n    80 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www (124 match(es))\n    90 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo (96 match(es))\n    100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo (916 match(es))\n    110 permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo (964 match(es))\n    120 deny ip any any (12 match(es))\nExtended IP access list FACULTY-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (67 match(es))\n    20 permit udp any eq bootpc host 192.168.10.95 eq bootps\n    30 permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo (144 match(es))\n    50 permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain (38 match(es))\n    60 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www (93 match(es))\n    80 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo (148 match(es))\n    90 permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply (868 match(es))\n    100 deny ip any any (2684 match(es))\nExtended IP access list STUDENTS-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (75 match(es))\n    20 permit udp any eq bootpc host 192.168.10.63 eq bootps\n    30 permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo (80 match(es))\n    50 permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain (60 match(es))\n    60 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www (207 match(es))\n    80 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo (163 match(es))\n    90 permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply (964 match(es))\n    100 deny ip any any (2895 match(es))\nExtended IP access list SERVICES-IN\n    10 permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps (25 match(es))\n    20 permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n    30 permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 (31 match(es))\n    40 permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n    50 permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established (85 match(es))\n    60 permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply (96 match(es))\n    70 permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps (39 match(es))\n    80 permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n    90 permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 (37 match(es))\n    100 permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n    110 permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established (58 match(es))\n    120 permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply (147 match(es))\n    130 permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps (40 match(es))\n    140 permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n    150 permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 (56 match(es))\n    160 permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n    170 permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established (142 match(es))\n    180 permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply (163 match(es))\n    190 permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n    200 permit icmp host 192.168.10.130 host 192.168.10.129 echo (4 match(es))\n    210 permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n    220 deny ip any any (325 match(es))\n\n\n",
+  "records": [
+    {
+      "id": "PING2-2806",
+      "testId": "P02",
+      "sourceDeviceId": "pc8",
+      "sourceIp": "192.168.10.98",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=2ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 2ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=2ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 2ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2807",
+      "testId": "P02",
+      "sourceDeviceId": "pc9",
+      "sourceIp": "192.168.10.108",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2808",
+      "testId": "P02",
+      "sourceDeviceId": "pc40",
+      "sourceIp": "192.168.10.113",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2809",
+      "testId": "P02",
+      "sourceDeviceId": "pc41",
+      "sourceIp": "192.168.10.111",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2810",
+      "testId": "P02",
+      "sourceDeviceId": "pc42",
+      "sourceIp": "192.168.10.109",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2811",
+      "testId": "P02",
+      "sourceDeviceId": "pc43",
+      "sourceIp": "192.168.10.112",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2812",
+      "testId": "P02",
+      "sourceDeviceId": "pc44",
+      "sourceIp": "192.168.10.114",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2813",
+      "testId": "P02",
+      "sourceDeviceId": "pc45",
+      "sourceIp": "192.168.10.107",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2814",
+      "testId": "P02",
+      "sourceDeviceId": "pc46",
+      "sourceIp": "192.168.10.105",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2815",
+      "testId": "P02",
+      "sourceDeviceId": "pc47",
+      "sourceIp": "192.168.10.110",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2816",
+      "testId": "P02",
+      "sourceDeviceId": "pc48",
+      "sourceIp": "192.168.10.106",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2817",
+      "testId": "P02",
+      "sourceDeviceId": "pc49",
+      "sourceIp": "192.168.10.103",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "ADMIN-IN | 100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2818",
+      "testId": "P02",
+      "sourceDeviceId": "pc5",
+      "sourceIp": "192.168.10.78",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2819",
+      "testId": "P02",
+      "sourceDeviceId": "pc6",
+      "sourceIp": "192.168.10.81",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2820",
+      "testId": "P02",
+      "sourceDeviceId": "pc7",
+      "sourceIp": "192.168.10.77",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2821",
+      "testId": "P02",
+      "sourceDeviceId": "pc25",
+      "sourceIp": "192.168.10.70",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2822",
+      "testId": "P02",
+      "sourceDeviceId": "pc26",
+      "sourceIp": "192.168.10.66",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2823",
+      "testId": "P02",
+      "sourceDeviceId": "pc27",
+      "sourceIp": "192.168.10.69",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2824",
+      "testId": "P02",
+      "sourceDeviceId": "pc28",
+      "sourceIp": "192.168.10.79",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2825",
+      "testId": "P02",
+      "sourceDeviceId": "pc29",
+      "sourceIp": "192.168.10.83",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2826",
+      "testId": "P02",
+      "sourceDeviceId": "pc30",
+      "sourceIp": "192.168.10.67",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2827",
+      "testId": "P02",
+      "sourceDeviceId": "pc31",
+      "sourceIp": "192.168.10.73",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2828",
+      "testId": "P02",
+      "sourceDeviceId": "pc32",
+      "sourceIp": "192.168.10.80",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2829",
+      "testId": "P02",
+      "sourceDeviceId": "pc33",
+      "sourceIp": "192.168.10.71",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2830",
+      "testId": "P02",
+      "sourceDeviceId": "pc34",
+      "sourceIp": "192.168.10.72",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2831",
+      "testId": "P02",
+      "sourceDeviceId": "pc35",
+      "sourceIp": "192.168.10.68",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2832",
+      "testId": "P02",
+      "sourceDeviceId": "pc36",
+      "sourceIp": "192.168.10.76",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2833",
+      "testId": "P02",
+      "sourceDeviceId": "pc37",
+      "sourceIp": "192.168.10.75",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2834",
+      "testId": "P02",
+      "sourceDeviceId": "pc38",
+      "sourceIp": "192.168.10.74",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2835",
+      "testId": "P02",
+      "sourceDeviceId": "pc39",
+      "sourceIp": "192.168.10.82",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "allow",
+      "counterDelta": {
+        "FACULTY-IN | 40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "sent": 4,
+      "received": 4,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\nReply from 192.168.10.65: bytes=32 time=1ms TTL=255\nReply from 192.168.10.65: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2836",
+      "testId": "P02",
+      "sourceDeviceId": "pc0",
+      "sourceIp": "192.168.10.19",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2837",
+      "testId": "P02",
+      "sourceDeviceId": "pc1",
+      "sourceIp": "192.168.10.20",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2838",
+      "testId": "P02",
+      "sourceDeviceId": "pc2",
+      "sourceIp": "192.168.10.21",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2839",
+      "testId": "P02",
+      "sourceDeviceId": "pc3",
+      "sourceIp": "192.168.10.4",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2840",
+      "testId": "P02",
+      "sourceDeviceId": "pc4",
+      "sourceIp": "192.168.10.25",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2841",
+      "testId": "P02",
+      "sourceDeviceId": "pc10",
+      "sourceIp": "192.168.10.18",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2842",
+      "testId": "P02",
+      "sourceDeviceId": "pc11",
+      "sourceIp": "192.168.10.11",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2843",
+      "testId": "P02",
+      "sourceDeviceId": "pc12",
+      "sourceIp": "192.168.10.17",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2844",
+      "testId": "P02",
+      "sourceDeviceId": "pc13",
+      "sourceIp": "192.168.10.16",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2845",
+      "testId": "P02",
+      "sourceDeviceId": "pc14",
+      "sourceIp": "192.168.10.10",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2846",
+      "testId": "P02",
+      "sourceDeviceId": "pc15",
+      "sourceIp": "192.168.10.3",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2847",
+      "testId": "P02",
+      "sourceDeviceId": "pc16",
+      "sourceIp": "192.168.10.7",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2848",
+      "testId": "P02",
+      "sourceDeviceId": "pc17",
+      "sourceIp": "192.168.10.22",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2849",
+      "testId": "P02",
+      "sourceDeviceId": "pc18",
+      "sourceIp": "192.168.10.2",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2850",
+      "testId": "P02",
+      "sourceDeviceId": "pc19",
+      "sourceIp": "192.168.10.15",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2851",
+      "testId": "P02",
+      "sourceDeviceId": "pc20",
+      "sourceIp": "192.168.10.23",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2852",
+      "testId": "P02",
+      "sourceDeviceId": "pc21",
+      "sourceIp": "192.168.10.24",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2853",
+      "testId": "P02",
+      "sourceDeviceId": "pc22",
+      "sourceIp": "192.168.10.8",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2854",
+      "testId": "P02",
+      "sourceDeviceId": "pc23",
+      "sourceIp": "192.168.10.9",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2855",
+      "testId": "P02",
+      "sourceDeviceId": "pc24",
+      "sourceIp": "192.168.10.5",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "STUDENTS-IN | 100 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING2-2856",
+      "testId": "P02",
+      "sourceDeviceId": "server0",
+      "sourceIp": "192.168.10.130",
+      "destinationDeviceId": "r1",
+      "destinationIp": "192.168.10.65",
+      "expected": "deny",
+      "counterDelta": {
+        "SERVICES-IN | 220 deny ip any any": 4
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/PING-20261031/batch-56.json",
+      "output": "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 192.168.10.65\n\nPinging 192.168.10.65 with 32 bytes of data:\n\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\n\nPing statistics for 192.168.10.65:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    }
+  ]
+}

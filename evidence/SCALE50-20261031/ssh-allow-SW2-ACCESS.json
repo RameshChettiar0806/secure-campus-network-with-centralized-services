@@ -1,0 +1,11 @@
+{
+  "source": "PC8-MGMT",
+  "destination": "192.168.10.100",
+  "protocol": "SSH",
+  "port": 22,
+  "initial": "ssh -l netadmin 192.168.10.100\n\nPassword: ",
+  "authenticated": "\n\n\n\nSW2-ACCESS>",
+  "statusOutput": "show ip ssh\nSSH Enabled - version 2.0\nAuthentication timeout: 60 secs; Authentication retries: 2\nSW2-ACCESS>",
+  "passed": true,
+  "observedAt": "2026-10-31T21:47:50+05:30"
+}

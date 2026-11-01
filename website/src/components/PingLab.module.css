@@ -1,0 +1,51 @@
+.workspace {
+  display: grid;
+  grid-template-columns: minmax(270px, 0.85fr) minmax(0, 1.8fr);
+  gap: 16px;
+  align-items: start;
+}
+.column {
+  min-width: 0;
+  padding: clamp(14px, 1.5vw, 24px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--surface);
+}
+.heading, .status { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.heading { padding-bottom: 14px; margin-bottom: 14px; border-bottom: 1px solid var(--border); }
+.heading h3 { font-size: 20px; margin: 4px 0 0; letter-spacing: -.4px; }
+.fields { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(min(165px,100%), 1fr)); }
+.fields label, .routerField { display: grid; gap: 6px; color: var(--muted); font-size: 12px; }
+.fields select, .routerField select { width: 100%; font-size: 12px; }
+.routerField, .column form, .presets { margin-top: 16px; }
+.presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.presets span { width: 100%; color: var(--muted); font-size: 11px; }
+.presets button, .switcher button { border: 1px solid var(--border); border-radius: 5px; padding: 7px 9px; font-size: 11px; }
+.switcher { display: flex; gap: 4px; }
+.switcher button[aria-pressed=true] { color: var(--accent); border-color: var(--accent); background: var(--canvas); }
+.status { background: var(--canvas); padding: 10px 12px; border-radius: 6px 6px 0 0; border: 1px solid var(--border); }
+.status strong { font-size: 13px; }
+.status span { color: var(--muted); font-size: 11px; }
+.status[data-phase=request] strong { color: var(--accent); }
+.status[data-phase=reply] strong { color: #7faaf2; }
+.status[data-phase=blocked] strong { color: #ed927d; }
+.map { border: 1px solid var(--border); border-top: 0; border-radius: 0 0 6px 6px; overflow: hidden; }
+.map > div, .placeholder { height: clamp(310px, 42vh, 450px); }
+.placeholder { margin: 0; display: grid; place-items: center; text-align: center; font-size: 12px; color: var(--muted); }
+.hopNotes {
+  margin: 14px 0;
+  padding-inline-start: 20px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.hopNotes li + li { margin-top: 5px; }
+.hopNotes li::marker { color: var(--accent); }
+.hopNotes strong { color: var(--text); }
+.mobileResult { display: none; }
+@media (max-width: 720px) {
+  .mobileResult { display: inline-block; margin-top: 12px; font-size: 12px; }
+  .workspace { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+  .map > div, .placeholder { height: 310px; }
+}

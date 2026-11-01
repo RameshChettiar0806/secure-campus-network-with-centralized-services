@@ -1,0 +1,66 @@
+{
+  "devices": [
+    {
+      "name": "Power Distribution Device0",
+      "type": 45
+    },
+    {
+      "name": "SW1-CORE",
+      "type": 1
+    },
+    {
+      "name": "R1-CAMPUS",
+      "type": 0
+    },
+    {
+      "name": "PC0",
+      "type": 8
+    },
+    {
+      "name": "PC1",
+      "type": 8
+    },
+    {
+      "name": "PC2",
+      "type": 8
+    },
+    {
+      "name": "PC3",
+      "type": 8
+    },
+    {
+      "name": "PC4",
+      "type": 8
+    },
+    {
+      "name": "PC5",
+      "type": 8
+    },
+    {
+      "name": "PC6",
+      "type": 8
+    },
+    {
+      "name": "PC7",
+      "type": 8
+    },
+    {
+      "name": "PC8-MGMT",
+      "type": 8
+    },
+    {
+      "name": "PC9-ADMIN",
+      "type": 8
+    },
+    {
+      "name": "SRV-CAMPUS",
+      "type": 9
+    },
+    {
+      "name": "SW2-ACCESS",
+      "type": 1
+    }
+  ],
+  "file": "C:/Users/Ramesh/Personal Folders/College/SRM/SEMESTERS/SEMESTER - 5/Subjects/21CSC302J - Computer Networks/Secure Campus Network with Centralized Services/Secure_Campus_Network_Submission.pkt",
+  "links": 13
+}

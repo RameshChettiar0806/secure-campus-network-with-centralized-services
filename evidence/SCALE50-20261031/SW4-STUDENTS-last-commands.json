@@ -1,0 +1,327 @@
+[
+  {
+    "command": "enable",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "configure terminal",
+    "output": "Enter configuration commands, one per line.  End with CNTL/Z.\n",
+    "status": 0
+  },
+  {
+    "command": "hostname SW4-STUDENTS",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip domain-lookup",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip domain-name campus.test",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "[REDACTED]",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "[REDACTED]",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "[REDACTED]",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "vlan 10",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "name ADMINISTRATION",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "vlan 20",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "name FACULTY",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "vlan 30",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "name STUDENTS",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "vlan 40",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "name SERVICES",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface range fastEthernet0/1 - 24",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "shutdown",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport mode access",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport access vlan 1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no spanning-tree portfast",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no spanning-tree bpduguard enable",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface range gigabitEthernet0/1 - 2",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "shutdown",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport mode access",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport access vlan 1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport mode trunk",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport trunk allowed vlan 10,30",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no shutdown",
+    "output": "\n",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface range fastEthernet0/1 - 20",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport mode access",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "switchport access vlan 30",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "spanning-tree portfast",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "spanning-tree bpduguard enable",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no shutdown",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface vlan 10",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip address",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip address 192.168.10.102 255.255.255.224",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no shutdown",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip default-gateway 192.168.10.97",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no access-list 1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "access-list 1 permit host 192.168.10.98",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "access-list 1 deny any",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "line vty 0 15",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "login local",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "transport input ssh",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "access-class 1 in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exec-timeout 5 0",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "crypto key generate rsa general-keys modulus 2048",
+    "output": "The name for the keys will be: SW4-STUDENTS.campus.test\n\n% The key modulus size is 2048 bits\n% Generating 2048 bit RSA keys, keys will be non-exportable...[OK]\n*Mar 1 0:0:10.850: %SSH-5-ENABLED: SSH 1.99 has been enabled\n",
+    "status": 0
+  },
+  {
+    "command": "ip ssh version 2",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip ssh time-out 60",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip ssh authentication-retries 2",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "end",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "write memory",
+    "output": "Building configuration...\n[OK]\n",
+    "status": 0
+  }
+]

@@ -1,0 +1,2159 @@
+{
+  "links": [
+    {
+      "cable": 8100,
+      "from": "R1-CAMPUS",
+      "fromInterface": "GigabitEthernet0/0",
+      "to": "SW1-CORE",
+      "toInterface": "GigabitEthernet0/1"
+    },
+    {
+      "cable": 8101,
+      "from": "SW1-CORE",
+      "fromInterface": "GigabitEthernet0/2",
+      "to": "SW2-ACCESS",
+      "toInterface": "GigabitEthernet0/1"
+    },
+    {
+      "cable": 8101,
+      "from": "SW1-CORE",
+      "fromInterface": "FastEthernet0/23",
+      "to": "SW3-FACULTY",
+      "toInterface": "GigabitEthernet0/1"
+    },
+    {
+      "cable": 8101,
+      "from": "SW1-CORE",
+      "fromInterface": "FastEthernet0/24",
+      "to": "SW4-STUDENTS",
+      "toInterface": "GigabitEthernet0/1"
+    },
+    {
+      "cable": 8100,
+      "from": "SRV-CAMPUS",
+      "fromInterface": "FastEthernet0",
+      "to": "SW1-CORE",
+      "toInterface": "FastEthernet0/1"
+    },
+    {
+      "cable": 8100,
+      "from": "PC8-MGMT",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/1"
+    },
+    {
+      "cable": 8100,
+      "from": "PC9-ADMIN",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/2"
+    },
+    {
+      "cable": 8100,
+      "from": "PC40",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/3"
+    },
+    {
+      "cable": 8100,
+      "from": "PC41",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/4"
+    },
+    {
+      "cable": 8100,
+      "from": "PC42",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/5"
+    },
+    {
+      "cable": 8100,
+      "from": "PC43",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/6"
+    },
+    {
+      "cable": 8100,
+      "from": "PC44",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/7"
+    },
+    {
+      "cable": 8100,
+      "from": "PC45",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/8"
+    },
+    {
+      "cable": 8100,
+      "from": "PC46",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/9"
+    },
+    {
+      "cable": 8100,
+      "from": "PC47",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/10"
+    },
+    {
+      "cable": 8100,
+      "from": "PC48",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/11"
+    },
+    {
+      "cable": 8100,
+      "from": "PC49",
+      "fromInterface": "FastEthernet0",
+      "to": "SW2-ACCESS",
+      "toInterface": "FastEthernet0/12"
+    },
+    {
+      "cable": 8100,
+      "from": "PC5",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/1"
+    },
+    {
+      "cable": 8100,
+      "from": "PC6",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/2"
+    },
+    {
+      "cable": 8100,
+      "from": "PC7",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/3"
+    },
+    {
+      "cable": 8100,
+      "from": "PC25",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/4"
+    },
+    {
+      "cable": 8100,
+      "from": "PC26",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/5"
+    },
+    {
+      "cable": 8100,
+      "from": "PC27",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/6"
+    },
+    {
+      "cable": 8100,
+      "from": "PC28",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/7"
+    },
+    {
+      "cable": 8100,
+      "from": "PC29",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/8"
+    },
+    {
+      "cable": 8100,
+      "from": "PC30",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/9"
+    },
+    {
+      "cable": 8100,
+      "from": "PC31",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/10"
+    },
+    {
+      "cable": 8100,
+      "from": "PC32",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/11"
+    },
+    {
+      "cable": 8100,
+      "from": "PC33",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/12"
+    },
+    {
+      "cable": 8100,
+      "from": "PC34",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/13"
+    },
+    {
+      "cable": 8100,
+      "from": "PC35",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/14"
+    },
+    {
+      "cable": 8100,
+      "from": "PC36",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/15"
+    },
+    {
+      "cable": 8100,
+      "from": "PC37",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/16"
+    },
+    {
+      "cable": 8100,
+      "from": "PC38",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/17"
+    },
+    {
+      "cable": 8100,
+      "from": "PC39",
+      "fromInterface": "FastEthernet0",
+      "to": "SW3-FACULTY",
+      "toInterface": "FastEthernet0/18"
+    },
+    {
+      "cable": 8100,
+      "from": "PC0",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/1"
+    },
+    {
+      "cable": 8100,
+      "from": "PC1",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/2"
+    },
+    {
+      "cable": 8100,
+      "from": "PC2",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/3"
+    },
+    {
+      "cable": 8100,
+      "from": "PC3",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/4"
+    },
+    {
+      "cable": 8100,
+      "from": "PC4",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/5"
+    },
+    {
+      "cable": 8100,
+      "from": "PC10",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/6"
+    },
+    {
+      "cable": 8100,
+      "from": "PC11",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/7"
+    },
+    {
+      "cable": 8100,
+      "from": "PC12",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/8"
+    },
+    {
+      "cable": 8100,
+      "from": "PC13",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/9"
+    },
+    {
+      "cable": 8100,
+      "from": "PC14",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/10"
+    },
+    {
+      "cable": 8100,
+      "from": "PC15",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/11"
+    },
+    {
+      "cable": 8100,
+      "from": "PC16",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/12"
+    },
+    {
+      "cable": 8100,
+      "from": "PC17",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/13"
+    },
+    {
+      "cable": 8100,
+      "from": "PC18",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/14"
+    },
+    {
+      "cable": 8100,
+      "from": "PC19",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/15"
+    },
+    {
+      "cable": 8100,
+      "from": "PC20",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/16"
+    },
+    {
+      "cable": 8100,
+      "from": "PC21",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/17"
+    },
+    {
+      "cable": 8100,
+      "from": "PC22",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/18"
+    },
+    {
+      "cable": 8100,
+      "from": "PC23",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/19"
+    },
+    {
+      "cable": 8100,
+      "from": "PC24",
+      "fromInterface": "FastEthernet0",
+      "to": "SW4-STUDENTS",
+      "toInterface": "FastEthernet0/20"
+    }
+  ],
+  "nodes": [
+    {
+      "interfaces": [
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "Vlan1",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/2",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/3",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/4",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/5",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/6",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/7",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/8",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/9",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/10",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/11",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/12",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/13",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/14",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/15",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/16",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/17",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/18",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/19",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/20",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/21",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/22",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/23",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/24",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "address": "192.168.10.99",
+          "mask": "255.255.255.224",
+          "name": "Vlan10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "2960-24TT",
+      "name": "SW1-CORE",
+      "position": {
+        "x": 848,
+        "y": 260
+      },
+      "type": 1
+    },
+    {
+      "interfaces": [
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "Vlan1",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "GigabitEthernet0/0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "GigabitEthernet0/1",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "address": "192.168.10.97",
+          "mask": "255.255.255.224",
+          "name": "GigabitEthernet0/0.10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "address": "192.168.10.65",
+          "mask": "255.255.255.224",
+          "name": "GigabitEthernet0/0.20",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "address": "192.168.10.1",
+          "mask": "255.255.255.192",
+          "name": "GigabitEthernet0/0.30",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "address": "192.168.10.129",
+          "mask": "255.255.255.240",
+          "name": "GigabitEthernet0/0.40",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "1941",
+      "name": "R1-CAMPUS",
+      "position": {
+        "x": 850,
+        "y": 120
+      },
+      "type": 0
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.19",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC0",
+      "position": {
+        "x": 1220,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.20",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC1",
+      "position": {
+        "x": 1345,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.21",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC2",
+      "position": {
+        "x": 1470,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.4",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC3",
+      "position": {
+        "x": 1595,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.25",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC4",
+      "position": {
+        "x": 1220,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.78",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC5",
+      "position": {
+        "x": 630,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.81",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC6",
+      "position": {
+        "x": 755,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.77",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC7",
+      "position": {
+        "x": 880,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.98",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC8-MGMT",
+      "position": {
+        "x": 40,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.108",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC9-ADMIN",
+      "position": {
+        "x": 165,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.130",
+          "mask": "255.255.255.240",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "Server-PT",
+      "name": "SRV-CAMPUS",
+      "position": {
+        "x": 1148,
+        "y": 140
+      },
+      "type": 9
+    },
+    {
+      "interfaces": [
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "Vlan1",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/2",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/3",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/4",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/5",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/6",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/7",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/8",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/9",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/11",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/12",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/13",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/14",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/15",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/16",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/17",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/18",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/19",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/20",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/21",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/22",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/23",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/24",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "address": "192.168.10.100",
+          "mask": "255.255.255.224",
+          "name": "Vlan10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "2960-24TT",
+      "name": "SW2-ACCESS",
+      "position": {
+        "x": 258,
+        "y": 460
+      },
+      "type": 1
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.18",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC10",
+      "position": {
+        "x": 1345,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.11",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC11",
+      "position": {
+        "x": 1470,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.17",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC12",
+      "position": {
+        "x": 1595,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.16",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC13",
+      "position": {
+        "x": 1220,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.10",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC14",
+      "position": {
+        "x": 1345,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.3",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC15",
+      "position": {
+        "x": 1470,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.7",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC16",
+      "position": {
+        "x": 1595,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.22",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC17",
+      "position": {
+        "x": 1220,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.2",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC18",
+      "position": {
+        "x": 1345,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.15",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC19",
+      "position": {
+        "x": 1470,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.23",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC20",
+      "position": {
+        "x": 1595,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.24",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC21",
+      "position": {
+        "x": 1220,
+        "y": 1130
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.8",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC22",
+      "position": {
+        "x": 1345,
+        "y": 1130
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.9",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC23",
+      "position": {
+        "x": 1470,
+        "y": 1130
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.5",
+          "mask": "255.255.255.192",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC24",
+      "position": {
+        "x": 1595,
+        "y": 1130
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.70",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC25",
+      "position": {
+        "x": 1005,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.66",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC26",
+      "position": {
+        "x": 630,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.69",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC27",
+      "position": {
+        "x": 755,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.79",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC28",
+      "position": {
+        "x": 880,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.83",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC29",
+      "position": {
+        "x": 1005,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.67",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC30",
+      "position": {
+        "x": 630,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.73",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC31",
+      "position": {
+        "x": 755,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.80",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC32",
+      "position": {
+        "x": 880,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.71",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC33",
+      "position": {
+        "x": 1005,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.72",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC34",
+      "position": {
+        "x": 630,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.68",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC35",
+      "position": {
+        "x": 755,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.76",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC36",
+      "position": {
+        "x": 880,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.75",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC37",
+      "position": {
+        "x": 1005,
+        "y": 1005
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.74",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC38",
+      "position": {
+        "x": 630,
+        "y": 1130
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.82",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC39",
+      "position": {
+        "x": 755,
+        "y": 1130
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.113",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC40",
+      "position": {
+        "x": 290,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.111",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC41",
+      "position": {
+        "x": 415,
+        "y": 630
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.109",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC42",
+      "position": {
+        "x": 40,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.112",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC43",
+      "position": {
+        "x": 165,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.114",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC44",
+      "position": {
+        "x": 290,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.107",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC45",
+      "position": {
+        "x": 415,
+        "y": 755
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.105",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC46",
+      "position": {
+        "x": 40,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.110",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC47",
+      "position": {
+        "x": 165,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.106",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC48",
+      "position": {
+        "x": 290,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "192.168.10.103",
+          "mask": "255.255.255.224",
+          "name": "FastEthernet0",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "PC-PT",
+      "name": "PC49",
+      "position": {
+        "x": 415,
+        "y": 880
+      },
+      "type": 8
+    },
+    {
+      "interfaces": [
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "Vlan1",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/2",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/3",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/4",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/5",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/6",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/7",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/8",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/9",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/11",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/12",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/13",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/14",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/15",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/16",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/17",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/18",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/19",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/20",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/21",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/22",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/23",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/24",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "address": "192.168.10.101",
+          "mask": "255.255.255.224",
+          "name": "Vlan10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "2960-24TT",
+      "name": "SW3-FACULTY",
+      "position": {
+        "x": 848,
+        "y": 460
+      },
+      "type": 1
+    },
+    {
+      "interfaces": [
+        {
+          "address": "0.0.0.0",
+          "mask": "0.0.0.0",
+          "name": "Vlan1",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/2",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/3",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/4",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/5",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/6",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/7",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/8",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/9",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/11",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/12",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/13",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/14",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/15",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/16",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/17",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/18",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/19",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/20",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "FastEthernet0/21",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/22",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/23",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "FastEthernet0/24",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "name": "GigabitEthernet0/1",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        },
+        {
+          "name": "GigabitEthernet0/2",
+          "portUp": false,
+          "power": false,
+          "protocolUp": false
+        },
+        {
+          "address": "192.168.10.102",
+          "mask": "255.255.255.224",
+          "name": "Vlan10",
+          "portUp": true,
+          "power": true,
+          "protocolUp": true
+        }
+      ],
+      "model": "2960-24TT",
+      "name": "SW4-STUDENTS",
+      "position": {
+        "x": 1438,
+        "y": 460
+      },
+      "type": 1
+    }
+  ]
+}

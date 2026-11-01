@@ -1,0 +1,592 @@
+[
+  {
+    "command": "enable",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "configure terminal",
+    "output": "Enter configuration commands, one per line.  End with CNTL/Z.\n",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.10",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-group ADMIN-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip address",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip helper-address 192.168.10.50",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.20",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-group FACULTY-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip address",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip helper-address 192.168.10.50",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.30",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-group STUDENTS-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip address",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip helper-address 192.168.10.50",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.40",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-group SERVICES-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip address",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-list extended ADMIN-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-list extended FACULTY-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-list extended STUDENTS-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no ip access-list extended SERVICES-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no access-list 1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "access-list 1 permit host 192.168.10.98",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "access-list 1 deny any",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.10",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "encapsulation dot1Q 10",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip address 192.168.10.97 255.255.255.224",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip helper-address 192.168.10.130",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-group ADMIN-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.20",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "encapsulation dot1Q 20",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip address 192.168.10.65 255.255.255.224",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip helper-address 192.168.10.130",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-group FACULTY-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.30",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "encapsulation dot1Q 30",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip address 192.168.10.1 255.255.255.192",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip helper-address 192.168.10.130",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-group STUDENTS-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0.40",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "encapsulation dot1Q 40",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip address 192.168.10.129 255.255.255.240",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-group SERVICES-IN in",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-list extended ADMIN-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp any eq bootpc host 255.255.255.255 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp any eq bootpc host 192.168.10.127 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.98 host 192.168.10.97 eq 22",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "deny ip any any",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-list extended FACULTY-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp any eq bootpc host 255.255.255.255 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp any eq bootpc host 192.168.10.95 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "deny ip any any",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-list extended STUDENTS-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp any eq bootpc host 255.255.255.255 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp any eq bootpc host 192.168.10.63 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "deny ip any any",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "ip access-list extended SERVICES-IN",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp host 192.168.10.130 host 192.168.10.129 echo",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "deny ip any any",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "interface gigabitEthernet0/0",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no shutdown",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "exit",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "end",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "write memory",
+    "output": "Building configuration...\n[OK]\n",
+    "status": 0
+  }
+]

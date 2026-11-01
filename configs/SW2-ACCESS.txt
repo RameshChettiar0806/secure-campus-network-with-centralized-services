@@ -1,0 +1,217 @@
+Building configuration...
+
+Current configuration : 4170 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+[REDACTED LAB CREDENTIAL]
+!
+hostname SW2-ACCESS
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name campus.test
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+spanning-tree mode pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ description STUDENT_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ description STUDENT_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/3
+ description STUDENT_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/4
+ description STUDENT_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/5
+ description STUDENT_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ description FACULTY_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ description FACULTY_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/8
+ description FACULTY_CLIENTS
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/9
+ description UNUSED_SHUTDOWN
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/10
+ description UNUSED_SHUTDOWN
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/11
+ description UNUSED_SHUTDOWN
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/12
+ description UNUSED_SHUTDOWN
+ switchport access vlan 10
+ switchport mode access
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/13
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/14
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/15
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/16
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/17
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/18
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/19
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/20
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/21
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/22
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/23
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/24
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet0/1
+ description TRUNK_TO_SW1_Gi0_2
+ switchport trunk allowed vlan 10
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ description UNUSED_SHUTDOWN
+ switchport mode access
+ shutdown
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ ip address 192.168.10.100 255.255.255.224
+!
+ip default-gateway 192.168.10.97
+!
+!
+!
+!
+access-list 1 permit host 192.168.10.98
+access-list 1 deny any
+line con 0
+ login local
+!
+line vty 0 4
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+line vty 5 15
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+!
+!
+end
+
+

@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+LAB_CREDENTIALS.txt
+*.pkt
+archive/
+evidence/**/*.zip

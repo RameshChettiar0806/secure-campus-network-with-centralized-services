@@ -1,0 +1,27 @@
+{
+  "PC0": {
+    "command": "ping 192.168.10.5",
+    "output": "ping 192.168.10.5\n\nPinging 192.168.10.5 with 32 bytes of data:\n\nReply from 192.168.10.5: bytes=32 time=13ms TTL=128\nReply from 192.168.10.5: bytes=32 time<1ms TTL=128\nReply from 192.168.10.5: bytes=32 time<1ms TTL=128\nReply from 192.168.10.5: bytes=32 time<1ms TTL=128\n\nPing statistics for 192.168.10.5:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 13ms, Average = 3ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "ping 192.168.10.82",
+    "output": "ping 192.168.10.82\n\nPinging 192.168.10.82 with 32 bytes of data:\n\nReply from 192.168.10.82: bytes=32 time<1ms TTL=128\nReply from 192.168.10.82: bytes=32 time=10ms TTL=128\nReply from 192.168.10.82: bytes=32 time<1ms TTL=128\nReply from 192.168.10.82: bytes=32 time<1ms TTL=128\n\nPing statistics for 192.168.10.82:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 2ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "command": "ping 192.168.10.19",
+    "output": "ping 192.168.10.19\n\nPinging 192.168.10.19 with 32 bytes of data:\n\nReply from 192.168.10.19: bytes=32 time=24ms TTL=127\nReply from 192.168.10.19: bytes=32 time=10ms TTL=127\nReply from 192.168.10.19: bytes=32 time<1ms TTL=127\nReply from 192.168.10.19: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.19:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 24ms, Average = 9ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC9-ADMIN": {
+    "command": "ping 192.168.10.78",
+    "output": "ping 192.168.10.78\n\nPinging 192.168.10.78 with 32 bytes of data:\n\nReply from 192.168.10.78: bytes=32 time=2ms TTL=127\nReply from 192.168.10.78: bytes=32 time=12ms TTL=127\nReply from 192.168.10.78: bytes=32 time=10ms TTL=127\nReply from 192.168.10.78: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.78:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 12ms, Average = 7ms\n\nC:\\>",
+    "passed": true
+  },
+  "SRV-CAMPUS": {
+    "command": "ping 192.168.10.129",
+    "output": "ping 192.168.10.129\n\nPinging 192.168.10.129 with 32 bytes of data:\n\nReply from 192.168.10.129: bytes=32 time=30ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\nReply from 192.168.10.129: bytes=32 time<1ms TTL=255\n\nPing statistics for 192.168.10.129:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 30ms, Average = 7ms\n\nC:\\>",
+    "passed": true
+  }
+}
