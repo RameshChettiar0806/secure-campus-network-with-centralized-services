@@ -13,7 +13,7 @@ const DeviceNode = memo(({ data, selected }: NodeProps<DeviceFlowNode>) => {
   const device = data.device;
   return <div className={`${styles.deviceNode} ${selected ? styles.nodeSelected : ''} ${data.dimmed ? styles.dimmed : ''} ${data.packetActive ? styles.packetActive : ''} ${data.blocked ? styles.packetBlocked : ''}`} style={{ '--vlan': vlanColors[device.vlanId ?? 0] ?? '#7d9bad' } as React.CSSProperties}>
     {(['left', 'right', 'top', 'bottom'] as const).map(side => <span key={side}><Handle type="source" id={`s-${side}`} position={Position[side === 'left' ? 'Left' : side === 'right' ? 'Right' : side === 'top' ? 'Top' : 'Bottom']} isConnectable={false}/><Handle type="target" id={`t-${side}`} position={Position[side === 'left' ? 'Left' : side === 'right' ? 'Right' : side === 'top' ? 'Top' : 'Bottom']} isConnectable={false}/></span>)}
-    <div className={styles.nodeHeading}><span className={styles.nodeIcon}><DeviceSymbol model={device.model}/></span><span>{device.vlanId ? `VLAN ${device.vlanId}` : device.id === 'r1' ? 'L3 ROUTER' : 'L2 SWITCH'}</span></div>
+    <div className={styles.nodeHeading}><span className={styles.nodeIcon}><DeviceSymbol model={device.model}/></span><span>{device.vlanId ? `VLAN ${device.vlanId}` : device.model === '1941' ? 'L3 ROUTER' : device.model === 'Server-PT' ? 'EXTERNAL SERVER' : 'L2 SWITCH'}</span></div>
     <strong>{device.label}</strong><small>{data.address ?? primaryAddress(device)}</small>{data.packetActive && <span className={styles.packetMarker}>{data.blocked ? '⊘ BLOCKED' : '● ICMP'}</span>}
   </div>;
 });
@@ -56,8 +56,8 @@ export default function TopologyCanvas({ snapshot, vlan, selected, select, selec
     const reverse = activeLink && current === link.sourceDeviceId;
     const color = packet?.steps[packet.step]?.phase === 'blocked' ? '#ed927d' : packet?.steps[packet.step]?.phase === 'reply' ? '#7faaf2' : '#65dac7';
     return { id: link.id, source: reverse ? link.targetDeviceId : link.sourceDeviceId, target: reverse ? link.sourceDeviceId : link.targetDeviceId,
-      sourceHandle: `s-${reverse ? opposite[side] : side}`, targetHandle: `t-${reverse ? side : opposite[side]}`, type: 'smoothstep', label: pingView !== 'route' && link.mode === 'trunk' ? `802.1Q · ${link.vlanIds.join(' / ')}` : undefined,
-      animated: activeLink && !!moving, markerEnd: activeLink ? { type: MarkerType.ArrowClosed, color, width: 5, height: 5 } : undefined, style: { stroke: activeLink ? color : link.mode === 'trunk' ? '#8297b4' : vlanColors[link.vlanIds[0]], strokeWidth: activeLink ? 4 : link.mode === 'trunk' ? 2.5 : 1.8, opacity: packet ? pathContainsLink ? 1 : .12 : isLinkHighlighted(link, vlan) ? 1 : .15 },
+      sourceHandle: `s-${reverse ? opposite[side] : side}`, targetHandle: `t-${reverse ? side : opposite[side]}`, type: 'smoothstep', label: pingView !== 'route' ? link.mode === 'trunk' ? `802.1Q · ${link.vlanIds.join(' / ')}` : link.mode === 'routed' ? link.id.includes('r1-r2') ? 'OSPF area 0 · PAT outside' : 'External LAN · 203.0.113.0/24' : undefined : undefined,
+      animated: activeLink && !!moving, markerEnd: activeLink ? { type: MarkerType.ArrowClosed, color, width: 5, height: 5 } : undefined, style: { stroke: activeLink ? color : link.mode === 'routed' ? '#67cdd6' : link.mode === 'trunk' ? '#8297b4' : vlanColors[link.vlanIds[0]], strokeDasharray: link.mode === 'routed' ? '7 4' : undefined, strokeWidth: activeLink ? 4 : link.mode !== 'access' ? 2.5 : 1.8, opacity: packet ? pathContainsLink ? 1 : .12 : isLinkHighlighted(link, vlan) ? 1 : .15 },
       labelStyle: { fill: theme === 'dark' ? '#c4d2e7' : '#283f5a', fontSize: 11 }, labelBgStyle: { fill: theme === 'dark' ? '#101a2a' : '#f4f7fb' }, interactionWidth: 24, ariaLabel: `${link.mode} link ${link.id}`, focusable: true,
     };
   }), [snapshot, vlan, theme, packet, positions, moving, pingView]);

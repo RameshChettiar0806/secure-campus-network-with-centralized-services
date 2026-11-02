@@ -1,0 +1,58 @@
+{
+  "PC10": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 157ms, Average = 52ms\n\nC:\\>"
+  },
+  "PC21": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 208ms, Average = 69ms\n\nC:\\>"
+  },
+  "PC23": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 276ms, Average = 92ms\n\nC:\\>"
+  },
+  "PC26": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 279ms, Average = 94ms\n\nC:\\>"
+  },
+  "PC28": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=35ms TTL=126\nReply from 203.0.113.10: bytes=32 time=29ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 29ms, Maximum = 342ms, Average = 135ms\n\nC:\\>"
+  },
+  "PC29": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=37ms TTL=126\nReply from 203.0.113.10: bytes=32 time=38ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 37ms, Maximum = 340ms, Average = 138ms\n\nC:\\>"
+  },
+  "PC31": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=37ms TTL=126\nReply from 203.0.113.10: bytes=32 time=29ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 29ms, Maximum = 338ms, Average = 134ms\n\nC:\\>"
+  },
+  "PC33": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=35ms TTL=126\nReply from 203.0.113.10: bytes=32 time=13ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 13ms, Maximum = 336ms, Average = 128ms\n\nC:\\>"
+  },
+  "PC37": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=37ms TTL=126\nReply from 203.0.113.10: bytes=32 time=13ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 13ms, Maximum = 332ms, Average = 127ms\n\nC:\\>"
+  },
+  "PC42": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=4ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 291ms, Average = 98ms\n\nC:\\>"
+  },
+  "PC43": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=4ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 290ms, Average = 98ms\n\nC:\\>"
+  },
+  "PC47": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=24ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 350ms, Average = 125ms\n\nC:\\>"
+  },
+  "PC48": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=37ms TTL=126\nReply from 203.0.113.10: bytes=32 time=37ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 37ms, Maximum = 349ms, Average = 141ms\n\nC:\\>"
+  },
+  "PC49": {
+    "command": "ping 203.0.113.10",
+    "output": "Reply from 203.0.113.10: bytes=32 time=4ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 348ms, Average = 117ms\n\nC:\\>"
+  }
+}

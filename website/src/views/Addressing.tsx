@@ -13,8 +13,12 @@ export default function Addressing({ snapshot }: { snapshot: NetworkSnapshot }) 
   ).filter(({ device, address }) =>
     device.label.toLowerCase().includes(search) || address?.includes(search)
   );
-  return <section className={styles.dataView}><div className={styles.viewIntro}><div className={styles.sectionLabel}>ADDRESSING PLAN</div><h2>VLANs and IP addresses</h2><p>VLSM sized for 50 PCs: /26 Students, /27 Faculty, /27 Administration and /28 Services.</p></div>
+  return <section className={styles.dataView}><div className={styles.viewIntro}><div className={styles.sectionLabel}>ADDRESSING PLAN</div><h2>VLANs and routed networks</h2><p>Four campus VLANs retain their VLSM addressing. Two additional routed networks carry the OSPF transit and external server LAN.</p></div>
     <div className={styles.vlanCards}>{snapshot.vlans.map(v => { const pool = snapshot.dhcpPools.find(p => p.id === v.poolId); return <article key={v.id} className={styles.vlanCard} style={{ borderTopColor: vlanColors[v.id] }}><span style={{ color: vlanColors[v.id] }}>VLAN {v.id}</span><h3>{shortName(v.name)}</h3><code>{v.subnet}</code><dl className={styles.facts}><dt>Gateway</dt><dd>{v.gateway}</dd><dt>Mask</dt><dd>{v.mask}</dd><dt>Broadcast</dt><dd>{v.broadcast}</dd><dt>DHCP range</dt><dd>{pool ? `${pool.start} – ${pool.end}` : 'Static addressing'}</dd><dt>Connected endpoints</dt><dd>{snapshot.devices.filter(d => d.vlanId === v.id).length}</dd><dt>Usable hosts</dt><dd>{v.usableHosts}</dd><dt>Pool capacity</dt><dd>{pool ? `${pool.maxUsers} addresses` : '—'}</dd></dl></article>; })}</div>
+    {snapshot.routing && <div className={styles.vlanCards}>
+      <article className={styles.vlanCard} style={{borderTopColor:'#67cdd6'}}><span>ROUTED ETHERNET · AREA 0</span><h3>OSPF / PAT transit</h3><code>{snapshot.routing.transitSubnet}</code><dl className={styles.facts}><dt>R1 Gi0/1</dt><dd>198.51.100.1/30 · PAT outside</dd><dt>R2 Gi0/0</dt><dd>198.51.100.2/30</dd><dt>Encapsulation</dt><dd>Ethernet · no VLAN trunk</dd></dl></article>
+      <article className={styles.vlanCard} style={{borderTopColor:'#67cdd6'}}><span>ROUTED ETHERNET · EXTERNAL LAN</span><h3>External server network</h3><code>{snapshot.routing.externalSubnet}</code><dl className={styles.facts}><dt>R2 Gi0/1</dt><dd>{snapshot.routing.externalGateway}/24</dd><dt>Server</dt><dd>{snapshot.routing.externalAddress}/24</dd><dt>DNS name</dt><dd>{snapshot.routing.externalHostname}</dd><dt>OSPF</dt><dd>Advertised subnet · passive LAN</dd></dl></article>
+    </div>}
     <label className={styles.selectLabel}>Find an address
       <input type="search" placeholder="Device name or IP" value={query} onChange={event => setQuery(event.target.value)}/>
     </label>

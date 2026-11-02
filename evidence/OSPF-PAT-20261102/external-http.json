@@ -1,0 +1,690 @@
+{
+  "PC0": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC1": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC10": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC11": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC12": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC13": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC14": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC15": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC16": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC17": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC18": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC19": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC2": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC20": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC21": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC22": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC23": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC24": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC25": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC26": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC27": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC28": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC29": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC3": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC30": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC31": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC32": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC33": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC34": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC35": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC36": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC37": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC38": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC39": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC4": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC40": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC41": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC42": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC43": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC44": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC45": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC46": {
+    "events": [
+      {
+        "content": "",
+        "responseType": 7,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "",
+    "passed": true,
+    "retry": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ]
+  },
+  "PC47": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC48": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC49": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC5": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC6": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC7": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  },
+  "PC9-ADMIN": {
+    "events": [
+      {
+        "content": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+        "responseType": 3,
+        "serverIp": "203.0.113.10",
+        "url": "http://external.campus.test"
+      }
+    ],
+    "page": "<html><head><title>Campus External Connectivity Lab</title></head><body><h1>External Connectivity Demonstration</h1><p>This simulated external web server is reached through an OSPF-learned route and campus PAT.</p><p>Server: 203.0.113.10 | Shared campus outside address: 198.51.100.1</p><p>The internal campus portal and department security policy remain available.</p></body></html>",
+    "passed": true
+  }
+}

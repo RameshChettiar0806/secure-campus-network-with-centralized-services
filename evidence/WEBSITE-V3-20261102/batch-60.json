@@ -1,0 +1,1258 @@
+{
+  "runId": "WEBSITE-V3-20261102",
+  "submissionSha256": "b3b7892fe2d2e80330a2c6b80df6b2cfaf1032d33b3b4ab78f88ca2883b28406",
+  "observedAt": "2026-11-02T12:27:58+05:30",
+  "counterScope": "capture-batch",
+  "aclBefore": "Standard IP access list 1\n    10 permit host 192.168.10.98 (2 match(es))\n    20 deny any\nExtended IP access list ADMIN-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (24 match(es))\n    20 permit udp any eq bootpc host 192.168.10.127 eq bootps\n    30 permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo (96 match(es))\n    50 permit tcp host 192.168.10.98 host 192.168.10.97 eq 22 (21 match(es))\n    60 permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain (47 match(es))\n    70 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n    80 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www (96 match(es))\n    90 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo (96 match(es))\n    100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo (916 match(es))\n    110 permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo (1012 match(es))\n    120 permit tcp 192.168.10.96 0.0.0.31 host 203.0.113.10 eq www (84 match(es))\n    130 permit icmp 192.168.10.96 0.0.0.31 host 203.0.113.10 echo (95 match(es))\n    140 deny ip any any (48 match(es))\nExtended IP access list FACULTY-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (39 match(es))\n    20 permit udp any eq bootpc host 192.168.10.95 eq bootps\n    30 permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo (144 match(es))\n    50 permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain (66 match(es))\n    60 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www (91 match(es))\n    80 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo (144 match(es))\n    90 permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply (868 match(es))\n    100 permit tcp 192.168.10.64 0.0.0.31 host 203.0.113.10 eq www (115 match(es))\n    110 permit icmp 192.168.10.64 0.0.0.31 host 203.0.113.10 echo (137 match(es))\n    120 deny ip any any (2827 match(es))\nExtended IP access list STUDENTS-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (44 match(es))\n    20 permit udp any eq bootpc host 192.168.10.63 eq bootps\n    30 permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo (160 match(es))\n    50 permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain (77 match(es))\n    60 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www (102 match(es))\n    80 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo (163 match(es))\n    90 permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply (964 match(es))\n    100 permit tcp 192.168.10.0 0.0.0.63 host 203.0.113.10 eq www (185 match(es))\n    110 permit icmp 192.168.10.0 0.0.0.63 host 203.0.113.10 echo (154 match(es))\n    120 deny ip any any (2980 match(es))\nExtended IP access list SERVICES-IN\n    10 permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps (24 match(es))\n    20 permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n    30 permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 (42 match(es))\n    40 permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n    50 permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established (71 match(es))\n    60 permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply (94 match(es))\n    70 permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps (38 match(es))\n    80 permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n    90 permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 (56 match(es))\n    100 permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n    110 permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established (56 match(es))\n    120 permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply (144 match(es))\n    130 permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps (42 match(es))\n    140 permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n    150 permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 (68 match(es))\n    160 permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n    170 permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established (62 match(es))\n    180 permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply (155 match(es))\n    190 permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n    200 permit icmp host 192.168.10.130 host 192.168.10.129 echo (4 match(es))\n    210 permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n    220 deny ip any any (339 match(es))\nStandard IP access list NAT-CLIENTS\n    10 permit 192.168.10.0 0.0.0.63 (362 match(es))\n    20 permit 192.168.10.64 0.0.0.31 (314 match(es))\n    30 permit 192.168.10.96 0.0.0.31 (218 match(es))\nExtended IP access list WAN-IN\n    10 permit ospf host 198.51.100.2 any (208 match(es))\n    20 permit tcp host 203.0.113.10 eq www host 198.51.100.1 established (285 match(es))\n    30 permit icmp host 203.0.113.10 host 198.51.100.1 echo-reply (375 match(es))\n    40 deny ip any any (4 match(es))\n\n\n",
+  "aclAfter": "Standard IP access list 1\n    10 permit host 192.168.10.98 (2 match(es))\n    20 deny any\nExtended IP access list ADMIN-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (24 match(es))\n    20 permit udp any eq bootpc host 192.168.10.127 eq bootps\n    30 permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo (96 match(es))\n    50 permit tcp host 192.168.10.98 host 192.168.10.97 eq 22 (21 match(es))\n    60 permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain (47 match(es))\n    70 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n    80 permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www (96 match(es))\n    90 permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo (96 match(es))\n    100 permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo (916 match(es))\n    110 permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo (1012 match(es))\n    120 permit tcp 192.168.10.96 0.0.0.31 host 203.0.113.10 eq www (84 match(es))\n    130 permit icmp 192.168.10.96 0.0.0.31 host 203.0.113.10 echo (95 match(es))\n    140 deny ip any any (96 match(es))\nExtended IP access list FACULTY-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (39 match(es))\n    20 permit udp any eq bootpc host 192.168.10.95 eq bootps\n    30 permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo (144 match(es))\n    50 permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain (66 match(es))\n    60 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www (91 match(es))\n    80 permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo (144 match(es))\n    90 permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply (868 match(es))\n    100 permit tcp 192.168.10.64 0.0.0.31 host 203.0.113.10 eq www (115 match(es))\n    110 permit icmp 192.168.10.64 0.0.0.31 host 203.0.113.10 echo (137 match(es))\n    120 deny ip any any (2899 match(es))\nExtended IP access list STUDENTS-IN\n    10 permit udp any eq bootpc host 255.255.255.255 eq bootps (44 match(es))\n    20 permit udp any eq bootpc host 192.168.10.63 eq bootps\n    30 permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n    40 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo (160 match(es))\n    50 permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain (77 match(es))\n    60 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n    70 permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www (102 match(es))\n    80 permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo (163 match(es))\n    90 permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply (964 match(es))\n    100 permit tcp 192.168.10.0 0.0.0.63 host 203.0.113.10 eq www (185 match(es))\n    110 permit icmp 192.168.10.0 0.0.0.63 host 203.0.113.10 echo (154 match(es))\n    120 deny ip any any (3060 match(es))\nExtended IP access list SERVICES-IN\n    10 permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps (24 match(es))\n    20 permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n    30 permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 (42 match(es))\n    40 permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n    50 permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established (71 match(es))\n    60 permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply (94 match(es))\n    70 permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps (38 match(es))\n    80 permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n    90 permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 (56 match(es))\n    100 permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n    110 permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established (56 match(es))\n    120 permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply (144 match(es))\n    130 permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps (42 match(es))\n    140 permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n    150 permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 (68 match(es))\n    160 permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n    170 permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established (62 match(es))\n    180 permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply (155 match(es))\n    190 permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n    200 permit icmp host 192.168.10.130 host 192.168.10.129 echo (4 match(es))\n    210 permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n    220 deny ip any any (343 match(es))\nStandard IP access list NAT-CLIENTS\n    10 permit 192.168.10.0 0.0.0.63 (362 match(es))\n    20 permit 192.168.10.64 0.0.0.31 (314 match(es))\n    30 permit 192.168.10.96 0.0.0.31 (218 match(es))\nExtended IP access list WAN-IN\n    10 permit ospf host 198.51.100.2 any (208 match(es))\n    20 permit tcp host 203.0.113.10 eq www host 198.51.100.1 established (285 match(es))\n    30 permit icmp host 203.0.113.10 host 198.51.100.1 echo-reply (375 match(es))\n    40 deny ip any any (8 match(es))\n\n\n",
+  "records": [
+    {
+      "id": "PING3-3069",
+      "testId": "P03",
+      "sourceDeviceId": "pc8",
+      "sourceIp": "192.168.10.98",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3070",
+      "testId": "P03",
+      "sourceDeviceId": "pc9",
+      "sourceIp": "192.168.10.106",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3071",
+      "testId": "P03",
+      "sourceDeviceId": "pc40",
+      "sourceIp": "192.168.10.113",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3072",
+      "testId": "P03",
+      "sourceDeviceId": "pc41",
+      "sourceIp": "192.168.10.109",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3073",
+      "testId": "P03",
+      "sourceDeviceId": "pc42",
+      "sourceIp": "192.168.10.103",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3074",
+      "testId": "P03",
+      "sourceDeviceId": "pc43",
+      "sourceIp": "192.168.10.105",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3075",
+      "testId": "P03",
+      "sourceDeviceId": "pc44",
+      "sourceIp": "192.168.10.111",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3076",
+      "testId": "P03",
+      "sourceDeviceId": "pc45",
+      "sourceIp": "192.168.10.107",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3077",
+      "testId": "P03",
+      "sourceDeviceId": "pc46",
+      "sourceIp": "192.168.10.108",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3078",
+      "testId": "P03",
+      "sourceDeviceId": "pc47",
+      "sourceIp": "192.168.10.110",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3079",
+      "testId": "P03",
+      "sourceDeviceId": "pc48",
+      "sourceIp": "192.168.10.104",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3080",
+      "testId": "P03",
+      "sourceDeviceId": "pc49",
+      "sourceIp": "192.168.10.112",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "ADMIN-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "ADMIN-IN | 140 deny ip any any": 48
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\nReply from 192.168.10.97: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3081",
+      "testId": "P03",
+      "sourceDeviceId": "pc5",
+      "sourceIp": "192.168.10.70",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3082",
+      "testId": "P03",
+      "sourceDeviceId": "pc6",
+      "sourceIp": "192.168.10.78",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3083",
+      "testId": "P03",
+      "sourceDeviceId": "pc7",
+      "sourceIp": "192.168.10.76",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3084",
+      "testId": "P03",
+      "sourceDeviceId": "pc25",
+      "sourceIp": "192.168.10.79",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3085",
+      "testId": "P03",
+      "sourceDeviceId": "pc26",
+      "sourceIp": "192.168.10.72",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3086",
+      "testId": "P03",
+      "sourceDeviceId": "pc27",
+      "sourceIp": "192.168.10.77",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3087",
+      "testId": "P03",
+      "sourceDeviceId": "pc28",
+      "sourceIp": "192.168.10.83",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3088",
+      "testId": "P03",
+      "sourceDeviceId": "pc29",
+      "sourceIp": "192.168.10.80",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3089",
+      "testId": "P03",
+      "sourceDeviceId": "pc30",
+      "sourceIp": "192.168.10.82",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3090",
+      "testId": "P03",
+      "sourceDeviceId": "pc31",
+      "sourceIp": "192.168.10.75",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3091",
+      "testId": "P03",
+      "sourceDeviceId": "pc32",
+      "sourceIp": "192.168.10.66",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3092",
+      "testId": "P03",
+      "sourceDeviceId": "pc33",
+      "sourceIp": "192.168.10.69",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3093",
+      "testId": "P03",
+      "sourceDeviceId": "pc34",
+      "sourceIp": "192.168.10.74",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3094",
+      "testId": "P03",
+      "sourceDeviceId": "pc35",
+      "sourceIp": "192.168.10.81",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3095",
+      "testId": "P03",
+      "sourceDeviceId": "pc36",
+      "sourceIp": "192.168.10.68",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3096",
+      "testId": "P03",
+      "sourceDeviceId": "pc37",
+      "sourceIp": "192.168.10.73",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3097",
+      "testId": "P03",
+      "sourceDeviceId": "pc38",
+      "sourceIp": "192.168.10.71",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3098",
+      "testId": "P03",
+      "sourceDeviceId": "pc39",
+      "sourceIp": "192.168.10.67",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "FACULTY-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "FACULTY-IN | 120 deny ip any any": 72
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\nReply from 192.168.10.65: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3099",
+      "testId": "P03",
+      "sourceDeviceId": "pc0",
+      "sourceIp": "192.168.10.11",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3100",
+      "testId": "P03",
+      "sourceDeviceId": "pc1",
+      "sourceIp": "192.168.10.9",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3101",
+      "testId": "P03",
+      "sourceDeviceId": "pc2",
+      "sourceIp": "192.168.10.13",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3102",
+      "testId": "P03",
+      "sourceDeviceId": "pc3",
+      "sourceIp": "192.168.10.21",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3103",
+      "testId": "P03",
+      "sourceDeviceId": "pc4",
+      "sourceIp": "192.168.10.6",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3104",
+      "testId": "P03",
+      "sourceDeviceId": "pc10",
+      "sourceIp": "192.168.10.10",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3105",
+      "testId": "P03",
+      "sourceDeviceId": "pc11",
+      "sourceIp": "192.168.10.3",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3106",
+      "testId": "P03",
+      "sourceDeviceId": "pc12",
+      "sourceIp": "192.168.10.15",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3107",
+      "testId": "P03",
+      "sourceDeviceId": "pc13",
+      "sourceIp": "192.168.10.5",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3108",
+      "testId": "P03",
+      "sourceDeviceId": "pc14",
+      "sourceIp": "192.168.10.8",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3109",
+      "testId": "P03",
+      "sourceDeviceId": "pc15",
+      "sourceIp": "192.168.10.18",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3110",
+      "testId": "P03",
+      "sourceDeviceId": "pc16",
+      "sourceIp": "192.168.10.20",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3111",
+      "testId": "P03",
+      "sourceDeviceId": "pc17",
+      "sourceIp": "192.168.10.4",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3112",
+      "testId": "P03",
+      "sourceDeviceId": "pc18",
+      "sourceIp": "192.168.10.12",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3113",
+      "testId": "P03",
+      "sourceDeviceId": "pc19",
+      "sourceIp": "192.168.10.16",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3114",
+      "testId": "P03",
+      "sourceDeviceId": "pc20",
+      "sourceIp": "192.168.10.7",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3115",
+      "testId": "P03",
+      "sourceDeviceId": "pc21",
+      "sourceIp": "192.168.10.17",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3116",
+      "testId": "P03",
+      "sourceDeviceId": "pc22",
+      "sourceIp": "192.168.10.14",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3117",
+      "testId": "P03",
+      "sourceDeviceId": "pc23",
+      "sourceIp": "192.168.10.2",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3118",
+      "testId": "P03",
+      "sourceDeviceId": "pc24",
+      "sourceIp": "192.168.10.19",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "STUDENTS-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "STUDENTS-IN | 120 deny ip any any": 80
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\nReply from 192.168.10.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3119",
+      "testId": "P03",
+      "sourceDeviceId": "server0",
+      "sourceIp": "192.168.10.130",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "SERVICES-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "SERVICES-IN | 220 deny ip any any": 4
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    },
+    {
+      "id": "PING3-3120",
+      "testId": "P03",
+      "sourceDeviceId": "server1",
+      "sourceIp": "203.0.113.10",
+      "destinationDeviceId": "r1",
+      "destinationIp": "198.51.100.1",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "WAN-IN",
+      "decisionReason": "WAN-IN denies unsolicited ICMP Echo to the PAT outside address",
+      "counterDelta": {
+        "WAN-IN | 40 deny ip any any": 4
+      },
+      "counterScope": "capture-batch",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-60.json",
+      "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true,
+      "attempts": [
+        "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>"
+      ]
+    }
+  ]
+}

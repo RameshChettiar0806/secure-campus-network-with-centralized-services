@@ -15,6 +15,9 @@ export interface PingRecord {
   counterDelta: Record<string, number>;
   evidenceRef: string;
   counterScope?: 'command' | 'capture-batch';
+  blockingDeviceId?: DeviceId | null;
+  enforcementAcl?: string | null;
+  decisionReason?: string;
 }
 export interface HopNote { concept: string; detail: string }
 export interface PingStep {
@@ -53,90 +56,77 @@ export function physicalPath(network: NetworkSnapshot, start: DeviceId, end: Dev
 }
 
 export function pingRoute(network: NetworkSnapshot, record: PingRecord): DeviceId[] {
-  const source = network.devices.find(d => d.id === record.sourceDeviceId)!;
-  const target = network.devices.find(d => d.id === record.destinationDeviceId)!;
+  const source = network.devices.find(d => d.id === record.sourceDeviceId);
+  const target = network.devices.find(d => d.id === record.destinationDeviceId);
   if (!source || !target) throw new Error('Unknown ping endpoint');
-  const subnet = network.vlans.find(v => v.id === source.vlanId)?.subnet;
   const ipNumber = (address: string) => address.split('.').reduce((n, part) => n * 256 + Number(part), 0);
-  const prefix = subnet ? Number(subnet.split('/')[1]) : 32;
-  const sameSubnet = subnet !== undefined && Math.floor(ipNumber(record.sourceIp) / 2 ** (32 - prefix)) === Math.floor(ipNumber(record.destinationIp) / 2 ** (32 - prefix));
-  if (sameSubnet || (source.vlanId !== undefined && source.vlanId === target.vlanId)) return physicalPath(network, source.id, target.id);
-  const toRouter = physicalPath(network, source.id, 'r1');
-  if (record.expected === 'deny' || target.id === 'r1') return toRouter;
-  return [...toRouter, ...physicalPath(network, 'r1', target.id).slice(1)];
+  const port = source.interfaces.find(p => (p.observedLease?.ipv4 ?? p.ipv4) === record.sourceIp);
+  const prefix = port?.observedLease?.prefixLength ?? port?.prefixLength ?? 32;
+  const local = Math.floor(ipNumber(record.sourceIp) / 2 ** (32 - prefix)) === Math.floor(ipNumber(record.destinationIp) / 2 ** (32 - prefix));
+  if (local) return physicalPath(network, source.id, target.id);
+  if (record.expected === 'deny') return physicalPath(network, source.id, record.blockingDeviceId ?? 'r1');
+  const gateway: DeviceId = source.segment === 'external' ? 'r2' : 'r1';
+  const toRouter = physicalPath(network, source.id, gateway);
+  if (target.id === gateway) return toRouter;
+  return [...toRouter, ...physicalPath(network, gateway, target.id).slice(1)];
 }
 
 export function pingSteps(network: NetworkSnapshot, record: PingRecord): PingStep[] {
   const route = pingRoute(network, record);
-  const label = (id: DeviceId) => network.devices.find(d => d.id === id)!.label;
-  const source = network.devices.find(d => d.id === record.sourceDeviceId)!;
-  const target = network.devices.find(d => d.id === record.destinationDeviceId)!;
-  const sourceVlan = network.vlans.find(v => v.id === source.vlanId)!;
+  const device = (id: DeviceId) => network.devices.find(d => d.id === id)!;
+  const source = device(record.sourceDeviceId), target = device(record.destinationDeviceId);
+  const sourceVlan = network.vlans.find(v => v.id === source.vlanId);
+  const sourcePort = source.interfaces.find(p => (p.observedLease?.ipv4 ?? p.ipv4) === record.sourceIp);
   const targetVlan = target.vlanId ?? target.interfaces.find(p => p.ipv4 === record.destinationIp)?.vlanId;
+  const externalRequest = target.id === 'server1' && source.vlanId !== undefined;
   const routerIndex = route.indexOf('r1');
-  function switchNotes(id: DeviceId, next: DeviceId, vlan: number): HopNote[] {
-    const link = network.links.find(l =>
-      (l.sourceDeviceId === id && l.targetDeviceId === next) ||
-      (l.targetDeviceId === id && l.sourceDeviceId === next)
-    )!;
+  function switchNotes(id: DeviceId, next: DeviceId, vlan: number | undefined): HopNote[] {
+    const link = network.links.find(l => (l.sourceDeviceId === id && l.targetDeviceId === next) || (l.targetDeviceId === id && l.sourceDeviceId === next))!;
     const port = link.sourceDeviceId === id ? link.sourceInterface : link.targetInterface;
-    return [
-      { concept: 'Layer 2 switching', detail: `The destination MAC selects the outgoing port in VLAN ${vlan}.` },
-      { concept: link.mode === 'trunk' ? '802.1Q trunk' : 'Access port', detail: `${port} forwards the frame to ${label(next)}.` },
-    ];
+    return [{ concept: 'Layer 2 switching', detail: `The destination MAC selects the outgoing port${vlan ? ` in VLAN ${vlan}` : ''}.` },
+      { concept: link.mode === 'trunk' ? '802.1Q trunk' : 'Access port', detail: `${port} forwards the frame to ${device(next).label}.` }];
   }
-
   const steps: PingStep[] = [];
   for (const [i, id] of route.entries()) {
     let notes: HopNote[];
-    if (i === 0) {
-      const local = sourceVlan.id === targetVlan;
-      notes = [
-        { concept: 'ICMP Echo Request', detail: `Type 8 from ${record.sourceIp} to ${record.destinationIp}.` },
-        { concept: 'Ethernet destination', detail: local
-            ? `Same subnet. Use the MAC address of ${label(target.id)}.`
-            : `Remote subnet. Use the MAC address of gateway ${sourceVlan.gateway}.` },
-      ];
-    } else if (id === 'r1' && record.expected === 'deny') {
+    if (record.expected === 'deny' && i === route.length - 1) {
+      const acl = record.enforcementAcl ?? (id === 'r1' ? 'source ingress ACL' : null);
       steps.push({ deviceId: id, phase: 'blocked', notes: [
-        { concept: 'Ingress ACL', detail: `R1 drops the echo request to ${record.destinationIp} as it enters from VLAN ${sourceVlan.id}.` },
-        { concept: 'Ping result', detail: `No echo reply. The command received ${record.received} of ${record.sent} replies.` },
+        { concept: acl ? 'Ingress ACL' : 'No route', detail: record.decisionReason ?? `${device(id).label} drops the echo request to ${record.destinationIp}.` },
+        { concept: 'Ping result', detail: `No destination echo reply: ${record.received} of ${record.sent} received.${acl ? ` Enforcement: ${acl}.` : ' R2 has no private campus route; this is not an ACL denial.'}` },
       ] });
       return steps;
-    } else if (i === route.length - 1) {
-      notes = [
-        { concept: 'Local delivery', detail: `${label(id)} accepts the request at its own IP address, ${record.destinationIp}.` },
-        { concept: 'ICMP Echo Reply', detail: `Type 0 from ${record.destinationIp} back to ${record.sourceIp}.` },
-      ];
-    } else if (id === 'r1') {
-      notes = [
-        { concept: 'Ingress ACL', detail: `R1 permits the echo request arriving from VLAN ${sourceVlan.id}.` },
-        { concept: 'Layer 3 routing', detail: `R1 forwards the IP packet in a new Ethernet frame on VLAN ${targetVlan}.` },
-      ];
-    } else {
-      const vlan = routerIndex >= 0 && i > routerIndex ? targetVlan! : sourceVlan.id;
-      notes = switchNotes(id, route[i + 1], vlan);
     }
+    if (i === 0) {
+      const local = source.vlanId !== undefined && source.vlanId === targetVlan;
+      notes = [{ concept: 'ICMP Echo Request', detail: `Type 8 from ${record.sourceIp} to ${record.destinationIp}.` },
+        { concept: 'Ethernet destination', detail: local ? `Same subnet. Resolve ${target.label} by ARP.` : `Use ARP for the next hop; the configured gateway is ${sourcePort?.defaultGateway ?? sourceVlan?.gateway ?? '203.0.113.1'}.` }];
+    } else if (i === route.length - 1) {
+      notes = [{ concept: 'Local delivery', detail: `${device(id).label} accepts ${record.destinationIp} as its own address.` },
+        { concept: 'ICMP Echo Reply', detail: externalRequest ? `Reply to translated address ${network.routing?.patOutsideAddress ?? '198.51.100.1'}, using the translated ICMP identifier.` : `Type 0 from ${record.destinationIp} back to ${record.sourceIp}.` }];
+    } else if (id === 'r1') {
+      notes = externalRequest ? [
+        { concept: 'Ingress ACL', detail: `The VLAN ${source.vlanId} ACL permits ICMP Echo specifically to ${record.destinationIp}.` },
+        { concept: 'OSPF-learned route', detail: '203.0.113.0/24 is reached via R2 at 198.51.100.2 on the routed transit link.' },
+        { concept: 'PAT / NAT overload', detail: `Translate ${record.sourceIp} to ${network.routing?.patOutsideAddress ?? '198.51.100.1'}; an ICMP identifier distinguishes this flow.` },
+      ] : [{ concept: 'Ingress ACL', detail: `R1 permits the request arriving from VLAN ${source.vlanId}.` },
+        { concept: 'Layer 3 routing', detail: `R1 builds a new Ethernet frame for VLAN ${targetVlan}.` }];
+    } else if (id === 'r2') {
+      notes = [{ concept: 'Connected route', detail: source.segment === 'external' ? 'R2 forwards the request over the directly connected transit network toward R1.' : 'R2 forwards the request to the directly connected external server LAN, 203.0.113.0/24.' }];
+    } else notes = switchNotes(id, route[i + 1], routerIndex >= 0 && i > routerIndex ? targetVlan : source.vlanId);
     steps.push({ deviceId: id, phase: 'request', notes });
   }
-
   for (let i = route.length - 2; i >= 0; i--) {
     const id = route[i];
     let notes: HopNote[];
-    if (i === 0) {
-      notes = [
-        { concept: 'ICMP Echo Reply', detail: `${label(id)} receives Type 0 from ${record.destinationIp}.` },
-        { concept: 'Ping result', detail: `The command received ${record.received} of ${record.sent} replies.` },
-      ];
-    } else if (id === 'r1') {
-      notes = [
-        { concept: 'Ingress ACL', detail: `R1 permits the echo reply arriving from VLAN ${targetVlan}.` },
-        { concept: 'Return route', detail: `R1 routes the reply to ${record.sourceIp} on VLAN ${sourceVlan.id}.` },
-      ];
-    } else {
-      const vlan = routerIndex >= 0 && i > routerIndex ? targetVlan! : sourceVlan.id;
-      notes = switchNotes(id, route[i - 1], vlan);
-    }
+    if (i === 0) notes = [{ concept: 'ICMP Echo Reply', detail: `${source.label} receives Type 0 from ${record.destinationIp}.` }, { concept: 'Ping result', detail: `${record.received} of ${record.sent} replies received.` }];
+    else if (id === 'r1') notes = externalRequest ? [
+      { concept: 'WAN-IN', detail: 'The outside ACL permits Echo Reply from the external server to 198.51.100.1.' },
+      { concept: 'Reverse PAT', detail: `The translation table maps the reply and ICMP identifier back to ${record.sourceIp}.` },
+      { concept: 'Return route', detail: `R1 forwards the restored private destination into VLAN ${source.vlanId}.` },
+    ] : [{ concept: 'Ingress ACL', detail: `R1 permits the reply arriving from VLAN ${targetVlan}.` }, { concept: 'Return route', detail: `R1 routes to ${record.sourceIp} on VLAN ${source.vlanId}.` }];
+    else if (id === 'r2') notes = [{ concept: 'Return route', detail: 'R2 routes the reply to 198.51.100.1 over the directly connected transit network. It has no route to private campus clients.' }];
+    else notes = switchNotes(id, route[i - 1], routerIndex >= 0 && i > routerIndex ? targetVlan : source.vlanId);
     steps.push({ deviceId: id, phase: 'reply', notes });
   }
   return steps;

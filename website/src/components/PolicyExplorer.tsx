@@ -1,34 +1,31 @@
 import { useState } from 'react';
 import type { DeviceId, NetworkSnapshot } from '../models/network';
-import { shortName } from '../lib/network';
+import matrix from '../../../data/policy-matrix.v3.json';
 import ui from './Teaching.module.css';
 import styles from '../app/App.module.css';
 
 export type PingPair = { source: DeviceId; target: DeviceId };
-const representatives: Record<number, DeviceId> = {10: 'pc8', 20: 'pc5', 30: 'pc0', 40: 'server0'};
-const localPeers: Record<number, DeviceId> = {10: 'pc9', 20: 'pc6', 30: 'pc1'};
-function decision(from: number, to: number) {
-  if (from === to) return 'Local';
-  if (from === 10 || to === 40) return 'Allow';
-  return 'Block';
-}
 
 export default function PolicyExplorer({ snapshot, openPing, openTest }: { snapshot: NetworkSnapshot; openPing: (pair: PingPair) => void; openTest: (id: string) => void }) {
-  const [pair, setPair] = useState({from: 30, to: 10});
-  const name = (id: number) => shortName(snapshot.vlans.find(v => v.id === id)!.name);
-  const result = decision(pair.from, pair.to);
-  const source = representatives[pair.from];
-  const target = pair.from === pair.to ? localPeers[pair.to] : representatives[pair.to];
-  const label = (id: DeviceId) => snapshot.devices.find(d => d.id === id)!.label;
-  const why = result === 'Local' ? 'Both PCs share a subnet. Their switch forwards the frame within the VLAN, so the request never enters R1’s routed ACL.'
-    : result === 'Allow' ? pair.to === 40 ? 'The client VLAN permits echo requests to the services server. The Services ACL permits the echo reply back to the client.' : 'Administration may initiate diagnostic pings into Faculty and Students. The departmental ACL permits the echo reply back to Administration.'
-    : pair.from === 40 ? 'The Services ACL permits replies to client requests. A new echo request initiated by the server hits its deny rule at R1.' : 'The source department may use shared services, but its ingress ACL at R1 blocks this new request into another department.';
+  const [pair, setPair] = useState({from: 'students', to: 'admin'});
+  const examples = matrix.examples;
+  const current = examples.find(r => r.fromSegment === pair.from && r.toSegment === pair.to)!;
+  const segment = (id: string) => matrix.segments.find(s => s.id === id)!;
+  const label = (id: string) => snapshot.devices.find(d => d.id === id)!.label;
+  const explanation = current.verdict === 'Local' ? 'The two clients share a VLAN. Their switch forwards locally, bypassing the routed ACLs.'
+    : current.verdict === 'No route' ? 'R2 does not have a route to private campus prefixes. The request stops at R2; this result is not an ACL match.'
+    : current.toSegment === 'external' && current.verdict === 'Allow' ? 'The client ingress ACL permits Echo to 203.0.113.10. R1 uses its OSPF-learned route and PAT, so replies can return through the outside address.'
+    : current.reason;
   return <>
-    <p className={ui.intro}>A rule depends on who starts the exchange, where the packet is going and which protocol it uses.</p>
-    <div className={ui.matrixLayout}><div className={ui.panel}><h3>Who can start a ping?</h3><p>Read from the sender’s row to the destination column. Select a cell to see the decision.</p>
-      <div className={ui.scroll}><table className={ui.matrix}><caption>ICMP echo requests between endpoints</caption><thead><tr><th scope="col">Sender ↓ / To →</th>{snapshot.vlans.map(v => <th scope="col" key={v.id}>{shortName(v.name)}</th>)}</tr></thead><tbody>{snapshot.vlans.map(a => <tr key={a.id}><th scope="row">{shortName(a.name)}</th>{snapshot.vlans.map(b => <td key={b.id}>{a.id === 40 && b.id === 40 ? <small>One server</small> : <button aria-label={name(a.id)+' to '+name(b.id)+', '+decision(a.id,b.id)} aria-pressed={pair.from === a.id && pair.to === b.id} data-result={decision(a.id,b.id)} onClick={() => setPair({from:a.id,to:b.id})}>{decision(a.id,b.id)}</button>}</td>)}</tr>)}</tbody></table></div>
-    </div><article className={ui.panel} aria-live="polite"><div className={styles.sectionLabel}>SELECTED EXCHANGE</div><h3>{name(pair.from)} → {name(pair.to)}</h3><strong className={ui.verdict} data-result={result}>{result === 'Local' ? 'Switched locally' : result === 'Allow' ? 'Router permits request' : 'Router blocks request'}</strong><p>{why}</p><button className={styles.outlineButton} onClick={() => openPing({source,target})}>Replay {label(source)} → {label(target)} in Ping lab</button></article></div>
-    <h3>How service access differs</h3><div className={ui.cards}><article><h4>Getting an address and opening the portal</h4><p>DHCP supplies client settings. DNS resolves the portal name and HTTP serves the page. A successful ping establishes ICMP reachability. The DNS and HTTP checks establish that those services work.</p><button onClick={() => openTest('A04')}>DNS checks ↗</button> <button onClick={() => openTest('A05')}>HTTP checks ↗</button></article>
-    <article><h4>Signing in to a network device</h4><p>Only PC8-MGMT can open an SSH management session. Another Administration PC can ping a switch on VLAN 10, yet the switch’s own management rule refuses its SSH connection.</p><button onClick={() => openTest('A08')}>Authorized SSH ↗</button> <button onClick={() => openTest('A09')}>Refused SSH ↗</button></article></div>
+    <p className={ui.intro}>These ICMP decisions come from the current 3,224-command capture. Choose a cell to inspect the reason and replay its measured result. HTTP, SSH and OSPF have separate service rules.</p>
+    <div className={ui.matrixLayout}><div className={ui.panel}><h3>Who can start a ping?</h3><p>Read from the sender’s row to the destination column. External represents SRV-EXTERNAL, not every outside address.</p>
+      <div className={ui.scroll}><table className={ui.matrix}><caption>Measured ICMP Echo between campus and external endpoints</caption><thead><tr><th scope="col">Sender ↓ / To →</th>{matrix.segments.map(s => <th scope="col" key={s.id}>{s.name}</th>)}</tr></thead><tbody>{matrix.segments.map(a => <tr key={a.id}><th scope="row">{a.name}</th>{matrix.segments.map(b => { const row=examples.find(r => r.fromSegment === a.id && r.toSegment === b.id); return <td key={b.id}>{row ? <button aria-label={`${a.name} to ${b.name}, ${row.verdict}`} aria-pressed={pair.from === a.id && pair.to === b.id} data-result={row.verdict === 'No route' ? 'Block' : row.verdict} onClick={() => setPair({from:a.id,to:b.id})}>{row.verdict}</button> : <small>One server</small>}</td>; })}</tr>)}</tbody></table></div>
+    </div><article className={ui.panel} aria-live="polite"><div className={styles.sectionLabel}>SELECTED MEASURED EXCHANGE</div><h3>{segment(pair.from).name} → {segment(pair.to).name}</h3><strong className={ui.verdict} data-result={current.verdict === 'No route' ? 'Block' : current.verdict}>{current.verdict === 'Local' ? 'Switched locally' : current.verdict === 'Allow' ? 'Request permitted' : current.verdict === 'No route' ? 'R2 has no private route' : 'R1 ACL blocks request'}</strong><p>{explanation}</p><p><code>{current.recordId}</code> · <code>ping {current.destinationIp}</code></p><button className={styles.outlineButton} onClick={() => openPing({source:current.source as DeviceId,target:current.target as DeviceId})}>Replay {label(current.source)} → {label(current.target)} in Ping lab</button></article></div>
+    <h3>Service access and WAN boundaries</h3><div className={ui.cards}>
+      <article><h4>Campus DHCP, DNS and HTTP</h4><p>The campus server continues to supply addresses, resolve names and serve the internal portal. A ping alone does not prove that these application services work.</p><button onClick={() => openTest('A04')}>DNS checks ↗</button> <button onClick={() => openTest('A05')}>Campus HTTP ↗</button></article>
+      <article><h4>External HTTP through PAT</h4><p>All three client VLANs may reach 203.0.113.10 on TCP 80 and with ICMP Echo. Other outside destinations and unlisted ports remain blocked. NAT-CLIENTS selects translations; the extended ACLs enforce access.</p><button onClick={() => openTest('E03')}>External HTTP ↗</button> <button onClick={() => openTest('E04')}>PAT evidence ↗</button></article>
+      <article><h4>Unsolicited outside traffic</h4><p>WAN-IN allows OSPF from R2 and selected replies from the external server. A new Echo Request to R1’s outside address is denied. Private campus destinations fail earlier at R2 because it has no route.</p><button onClick={() => openPing({source:'server1',target:'r1'})}>Replay WAN denial ↗</button> <button onClick={() => openTest('E05')}>WAN policy checks ↗</button></article>
+      <article><h4>OSPF and management</h4><p>OSPF protocol 89 is permitted on the transit link. The outside server LAN is passive. PC8-MGMT remains the only authorized SSH source for the five campus IOS devices.</p><button onClick={() => openTest('E01')}>OSPF adjacency ↗</button> <button onClick={() => openTest('A08')}>Authorized SSH ↗</button></article>
+    </div>
   </>;
 }

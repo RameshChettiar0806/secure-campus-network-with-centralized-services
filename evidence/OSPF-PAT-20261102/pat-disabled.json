@@ -1,0 +1,17 @@
+{
+  "PC0": {
+    "command": "ping 203.0.113.10",
+    "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nRequest timed out.\nRequest timed out.\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "ping 203.0.113.10",
+    "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nRequest timed out.\nRequest timed out.\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "command": "ping 203.0.113.10",
+    "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nRequest timed out.\nRequest timed out.\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+    "passed": true
+  }
+}

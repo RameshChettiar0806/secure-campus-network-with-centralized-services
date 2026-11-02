@@ -1,0 +1,6 @@
+{
+  "PC19": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>"
+  }
+}

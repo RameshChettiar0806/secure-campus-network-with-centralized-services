@@ -1,0 +1,269 @@
+{
+  "runId": "WEBSITE-V3-20261102",
+  "capturedAt": "2026-11-02T12:32:59+05:30",
+  "submissionFile": "Secure_Campus_Network_Submission.pkt",
+  "submissionSha256": "b3b7892fe2d2e80330a2c6b80df6b2cfaf1032d33b3b4ab78f88ca2883b28406",
+  "verifiedAfterReopen": true,
+  "inventory": {
+    "all55OriginalLinksRetained": true,
+    "addedLinks": 2,
+    "networkDevices": 58,
+    "links": 57,
+    "positionsMatchOctoberCapture": false
+  },
+  "checks": [
+    {
+      "label": "All 50 PCs have valid VLAN addressing and campus DNS settings",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "All 50 clients can ping their own gateway",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "All 50 clients can ping the campus services server",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "All 50 clients resolve portal.campus.test",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "All 50 clients load the campus portal by hostname",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "Administration diagnostics and local switching remain permitted",
+      "result": "4/4 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "Departmental and server-initiated prohibited pings are blocked",
+      "result": "5/5 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "PC8-MGMT authenticates by SSH to all five campus IOS devices",
+      "result": "5/5 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "An unauthorized Administration PC cannot SSH to switch management",
+      "result": "1/1 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "Student and Faculty sources cannot SSH to R1",
+      "result": "2/2 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "OSPF adjacency is FULL and the external server subnet is learned",
+      "result": "1/1 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "All 50 clients reach the external server with ICMP",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "All 50 clients load external.campus.test over HTTP",
+      "result": "50/50 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "PAT shares 198.51.100.1 across all 50 inside client addresses",
+      "result": "1/1 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "Another external host and unsolicited WAN Echo remain blocked",
+      "result": "2/2 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "DHCP renewal and saved OSPF/PAT settings remain valid",
+      "result": "1/1 current-network checks matched the expected outcome."
+    },
+    {
+      "label": "Complete current-network ICMP matrix: 52 sources \u00d7 62 destinations",
+      "result": "52/52 current-network checks matched the expected outcome."
+    }
+  ],
+  "evidence": [
+    {
+      "path": "configs/R1-CAMPUS-CURRENT.txt",
+      "sha256": "8796f843b7e7a0c4e4bc41e07943c67a7b2dfd54163a7ea6b972e9900f2989e0"
+    },
+    {
+      "path": "configs/R2-EXTERNAL-CURRENT.txt",
+      "sha256": "9977042674fc2c2624421680e1badb5516d77a75356096040ab69259dba45e95"
+    },
+    {
+      "path": "configs/SW1-CORE-CURRENT.txt",
+      "sha256": "e6473f7a2d537ba4009eadf94aed0dbd7b0acd1c5afa101401dc1e78c1988660"
+    },
+    {
+      "path": "configs/SW2-ACCESS-CURRENT.txt",
+      "sha256": "50db1cbe89dde24b5a4325ee98ef1aa22e134ba5c6cfacea4f68ecae09cfdcd2"
+    },
+    {
+      "path": "configs/SW3-FACULTY-CURRENT.txt",
+      "sha256": "272ad917a95e492c9ce4e92fad27af40a021297a54154edc2d020e01698c0491"
+    },
+    {
+      "path": "configs/SW4-STUDENTS-CURRENT.txt",
+      "sha256": "71cb7aa5ca139e6f91b778309b8b71f6ee0bde17d7ad778a4c9dd4a94069aaf1"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-campus-ping.json",
+      "sha256": "333bdf26c97054b264d2c784698d57449044de3657ff38e97352ac80877f133b"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-deny-0.json",
+      "sha256": "4fbd51a40e1f5e21e0c236ae1a9d6b38224c52fe46b0ebdb21a059b62498631a"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-deny-1.json",
+      "sha256": "d9650fd30df9bd89a44640474fce98a164e24ba41623b80b92d07b46d1286cef"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-deny-2.json",
+      "sha256": "dd22aee433014c97f44ce75156d2e9511963deee1bed9eba667c7a458d5ff11c"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-deny-3.json",
+      "sha256": "44ca648a23590e4df958f3d906c80c72f903806630288d2d6f17e68c0e73fe7a"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-deny-4.json",
+      "sha256": "c6422c27a8c763159b3c6aba7d0636f592a31d331ca65ab15dccf90f77c7395b"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-dns.json",
+      "sha256": "5bd6598b24c9d9575a27cb12f38b8bb74f9d75b0dcf5d45621a878a955e5acd7"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-gateway.json",
+      "sha256": "b322e61967fff8db19ffe2b6281527b402b68d8a0d1ad295fbac4e1303a3919b"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-leases.json",
+      "sha256": "a3138376ef7116f888114ca5c936bd132d622e9500721244975ff672c0c30ebe"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/current-policy-allow.json",
+      "sha256": "51056ff8f1e1025b971fcdd59aca97a0e0cebd471b09c9b39ed8c580e6104df7"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/external-http.json",
+      "sha256": "6f5445647bf170481ace628a7234fe03e931d158fd236ecc8e9fcc27f537bd17"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/external-other-host-denied.json",
+      "sha256": "0be2a5d744734ab527ec965d64ae3e279be77509c537cc1e8839c6d91457c312"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/external-pings.json",
+      "sha256": "165ac90511c3479f3d5c8e68ef3a61387d4b574d224fd638cd97ebeb694c77c1"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/external-router-routes.json",
+      "sha256": "f95cc42093c178e649ba66fa1125a1f8316257f8353243b733b207a789fd8240"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/http-all.json",
+      "sha256": "3cad5c5c2caf7239a81f9e351e59b1d707633131f7d38fcedfc93de6c6983d11"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/inventory.json",
+      "sha256": "8812d42c854a5ce8b0478092e9d0d477b032a3adf7ece10961114b9a36a1534f"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/leases.json",
+      "sha256": "a3138376ef7116f888114ca5c936bd132d622e9500721244975ff672c0c30ebe"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/ospf-full.json",
+      "sha256": "1cc4427efaac7b2d87312cccb1bae0fa862fa900c58bbc5f703c42ed41654c8b"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/pat-translations.json",
+      "sha256": "c5bb9af6e2f8940e9d994deecfac54594a6895d08546f618a0f3c23b55260f29"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/persistence-summary.json",
+      "sha256": "73728c2da7bf538dbb9a973741bff21c88c168b10e36791b306a671920d76aa6"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/ping-run.json",
+      "sha256": "4fe9467582921a8eaf7e93e7ed80e03d7a5355f432988dc7e9acd91ec4734dac"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-dhcp-renewal.json",
+      "sha256": "6824773f2e392423f0f25a94885094087a4fbd831d1daf98b978aa7e097e3b2b"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-ssh-R1-CAMPUS.json",
+      "sha256": "fd5a5ffbc481332132c8421d0562e4b4eb6adb9cbd6804bad45faf46702d6a34"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-ssh-SW1-CORE.json",
+      "sha256": "d89f34d5c1ddc37a074b8dcab562f802e6fc0ea46ba6736e02e633662e1444c2"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-ssh-SW2-ACCESS.json",
+      "sha256": "81e5ea861f7fb1534a31ec8f9d9a7154de6aff3a6e902bcf38121c3463be4c49"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-ssh-SW3-FACULTY.json",
+      "sha256": "fdbc9160aea4e95d7e653bf1e9a676a85b0eaf4cd7ce9a74a9d55cf9de761fb9"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-ssh-SW4-STUDENTS.json",
+      "sha256": "24cd63d64ebd31b379bde88f9da6b29d34e0c57fa289870fb5773c97ce7872c2"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/reopened-ssh-denied.json",
+      "sha256": "9624b122f66521a50dd6af4f8010170f32bb456becf7cd990eb32f181b659e0c"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/routing.json",
+      "sha256": "13df9eb46848a1aa460f38af9af38e0ddfa1f579fb415d65805a890b341a14f5"
+    },
+    {
+      "path": "evidence/WEBSITE-V3-20261102/unsolicited-wan-denied.json",
+      "sha256": "4135f817e21123e79b6652515ee96f48fa21a4e0d09e19c8607c8fa5a840dc22"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/failure-check-summary.json",
+      "sha256": "ceca373bd230825cc36b27009989065b8f00fcaacebaaaccbe441d45bce9af97"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-disabled.json",
+      "sha256": "c42e573a2d42ebf7d9ecdbcee48193d3e566c0e6ff328613d559dd13074418a1"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-disabled-state.json",
+      "sha256": "3b1e0f6bd6df8243809616dc7f4fac47f4e89c64371d564448078751efec6ba0"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-restored.json",
+      "sha256": "586ee0c98c82066b9af7d26a995326c484fc788cedf818b10b2d4ecb50866704"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-disabled.json",
+      "sha256": "9f83516765d62f73f6075118765409aa2d4a40ca89c0d09ff436fd6e39fb414a"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-disabled-state.json",
+      "sha256": "f63bb9cff9253579a9a3b6808c2e684ab8850e5bc1f876697f4a03d5af0ab77b"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/campus-during-ospf-outage.json",
+      "sha256": "40b90de790237288f4ad192c09204109f38827f53083438e312635c67c2e597f"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-restored.json",
+      "sha256": "88b4b5a6bb1e5913b643d1d452bbef8b45536309103d7d2d3fbb67de4a9662c7"
+    }
+  ],
+  "observations": {
+    "ospf": "\n\nNeighbor ID     Pri   State           Dead Time   Address         Interface\n2.2.2.2           1   FULL/DR         00:00:33    198.51.100.2    GigabitEthernet0/1\n\n\nO    203.0.113.0/24 [110/2] via 198.51.100.2, 00:34:43, GigabitEthernet0/1",
+    "http": "http://external.campus.test\nDNS server: 192.168.10.130\nResolved external server: 203.0.113.10\n50/50 clients received the external HTTP page after reopening.",
+    "pat": "Pro  Inside global     Inside local       Outside local      Outside global\nicmp 198.51.100.1:1042 192.168.10.2:269   203.0.113.10:269   203.0.113.10:1042\nicmp 198.51.100.1:1059 192.168.10.66:269  203.0.113.10:269   203.0.113.10:1059\nicmp 198.51.100.1:277  192.168.10.98:277  203.0.113.10:277   203.0.113.10:277\n\n50 distinct inside-local addresses observed sharing 198.51.100.1.",
+    "policy": "Student \u2192 Administration: denied\nFaculty \u2192 Students: denied\nAll client VLANs \u2192 203.0.113.10 TCP/80 and ICMP Echo: permitted\nStudent \u2192 203.0.113.1: denied\nExternal server \u2192 198.51.100.1 unsolicited ICMP Echo: denied",
+    "recovery": "PAT disabled: three departmental clients received 0/4 replies.\nPAT restored: all three clients succeeded.\nOSPF made passive on transit: external route withdrawn and external ping failed.\nCampus server ping during OSPF outage: succeeded.\nOSPF restored: FULL adjacency, learned route and external access returned."
+  }
+}

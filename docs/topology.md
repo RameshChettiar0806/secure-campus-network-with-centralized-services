@@ -1,5 +1,7 @@
 # Topology and packet forwarding
 
+This diagram shows the retained campus. The current [OSPF/PAT extension](ospf-pat-extension.md) adds R2-EXTERNAL and SRV-EXTERNAL through R1 Gi0/1, for 58 network devices and 57 links overall.
+
 ```text
                      R1-CAMPUS (Cisco 1941)
                            |

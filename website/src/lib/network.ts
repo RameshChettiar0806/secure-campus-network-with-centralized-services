@@ -10,16 +10,16 @@ export function deviceVlans(device: NetworkDevice): number[] {
 }
 
 export function isDeviceHighlighted(device: NetworkDevice, vlan: number | null) {
-  return vlan === null || deviceVlans(device).includes(vlan);
+  return vlan === null || deviceVlans(device).includes(vlan) || (device.segment === 'external' && [10,20,30].includes(vlan));
 }
 
 export function isLinkHighlighted(link: PhysicalLink, vlan: number | null) {
-  return vlan === null || link.vlanIds.includes(vlan);
+  return vlan === null || link.vlanIds.includes(vlan) || (link.mode === 'routed' && [10,20,30].includes(vlan));
 }
 
 export function primaryAddress(device: NetworkDevice) {
   const port = device.interfaces.find(p => p.observedLease || p.ipv4);
-  return port?.observedLease?.ipv4 ?? port?.ipv4 ?? '802.1Q gateways';
+  return port?.observedLease?.ipv4 ?? port?.ipv4 ?? 'No IP address';
 }
 
 export function readPreference<T>(key: string, fallback: T, validate: (v: unknown) => v is T): T {
@@ -85,6 +85,15 @@ export function validateNetwork(snapshot: NetworkSnapshot): string[] {
       for (const [id, name] of [[link.sourceDeviceId, link.sourceInterface], [link.targetDeviceId, link.targetInterface]]) {
         const port = snapshot.devices.find(d => d.id === id)?.interfaces.find(p => p.name === name);
         if (port?.trunkVlans && link.vlanIds.some(v => !port.trunkVlans!.includes(v))) errors.push(`Trunk endpoint VLAN mismatch ${link.id}`);
+      }
+    }
+    if (link.mode === 'routed') {
+      if (link.vlanIds.length) errors.push(`Routed link carries VLAN tags ${link.id}`);
+      const ports = [[link.sourceDeviceId,link.sourceInterface],[link.targetDeviceId,link.targetInterface]].map(([id,name]) => snapshot.devices.find(d => d.id === id)?.interfaces.find(p => p.name === name));
+      if (ports.some(p => !p?.ipv4 || !p.prefixLength)) errors.push(`Unaddressed routed endpoint ${link.id}`);
+      else {
+        const block = 2 ** (32 - ports[0]!.prefixLength!);
+        if (ports[0]!.prefixLength !== ports[1]!.prefixLength || Math.floor(ip(ports[0]!.ipv4!) / block) !== Math.floor(ip(ports[1]!.ipv4!) / block)) errors.push(`Routed endpoint network mismatch ${link.id}`);
       }
     }
   }

@@ -1,0 +1,27 @@
+[
+  {
+    "command": "enable",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "configure terminal",
+    "output": "Enter configuration commands, one per line.  End with CNTL/Z.\n",
+    "status": 0
+  },
+  {
+    "command": "router ospf 1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "no passive-interface gigabitEthernet0/1",
+    "output": "",
+    "status": 0
+  },
+  {
+    "command": "end",
+    "output": "",
+    "status": 0
+  }
+]

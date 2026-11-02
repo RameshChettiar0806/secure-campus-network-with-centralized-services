@@ -1,0 +1,28 @@
+{
+  "runId": "WEBSITE-V3-20261102",
+  "submissionSha256": "b3b7892fe2d2e80330a2c6b80df6b2cfaf1032d33b3b4ab78f88ca2883b28406",
+  "observedAt": "2026-11-02T12:29:12+05:30",
+  "records": [
+    {
+      "id": "PING3-311",
+      "testId": "P03",
+      "sourceDeviceId": "server0",
+      "sourceIp": "192.168.10.130",
+      "destinationDeviceId": "pc42",
+      "destinationIp": "192.168.10.103",
+      "expected": "deny",
+      "blockingDeviceId": "r1",
+      "enforcementAcl": "SERVICES-IN",
+      "decisionReason": "Source VLAN ingress ACL denies this newly initiated request",
+      "counterDelta": {
+        "SERVICES-IN | 220 deny ip any any": 4
+      },
+      "counterScope": "command",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/retry-PING3-311.json",
+      "output": "ping 192.168.10.103\n\nPinging 192.168.10.103 with 32 bytes of data:\n\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\nReply from 192.168.10.129: Destination host unreachable.\n\nPing statistics for 192.168.10.103:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+      "sent": 4,
+      "received": 0,
+      "passed": true
+    }
+  ]
+}

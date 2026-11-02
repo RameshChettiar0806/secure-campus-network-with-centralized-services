@@ -1,0 +1,211 @@
+Building configuration...
+
+Current configuration : 6345 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+[REDACTED LAB CREDENTIAL]
+!
+hostname R1-CAMPUS
+!
+!
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+!
+!
+!
+no ip cef
+no ipv6 cef
+!
+!
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+license udi pid CISCO1941/K9 sn FTX1524UJSK-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name campus.test
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description TRUNK_TO_SW1_Gi0_1
+ no ip address
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/0.10
+ description VLAN10_ADMINISTRATION
+ encapsulation dot1Q 10
+ ip address 192.168.10.97 255.255.255.224
+ ip helper-address 192.168.10.130
+ ip nat inside
+ ip access-group ADMIN-IN in
+!
+interface GigabitEthernet0/0.20
+ description VLAN20_FACULTY
+ encapsulation dot1Q 20
+ ip address 192.168.10.65 255.255.255.224
+ ip helper-address 192.168.10.130
+ ip nat inside
+ ip access-group FACULTY-IN in
+!
+interface GigabitEthernet0/0.30
+ description VLAN30_STUDENTS
+ encapsulation dot1Q 30
+ ip address 192.168.10.1 255.255.255.192
+ ip helper-address 192.168.10.130
+ ip nat inside
+ ip access-group STUDENTS-IN in
+!
+interface GigabitEthernet0/0.40
+ description VLAN40_SERVICES
+ encapsulation dot1Q 40
+ ip address 192.168.10.129 255.255.255.240
+ ip access-group SERVICES-IN in
+!
+interface GigabitEthernet0/1
+ description OSPF_PAT_TRANSIT_TO_R2_EXTERNAL
+ ip address 198.51.100.1 255.255.255.252
+ ip nat outside
+ ip access-group WAN-IN in
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ router-id 1.1.1.1
+ log-adjacency-changes
+ passive-interface default
+ no passive-interface GigabitEthernet0/1
+ network 198.51.100.0 0.0.0.3 area 0
+!
+ip nat inside source list NAT-CLIENTS interface GigabitEthernet0/1 overload
+ip classless
+!
+ip flow-export version 9
+!
+!
+access-list 1 permit host 192.168.10.98
+access-list 1 deny any
+ip access-list extended ADMIN-IN
+ permit udp any eq bootpc host 255.255.255.255 eq bootps
+ permit udp any eq bootpc host 192.168.10.127 eq bootps
+ permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps
+ permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo
+ permit tcp host 192.168.10.98 host 192.168.10.97 eq 22
+ permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www
+ permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo
+ permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo
+ permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo
+ permit tcp 192.168.10.96 0.0.0.31 host 203.0.113.10 eq www
+ permit icmp 192.168.10.96 0.0.0.31 host 203.0.113.10 echo
+ deny ip any any
+ip access-list extended FACULTY-IN
+ permit udp any eq bootpc host 255.255.255.255 eq bootps
+ permit udp any eq bootpc host 192.168.10.95 eq bootps
+ permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps
+ permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo
+ permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www
+ permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo
+ permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply
+ permit tcp 192.168.10.64 0.0.0.31 host 203.0.113.10 eq www
+ permit icmp 192.168.10.64 0.0.0.31 host 203.0.113.10 echo
+ deny ip any any
+ip access-list extended STUDENTS-IN
+ permit udp any eq bootpc host 255.255.255.255 eq bootps
+ permit udp any eq bootpc host 192.168.10.63 eq bootps
+ permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps
+ permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo
+ permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www
+ permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo
+ permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply
+ permit tcp 192.168.10.0 0.0.0.63 host 203.0.113.10 eq www
+ permit icmp 192.168.10.0 0.0.0.63 host 203.0.113.10 echo
+ deny ip any any
+ip access-list extended SERVICES-IN
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps
+ permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc
+ permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31
+ permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established
+ permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established
+ permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps
+ permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc
+ permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31
+ permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established
+ permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established
+ permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps
+ permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc
+ permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63
+ permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established
+ permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established
+ permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply
+ permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc
+ permit icmp host 192.168.10.130 host 192.168.10.129 echo
+ permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply
+ deny ip any any
+ip access-list standard NAT-CLIENTS
+ permit 192.168.10.0 0.0.0.63
+ permit 192.168.10.64 0.0.0.31
+ permit 192.168.10.96 0.0.0.31
+ip access-list extended WAN-IN
+ permit ospf host 198.51.100.2 any
+ permit tcp host 203.0.113.10 eq www host 198.51.100.1 established
+ permit icmp host 203.0.113.10 host 198.51.100.1 echo-reply
+ deny ip any any
+!
+!
+!
+!
+!
+line con 0
+ login local
+!
+line aux 0
+!
+line vty 0 4
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+!
+end
+
+

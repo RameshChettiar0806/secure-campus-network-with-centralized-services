@@ -1,5 +1,7 @@
 # Expanded campus acceptance
 
+Historical campus baseline. The current submission has the additional branch described in [OSPF/PAT acceptance](OSPF_PAT_ACCEPTANCE.md); the results and hash below belong to the October 31 capture.
+
 Verified: 2026-10-31T21:50:13+05:30 (IST). Existing file edited in place: **Secure_Campus_Network_Submission.pkt**.
 
 The file was saved, closed, and reopened in Cisco Packet Tracer 9.0.1. All checks below ran against the reopened file. Its SHA-256 remained unchanged during the final acceptance run: `E8A0AA8E0B7411073D4B29CAE6A284C439A97F088AEBECB9D42D3546D26D9905`.

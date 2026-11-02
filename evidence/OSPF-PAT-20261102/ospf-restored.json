@@ -1,0 +1,17 @@
+{
+  "PC0": {
+    "command": "ping 203.0.113.10",
+    "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=7ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 7ms, Average = 2ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "ping 203.0.113.10",
+    "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "command": "ping 203.0.113.10",
+    "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+    "passed": true
+  }
+}

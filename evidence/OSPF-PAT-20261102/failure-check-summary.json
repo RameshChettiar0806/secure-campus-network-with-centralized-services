@@ -1,0 +1,9 @@
+{
+  "patDisabledFails": true,
+  "patRestoredWorks": true,
+  "ospfDisabledRemovesRoute": true,
+  "ospfDisabledFails": true,
+  "internalServiceDuringOutageWorks": true,
+  "ospfRestoredWorks": true,
+  "allPassed": true
+}

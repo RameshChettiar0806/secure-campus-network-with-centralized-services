@@ -1,11 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
-import raw from '../../../data/network-snapshot.v2.json';
+import raw from '../../../data/network-snapshot.v3.json';
 import { assertSnapshot, type NetworkSnapshot } from '../models/network';
 import { deviceVlans, isDeviceHighlighted, isLinkHighlighted, readPreference, validateNetwork, writePreference } from './network';
 
 function snapshot(): NetworkSnapshot { const value = structuredClone(raw); assertSnapshot(value); return value; }
 describe('verified snapshot invariants', () => {
-  it('accepts the expanded 56-device, 55-link inventory', () => { expect(snapshot().devices).toHaveLength(56); expect(snapshot().links).toHaveLength(55); expect(validateNetwork(snapshot())).toEqual([]); });
+  it('accepts the current 58-device, 57-link inventory', () => { expect(snapshot().devices).toHaveLength(58); expect(snapshot().links).toHaveLength(57); expect(validateNetwork(snapshot())).toEqual([]); });
   it('rejects duplicate device IDs at the runtime boundary', () => { const s = snapshot(); s.devices[1].id = s.devices[0].id; expect(() => assertSnapshot(s)).toThrow('inventory'); });
   it('rejects a missing link endpoint', () => { const s = snapshot(); s.links[0].sourceInterface = 'MissingPort'; expect(() => assertSnapshot(s)).toThrow('endpoint'); expect(validateNetwork(s)).toContain(`Broken endpoint ${s.links[0].id}`); });
   it('rejects a passing test with a failed case', () => { const s = snapshot(); s.recordedTests[0].cases[0].passed = false; expect(() => assertSnapshot(s)).toThrow('unverified'); });

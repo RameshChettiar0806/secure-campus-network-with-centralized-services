@@ -1,11 +1,11 @@
 {
   "schemaVersion": 2,
-  "runId": "PING-20261031",
-  "submissionSha256": "e8a0aa8e0b7411073d4b29cae6a284c439a97f088aebecb9d42d3546d26d9905",
-  "capturedAt": "2026-10-31T22:17:35+05:30",
-  "cases": 2958,
-  "passed": 2958,
-  "perSource": 58,
+  "runId": "WEBSITE-V3-20261102",
+  "submissionSha256": "b3b7892fe2d2e80330a2c6b80df6b2cfaf1032d33b3b4ab78f88ca2883b28406",
+  "capturedAt": "2026-11-02T12:29:12+05:30",
+  "cases": 3224,
+  "passed": 3224,
+  "perSource": 62,
   "sources": {
     "pc8": "data/pings/pc8.json",
     "pc9": "data/pings/pc9.json",
@@ -57,6 +57,7 @@
     "pc22": "data/pings/pc22.json",
     "pc23": "data/pings/pc23.json",
     "pc24": "data/pings/pc24.json",
-    "server0": "data/pings/server0.json"
+    "server0": "data/pings/server0.json",
+    "server1": "data/pings/server1.json"
   }
 }

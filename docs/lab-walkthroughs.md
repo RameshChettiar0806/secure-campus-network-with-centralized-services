@@ -5,9 +5,10 @@
 | Section | What to demonstrate |
 | --- | --- |
 | Introduction | Explain the campus need and objective, walk through a Student opening the portal, then introduce each networking technology and why it is used. |
-| Topology | Filter to Students, find PC0, inspect its port, then select its uplink. Use **Fit all** for the 56-device overview. |
+| Topology | Filter to Students, find PC0, inspect its port, then select its uplink. Use **Fit all 58** for the complete campus and external branch. |
 | Topology guide | Select a VLAN to explain a client, its access switch, subnet and gateway. **Locate** opens that device in the topology. |
 | Addressing table | Search a label or IP address. Compare a DHCP lease with PC8-MGMT’s reserved static address and the switches’ management interfaces. |
+| OSPF & PAT | Follow the added external branch, inspect the learned route and shared translated address, then review failure/recovery and preserved-policy evidence. |
 | Ping lab | Choose **Server access** and run the recorded ping. The console shows command output and loss. **Follow the packet** shows each switch, router decision and reply. Pause or step through repeated visits to SW1. |
 | Access policy | Read the ICMP matrix from the sender’s row to the destination column. Select Students → Administration, replay it, then reverse the direction. Open the detailed rules for service-specific enforcement and test links. |
 | Lab results | Select a check group, inspect an individual case, and open its evidence. Compare DNS resolution (A04) with an actual HTTP response (A05). |
@@ -26,7 +27,7 @@ Open these sheets from **Lab results → Printable lab walkthroughs** in the web
 
 ## Course exercises
 
-The [course lab manual](<../../Lab/CN Lab Manual (2025-26).pdf>) covers the following experiments. The campus reuses the LAN, IP and secure-management concepts. The WAN, NAT and dynamic-routing exercises use their own topologies.
+The [course lab manual](<../../Lab/CN Lab Manual (2025-26).pdf>) covers the following experiments. The campus reuses the LAN, IP and secure-management concepts. The current campus extension incorporates single-area OSPF and PAT using the two-device branch described in the [extension walkthrough](ospf-pat-extension.md). The other course exercises retain their separate topologies.
 
 | Manual exercise | Technical focus and verification |
 | --- | --- |

@@ -1,5 +1,7 @@
 # Addressing table
 
+The campus assignments below are retained. The [external extension](ospf-pat-extension.md) adds 198.51.100.0/30 for the OSPF/PAT transit and 203.0.113.0/24 for the test server.
+
 The campus uses variable-length subnet masks (VLSM) within `192.168.10.0/24`. Each VLAN has a gateway on R1. The 49 dynamic clients use departmental pools. PC8-MGMT and the services server have static addresses.
 
 ## VLAN plan

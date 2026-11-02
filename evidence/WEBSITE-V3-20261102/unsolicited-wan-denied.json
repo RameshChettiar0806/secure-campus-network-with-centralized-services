@@ -1,0 +1,11 @@
+{
+  "output": "ping 198.51.100.1\n\nPinging 198.51.100.1 with 32 bytes of data:\n\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\nReply from 198.51.100.1: Destination host unreachable.\n\nPing statistics for 198.51.100.1:\n    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),\n\nC:\\>",
+  "counterDelta": {
+    "ADMIN-IN | 120 permit tcp 192.168.10.96 0.0.0.31 host 203.0.113.10 eq www": 1,
+    "FACULTY-IN | 100 permit tcp 192.168.10.64 0.0.0.31 host 203.0.113.10 eq www": 4,
+    "STUDENTS-IN | 100 permit tcp 192.168.10.0 0.0.0.63 host 203.0.113.10 eq www": 8,
+    "WAN-IN | 20 permit tcp host 203.0.113.10 eq www host 198.51.100.1 established": 12,
+    "WAN-IN | 40 deny ip any any": 4
+  },
+  "passed": true
+}

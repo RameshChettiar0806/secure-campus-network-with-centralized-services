@@ -1,0 +1,17 @@
+{
+  "ospfFull": true,
+  "externalRouteLearned": true,
+  "externalRouterHasNoPrivateRoute": true,
+  "externalPing": {
+    "passed": 50,
+    "total": 50
+  },
+  "externalHttp": {
+    "passed": 50,
+    "total": 50
+  },
+  "patMultipleInsideAddresses": 50,
+  "otherExternalHostDenied": true,
+  "unsolicitedWanDenied": true,
+  "allPassed": true
+}

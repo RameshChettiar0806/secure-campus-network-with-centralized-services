@@ -1,5 +1,7 @@
 # Access policy
 
+The [OSPF/PAT extension](ospf-pat-extension.md) retains these campus rules and adds only client TCP/80 and ICMP Echo access to 203.0.113.10. The WAN ingress ACL permits OSPF and selected replies and denies other traffic.
+
 | Initiator and destination | Decision and reason |
 | --- | --- |
 | Two endpoints in the same client VLAN | Local switching. Traffic stays within the broadcast domain and bypasses R1’s routed ACLs. |

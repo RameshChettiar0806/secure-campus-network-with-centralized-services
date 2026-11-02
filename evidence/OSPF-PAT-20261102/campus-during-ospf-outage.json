@@ -1,0 +1,7 @@
+{
+  "PC0": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+    "passed": true
+  }
+}

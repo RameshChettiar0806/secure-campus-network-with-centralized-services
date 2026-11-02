@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import type { NetworkSnapshot, TestStatus } from '../models/network';
 import { dateTime } from '../lib/network';
+import pingIndex from '../data/ping-index.json';
 import EvidenceAsset from '../components/EvidenceAsset';
 import topologyLab from '../../../output/pdf/01-topology-and-addressing.pdf?no-inline';
 import servicesLab from '../../../output/pdf/02-centralized-services.pdf?no-inline';
@@ -18,11 +19,12 @@ export default function LabResults({ snapshot, selectedTest, selectTest }: { sna
   const [asset, setAsset] = useState<string | null>(null);
   const [page, setPage] = useState(0);
   const [showAllEvidence, setShowAllEvidence] = useState(false);
+  const acceptanceCount = snapshot.recordedTests.filter(t => t.id !== 'P03').reduce((n,t) => n+t.cases.length,0);
   
   const visible = snapshot.recordedTests.filter(t => status === 'all' || t.status === status);
   const test = visible.find(t => t.id === selectedTest) ?? visible[0];
   useEffect(() => { setPage(0); setAsset(null); setShowAllEvidence(false); }, [test?.id]);
-  return <section className={styles.dataView}><div className={styles.viewIntro}><div className={styles.sectionLabel}>LAB VERIFICATION</div><h2>Recorded lab results</h2><p>272 acceptance checks and a complete 2,958-pair ICMP matrix from the expanded Packet Tracer network.</p></div>
+  return <section className={styles.dataView}><div className={styles.viewIntro}><div className={styles.sectionLabel}>CURRENT NETWORK VERIFICATION</div><h2>Recorded lab results</h2><p>{acceptanceCount} service, addressing, routing and policy checks, plus {pingIndex.cases.toLocaleString('en-IN')} measured ping cases across all 58 devices. Captured {dateTime(snapshot.capturedAt)} IST.</p></div>
     <section className={styles.walkthroughs} aria-labelledby="walkthrough-title">
       <h3 id="walkthrough-title">Printable lab walkthroughs</h3>
       <ul>{walkthroughs.map(({ title, url }) => (

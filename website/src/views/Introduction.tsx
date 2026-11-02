@@ -7,10 +7,12 @@ const technologies = [
   ['IPv4 and VLSM', 'Each VLAN has its own subnet and gateway. Different subnet sizes, /26, /27 and /28, provide address capacity for each group without giving every segment the same allocation.'],
   ['Router-on-a-stick', 'R1 uses a logical subinterface for each VLAN over one trunk. This lets PCs reach services in another subnet and gives routed traffic a place to be filtered.'],
   ['DHCP and DHCP relay', 'DHCP automatically supplies an IP address, subnet mask, gateway and DNS server. R1 relays client requests to the central server, which serves three departmental pools.'],
-  ['DNS', 'The lab DNS server resolves portal.campus.test to the services server’s IP address, so users can open the portal by a readable name.'],
-  ['HTTP', 'The services server delivers the internal portal over TCP port 80. Opening it by hostname demonstrates DNS and web access working together. The lab page uses unencrypted HTTP.'],
+  ['DNS', 'The campus DNS server resolves portal.campus.test to 192.168.10.130 and external.campus.test to 203.0.113.10. Both web demonstrations use readable names.'],
+  ['HTTP', 'The campus portal and external demonstration server deliver pages over TCP port 80. The two hostname checks demonstrate DNS, routing and service access together. HTTP is unencrypted in this lab.'],
   ['Extended access control lists (ACLs)', 'Rules on R1 permit required services and replies while blocking prohibited departmental requests. They check individual packets and do not isolate traffic switched within the same VLAN.'],
   ['SSHv2 and VTY access control', 'SSH encrypts device administration. A source rule on each device’s remote terminal permits only PC8-MGMT, including sessions that reach a switch without going through R1.'],
+  ['Single-area OSPF', 'The added router advertises the simulated external server network to R1 in area 0. The OSPF & PAT walkthrough shows the adjacency, learned route and route withdrawal.'],
+  ['PAT / NAT overload', 'The three client VLANs share R1’s outside address when accessing the external test server. Destination-specific ACLs retain the campus restrictions.'],
 ] as const;
 
 export default function Introduction({ snapshot, openTopology, openPing }: {
@@ -25,8 +27,9 @@ export default function Introduction({ snapshot, openTopology, openPing }: {
       <div>
         <p className={styles.eyebrow}>ABOUT THE PROJECT</p>
         <h2 id="project-introduction-title">Shared campus services, controlled access</h2>
-        <p>A campus needs Administration, Faculty and Students to share services while keeping departmental access under control. This project connects {pcCount} PCs in Cisco Packet Tracer, separates them into departmental networks, and places DHCP, DNS and the campus portal on one central server.</p>
+        <p>A campus needs Administration, Faculty and Students to share services while keeping departmental access under control. This project connects {pcCount} PCs, four switches, two routers and two servers over 57 links in Cisco Packet Tracer. Four VLANs separate the campus, with centralized DHCP, DNS and an internal portal.</p>
         <p><strong>Our objective:</strong> make client setup consistent, provide access to shared services, and restrict routed traffic and device administration to the intended users.</p>
+        <p>R1 learns the external server network through OSPF and uses PAT so clients share its outside address. The external branch adds one router and one server while retaining all 55 original campus links. Explore both branches in Topology and replay current campus, external and blocked traffic in Ping lab.</p>
         <div className={styles.actions}>
           <button onClick={openTopology}>Explore the topology <span aria-hidden="true">→</span></button>
           <button onClick={openPing}>Follow a packet <span aria-hidden="true">→</span></button>

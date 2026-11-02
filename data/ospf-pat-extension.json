@@ -1,0 +1,161 @@
+{
+  "runId": "OSPF-PAT-20261102",
+  "capturedAt": "2026-11-02T12:18:11+05:30",
+  "submissionFile": "Secure_Campus_Network_Submission.pkt",
+  "submissionSha256": "b3b7892fe2d2e80330a2c6b80df6b2cfaf1032d33b3b4ab78f88ca2883b28406",
+  "verifiedAfterReopen": true,
+  "inventory": {
+    "all55OriginalLinksRetained": true,
+    "addedLinks": 2,
+    "networkDevices": 58,
+    "links": 57,
+    "positionsMatchOctoberCapture": false
+  },
+  "checks": [
+    {
+      "label": "Campus gateway / central server ping",
+      "result": "50/50 clients passed each check"
+    },
+    {
+      "label": "Campus DNS and HTTP",
+      "result": "50/50 clients passed each check"
+    },
+    {
+      "label": "Department policy",
+      "result": "4 allowed and 5 blocked cases matched policy"
+    },
+    {
+      "label": "External ICMP and hostname HTTP",
+      "result": "50/50 clients passed each check"
+    },
+    {
+      "label": "PAT address sharing",
+      "result": "50 inside-local addresses observed sharing 198.51.100.1"
+    },
+    {
+      "label": "OSPF",
+      "result": "FULL adjacency; 203.0.113.0/24 learned dynamically"
+    },
+    {
+      "label": "External access restrictions",
+      "result": "Other external host and unsolicited inbound ping blocked"
+    },
+    {
+      "label": "Failure and restoration",
+      "result": "PAT and OSPF dependency demonstrated; both restored"
+    },
+    {
+      "label": "Persistence and management",
+      "result": "DHCP renewed in all three client VLANs; 5 allowed and 3 blocked SSH checks passed"
+    }
+  ],
+  "evidence": [
+    {
+      "path": "evidence/OSPF-PAT-20261102/extension-summary.json",
+      "sha256": "7608d60e886bb40d23dec0955f70531677a71e4e68890ab87d49016bf3031b8a"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/after-summary.json",
+      "sha256": "c768ad6c6f157d99fa9e835b73bab6464d3e208cdfba829ec14ad63caf6104ff"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/persistence-summary.json",
+      "sha256": "73728c2da7bf538dbb9a973741bff21c88c168b10e36791b306a671920d76aa6"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/failure-check-summary.json",
+      "sha256": "ceca373bd230825cc36b27009989065b8f00fcaacebaaaccbe441d45bce9af97"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/topology-preservation.json",
+      "sha256": "053d657d7582c87bfd70c99bad45ed636bd6054c78e576436ad54ac2c376c5b2"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-full.json",
+      "sha256": "ec0ec7f607aefe275c5052387403d6d2ac62840fa5df6ee71feeb26816069412"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-translations.json",
+      "sha256": "695dee8b7d8de6131d545d985004f9c9d109d0e0d5b07a24f2163274ba82e89b"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/external-router-routes.json",
+      "sha256": "f95cc42093c178e649ba66fa1125a1f8316257f8353243b733b207a789fd8240"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/external-pings.json",
+      "sha256": "e63eb98472d40636ec24e139db6fb7284e17fda547f474c6b414560c681c2dd9"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/external-http.json",
+      "sha256": "7eb2e7b4bc165862ea24e737ef01cb17050288d05a73754bae8b8c479efffe0d"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/external-other-host-denied.json",
+      "sha256": "4900f26db93fec8fcae6f2a533e15e3abc20803e0d4c3c101ee75af307db9d20"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/unsolicited-wan-denied.json",
+      "sha256": "89a8410a01af1690d9b9122843a42c68ff3080571f346e92e69401778c279b08"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-disabled.json",
+      "sha256": "c42e573a2d42ebf7d9ecdbcee48193d3e566c0e6ff328613d559dd13074418a1"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-disabled-state.json",
+      "sha256": "3b1e0f6bd6df8243809616dc7f4fac47f4e89c64371d564448078751efec6ba0"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/pat-restored.json",
+      "sha256": "586ee0c98c82066b9af7d26a995326c484fc788cedf818b10b2d4ecb50866704"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-disabled.json",
+      "sha256": "9f83516765d62f73f6075118765409aa2d4a40ca89c0d09ff436fd6e39fb414a"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-disabled-state.json",
+      "sha256": "f63bb9cff9253579a9a3b6808c2e684ab8850e5bc1f876697f4a03d5af0ab77b"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/campus-during-ospf-outage.json",
+      "sha256": "40b90de790237288f4ad192c09204109f38827f53083438e312635c67c2e597f"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/ospf-restored.json",
+      "sha256": "88b4b5a6bb1e5913b643d1d452bbef8b45536309103d7d2d3fbb67de4a9662c7"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/reopened-dhcp-renewal.json",
+      "sha256": "5316faedb704c6b62dbe9f0936fffb770e7fb2b062cc039a5ca62d166b3e59a8"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/reopened-ssh-denied.json",
+      "sha256": "9624b122f66521a50dd6af4f8010170f32bb456becf7cd990eb32f181b659e0c"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/after-dns.json",
+      "sha256": "6c763202469186d81a41e46aac3092e8c533078704939f064384a09b799f1e10"
+    },
+    {
+      "path": "evidence/OSPF-PAT-20261102/http-all.json",
+      "sha256": "bfb4681017885216fbe4797053deacd0be021279b8ac00fd78326d3228cfb439"
+    },
+    {
+      "path": "configs/R1-CAMPUS-OSPF-PAT.txt",
+      "sha256": "509ab7ce8ca50d850ac8b928220b78f9ed10c825654ef46086c99c62e76fbbb0"
+    },
+    {
+      "path": "configs/R2-EXTERNAL.txt",
+      "sha256": "519464414e26a46aa53a31d4fe10cf9a0aee587abedfdb5f48f3984c56d1fbd1"
+    }
+  ],
+  "observations": {
+    "ospf": "\n\nNeighbor ID     Pri   State           Dead Time   Address         Interface\n2.2.2.2           1   FULL/DR         00:00:38    198.51.100.2    GigabitEthernet0/1\n\n\nO    203.0.113.0/24 [110/2] via 198.51.100.2, 00:02:46, GigabitEthernet0/1",
+    "http": "http://external.campus.test\nDNS server: 192.168.10.130\nResolved external server: 203.0.113.10\n50/50 clients received the external HTTP page after reopening.",
+    "pat": "Pro  Inside global     Inside local       Outside local      Outside global\nicmp 198.51.100.1:1125 192.168.10.2:10    203.0.113.10:10    203.0.113.10:1125\nicmp 198.51.100.1:1052 192.168.10.66:9    203.0.113.10:9     203.0.113.10:1052\nicmp 198.51.100.1:1140 192.168.10.98:14   203.0.113.10:14    203.0.113.10:1140\n\n50 distinct inside-local addresses observed in the full table.",
+    "policy": "Student \u2192 Administration: denied\nFaculty \u2192 Students: denied\nAll client VLANs \u2192 203.0.113.10 TCP/80 and ICMP Echo: permitted\nStudent \u2192 203.0.113.1: denied\nExternal server \u2192 198.51.100.1 unsolicited ICMP Echo: denied",
+    "recovery": "PAT disabled: three departmental clients received 0/4 replies.\nPAT restored: all three clients succeeded.\nOSPF made passive on transit: external route withdrawn and external ping failed.\nCampus server ping during OSPF outage: succeeded.\nOSPF restored: FULL adjacency, learned route and external access returned."
+  }
+}

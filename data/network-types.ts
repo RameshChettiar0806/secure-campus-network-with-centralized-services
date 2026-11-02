@@ -1,5 +1,5 @@
 /** Recorded domain model. It is independent of React Flow and contains no credentials. */
-export type DeviceId = 'r1' | `sw${number}` | 'server0' | `pc${number}`;
+export type DeviceId = 'r1' | 'r2' | `sw${number}` | 'server0' | 'server1' | `pc${number}`;
 export type TestStatus = 'not-run' | 'pass' | 'fail' | 'unsupported';
 export type InterfaceState = 'up' | 'down' | 'unknown';
 export type EvidenceRef = string;
@@ -31,6 +31,9 @@ export interface NetworkInterface {
   observedLease?: ObservedLease;
   defaultGateway?: string;
   dnsServer?: string;
+  natRole?: 'inside' | 'outside';
+  ospfArea?: number;
+  ospfPassive?: boolean;
 }
 
 export interface NetworkDevice {
@@ -42,6 +45,7 @@ export interface NetworkDevice {
   interfaces: NetworkInterface[];
   vlanId?: number;
   configurationRef?: EvidenceRef;
+  segment?: 'campus' | 'transit' | 'external';
 }
 
 export interface PhysicalLink {
@@ -51,7 +55,7 @@ export interface PhysicalLink {
   targetDeviceId: DeviceId;
   targetInterface: string;
   cableType: 'copper-straight-through' | 'copper-crossover';
-  mode: 'access' | 'trunk';
+  mode: 'access' | 'trunk' | 'routed';
   vlanIds: number[];
 }
 
@@ -150,6 +154,19 @@ export interface NetworkSnapshot {
     ssh: { deviceIds: DeviceId[]; version: number; configuredRsaModulusBits: number; authorizedSourceDeviceId: DeviceId; port: number };
   };
   limitations: string[];
+  routing?: {
+    externalServerId: DeviceId;
+    externalHostname: string;
+    externalAddress: string;
+    externalSubnet: string;
+    externalGateway: string;
+    transitSubnet: string;
+    patOutsideAddress: string;
+    ospfArea: number;
+    ospfNeighborState: string;
+    insideVlans: number[];
+    evidenceRefs: EvidenceRef[];
+  };
   dhcpReopenBehavior: {
     stpConvergenceSeconds: number | null;
     beforeRenew: Record<string, string>;

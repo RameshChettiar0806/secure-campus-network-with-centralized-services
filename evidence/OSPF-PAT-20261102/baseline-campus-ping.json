@@ -1,0 +1,252 @@
+{
+  "PC0": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 41ms, Average = 10ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC1": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=61ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 61ms, Average = 17ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC10": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=43ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 43ms, Average = 10ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC11": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=79ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 79ms, Average = 20ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC12": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=80ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 80ms, Average = 26ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC13": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=44ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 56ms, Average = 28ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC14": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=42ms TTL=127\nReply from 192.168.10.130: bytes=32 time=27ms TTL=127\nReply from 192.168.10.130: bytes=32 time=13ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 13ms, Maximum = 56ms, Average = 34ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC15": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=46ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 56ms, Average = 28ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC16": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=74ms TTL=127\nReply from 192.168.10.130: bytes=32 time=46ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 74ms, Average = 37ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC17": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=46ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time=4ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 4ms, Maximum = 56ms, Average = 28ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC18": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=46ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time=6ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 6ms, Maximum = 56ms, Average = 29ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC19": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time=18ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 56ms, Average = 25ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC2": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=47ms TTL=127\nReply from 192.168.10.130: bytes=32 time=42ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 47ms, Average = 25ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC20": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=82ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 82ms, Average = 31ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC21": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=82ms TTL=127\nReply from 192.168.10.130: bytes=32 time=42ms TTL=127\nReply from 192.168.10.130: bytes=32 time=34ms TTL=127\nReply from 192.168.10.130: bytes=32 time=16ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 16ms, Maximum = 82ms, Average = 43ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC22": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=82ms TTL=127\nReply from 192.168.10.130: bytes=32 time=62ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 82ms, Average = 36ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC23": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=82ms TTL=127\nReply from 192.168.10.130: bytes=32 time=42ms TTL=127\nReply from 192.168.10.130: bytes=32 time=27ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 82ms, Average = 38ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC24": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=82ms TTL=127\nReply from 192.168.10.130: bytes=32 time=43ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 82ms, Average = 34ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC25": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 56ms, Average = 14ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC26": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC27": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=43ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 43ms, Average = 15ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC28": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=79ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 79ms, Average = 20ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC29": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC3": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=80ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 80ms, Average = 22ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC30": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 41ms, Average = 13ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC31": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=108ms TTL=127\nReply from 192.168.10.130: bytes=32 time=22ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=28ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 108ms, Average = 39ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC32": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=28ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 39ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC33": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 39ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC34": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time=42ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 32ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC35": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time=40ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=28ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 88ms, Average = 39ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC36": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=87ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time=19ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 87ms, Average = 36ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC37": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=107ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 107ms, Average = 35ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC38": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=106ms TTL=127\nReply from 192.168.10.130: bytes=32 time=22ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 106ms, Average = 32ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC39": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=107ms TTL=127\nReply from 192.168.10.130: bytes=32 time=43ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 107ms, Average = 38ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC4": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=80ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=19ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 80ms, Average = 24ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC40": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=61ms TTL=127\nReply from 192.168.10.130: bytes=32 time=44ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 61ms, Average = 30ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC41": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=60ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time=19ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 11ms, Maximum = 60ms, Average = 28ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC42": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=60ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 60ms, Average = 21ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC43": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=60ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 60ms, Average = 21ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC44": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=60ms TTL=127\nReply from 192.168.10.130: bytes=32 time=44ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 60ms, Average = 27ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC45": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=60ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=3ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 60ms, Average = 21ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC46": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=59ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 59ms, Average = 20ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC47": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=27ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 88ms, Average = 35ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC48": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=87ms TTL=127\nReply from 192.168.10.130: bytes=32 time=42ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=28ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 87ms, Average = 39ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC49": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=87ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 87ms, Average = 28ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 41ms, Average = 12ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC6": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=56ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 56ms, Average = 14ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC7": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=41ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 41ms, Average = 10ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=62ms TTL=127\nReply from 192.168.10.130: bytes=32 time=33ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 62ms, Average = 26ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC9-ADMIN": {
+    "command": "ping 192.168.10.130",
+    "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=61ms TTL=127\nReply from 192.168.10.130: bytes=32 time=32ms TTL=127\nReply from 192.168.10.130: bytes=32 time=6ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 61ms, Average = 26ms\n\nC:\\>",
+    "passed": true
+  }
+}

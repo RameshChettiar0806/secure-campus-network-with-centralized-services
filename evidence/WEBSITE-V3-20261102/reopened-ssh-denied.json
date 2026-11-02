@@ -1,0 +1,17 @@
+{
+  "PC0": {
+    "command": "ssh -l netadmin 192.168.10.97",
+    "output": "ssh -l netadmin 192.168.10.97\n\n% Connection timed out; remote host not responding\nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "ssh -l netadmin 192.168.10.97",
+    "output": "ssh -l netadmin 192.168.10.97\n\n% Connection timed out; remote host not responding\nC:\\>",
+    "passed": true
+  },
+  "PC9-ADMIN": {
+    "command": "ssh -l netadmin 192.168.10.99",
+    "output": "ssh -l netadmin 192.168.10.99\n\n% Connection refused by remote host\nC:\\>",
+    "passed": true
+  }
+}

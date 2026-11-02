@@ -1,0 +1,22 @@
+{
+  "PC0": {
+    "command": "ping 192.168.10.19",
+    "output": "ping 192.168.10.19\n\nPinging 192.168.10.19 with 32 bytes of data:\n\nReply from 192.168.10.19: bytes=32 time=10ms TTL=128\nReply from 192.168.10.19: bytes=32 time<1ms TTL=128\nReply from 192.168.10.19: bytes=32 time<1ms TTL=128\nReply from 192.168.10.19: bytes=32 time=3ms TTL=128\n\nPing statistics for 192.168.10.19:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 3ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "ping 192.168.10.67",
+    "output": "ping 192.168.10.67\n\nPinging 192.168.10.67 with 32 bytes of data:\n\nReply from 192.168.10.67: bytes=32 time<1ms TTL=128\nReply from 192.168.10.67: bytes=32 time=5ms TTL=128\nReply from 192.168.10.67: bytes=32 time=1ms TTL=128\nReply from 192.168.10.67: bytes=32 time<1ms TTL=128\n\nPing statistics for 192.168.10.67:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 5ms, Average = 1ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "command": "ping 192.168.10.11",
+    "output": "ping 192.168.10.11\n\nPinging 192.168.10.11 with 32 bytes of data:\n\nReply from 192.168.10.11: bytes=32 time<1ms TTL=127\nReply from 192.168.10.11: bytes=32 time<1ms TTL=127\nReply from 192.168.10.11: bytes=32 time<1ms TTL=127\nReply from 192.168.10.11: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.11:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+    "passed": true
+  },
+  "PC9-ADMIN": {
+    "command": "ping 192.168.10.70",
+    "output": "ping 192.168.10.70\n\nPinging 192.168.10.70 with 32 bytes of data:\n\nReply from 192.168.10.70: bytes=32 time<1ms TTL=127\nReply from 192.168.10.70: bytes=32 time=19ms TTL=127\nReply from 192.168.10.70: bytes=32 time<1ms TTL=127\nReply from 192.168.10.70: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.70:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 19ms, Average = 4ms\n\nC:\\>",
+    "passed": true
+  }
+}

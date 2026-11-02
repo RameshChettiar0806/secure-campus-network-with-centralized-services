@@ -1,0 +1,260 @@
+{
+  "PC0": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC1": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC10": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC11": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC12": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC13": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC14": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC15": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC16": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC17": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC18": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC19": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC2": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC20": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC21": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC22": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n",
+    "passed": true,
+    "retry": {
+      "command": "nslookup portal.campus.test",
+      "output": "\nServer: [192.168.10.130]\nAddress:  192.168.10.130\nDNS request timed out.\n\ttimeout was 15000 milli seconds.\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>"
+    }
+  },
+  "PC23": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n",
+    "passed": true,
+    "retry": {
+      "command": "nslookup portal.campus.test",
+      "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>"
+    }
+  },
+  "PC24": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC25": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC26": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC27": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC28": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC29": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC3": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC30": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC31": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC32": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC33": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC34": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC35": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC36": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC37": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC38": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC39": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC4": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC40": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC41": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC42": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC43": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC44": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC45": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC46": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC47": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC48": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC49": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC5": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC6": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC7": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC8-MGMT": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  },
+  "PC9-ADMIN": {
+    "command": "nslookup portal.campus.test",
+    "output": "nslookup portal.campus.test\n\nServer: [192.168.10.130]\nAddress:  192.168.10.130\n\nNon-authoritative answer:\nName:   portal.campus.test\nAddress:   192.168.10.130\n           \nC:\\>",
+    "passed": true
+  }
+}

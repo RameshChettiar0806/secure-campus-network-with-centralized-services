@@ -1,0 +1,288 @@
+{
+  "submissionSha256": "b3b7892fe2d2e80330a2c6b80df6b2cfaf1032d33b3b4ab78f88ca2883b28406",
+  "segments": [
+    {
+      "id": "admin",
+      "name": "Administration",
+      "source": "pc8",
+      "peer": "pc9"
+    },
+    {
+      "id": "faculty",
+      "name": "Faculty",
+      "source": "pc5",
+      "peer": "pc6"
+    },
+    {
+      "id": "students",
+      "name": "Students",
+      "source": "pc0",
+      "peer": "pc1"
+    },
+    {
+      "id": "services",
+      "name": "Services",
+      "source": "server0"
+    },
+    {
+      "id": "external",
+      "name": "External",
+      "source": "server1"
+    }
+  ],
+  "examples": [
+    {
+      "fromSegment": "admin",
+      "toSegment": "admin",
+      "source": "pc8",
+      "target": "pc9",
+      "verdict": "Local",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-1",
+      "destinationIp": "192.168.10.106",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-01.json"
+    },
+    {
+      "fromSegment": "admin",
+      "toSegment": "faculty",
+      "source": "pc8",
+      "target": "pc5",
+      "verdict": "Allow",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-573",
+      "destinationIp": "192.168.10.70",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-12.json"
+    },
+    {
+      "fromSegment": "admin",
+      "toSegment": "students",
+      "source": "pc8",
+      "target": "pc0",
+      "verdict": "Allow",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-1509",
+      "destinationIp": "192.168.10.11",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-30.json"
+    },
+    {
+      "fromSegment": "admin",
+      "toSegment": "services",
+      "source": "pc8",
+      "target": "server0",
+      "verdict": "Allow",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-2549",
+      "destinationIp": "192.168.10.130",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-50.json"
+    },
+    {
+      "fromSegment": "admin",
+      "toSegment": "external",
+      "source": "pc8",
+      "target": "server1",
+      "verdict": "Allow",
+      "reason": "Client ACL permits external Echo; OSPF supplies the route and PAT enables return traffic",
+      "recordId": "PING3-2601",
+      "destinationIp": "203.0.113.10",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-51.json"
+    },
+    {
+      "fromSegment": "faculty",
+      "toSegment": "admin",
+      "source": "pc5",
+      "target": "pc8",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-2041",
+      "destinationIp": "192.168.10.98",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-40.json"
+    },
+    {
+      "fromSegment": "faculty",
+      "toSegment": "faculty",
+      "source": "pc5",
+      "target": "pc6",
+      "verdict": "Local",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-13",
+      "destinationIp": "192.168.10.78",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-01.json"
+    },
+    {
+      "fromSegment": "faculty",
+      "toSegment": "students",
+      "source": "pc5",
+      "target": "pc0",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-897",
+      "destinationIp": "192.168.10.11",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-18.json"
+    },
+    {
+      "fromSegment": "faculty",
+      "toSegment": "services",
+      "source": "pc5",
+      "target": "server0",
+      "verdict": "Allow",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-1937",
+      "destinationIp": "192.168.10.130",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-38.json"
+    },
+    {
+      "fromSegment": "faculty",
+      "toSegment": "external",
+      "source": "pc5",
+      "target": "server1",
+      "verdict": "Allow",
+      "reason": "Client ACL permits external Echo; OSPF supplies the route and PAT enables return traffic",
+      "recordId": "PING3-1989",
+      "destinationIp": "203.0.113.10",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-39.json"
+    },
+    {
+      "fromSegment": "students",
+      "toSegment": "admin",
+      "source": "pc0",
+      "target": "pc8",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-1123",
+      "destinationIp": "192.168.10.98",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-22.json"
+    },
+    {
+      "fromSegment": "students",
+      "toSegment": "faculty",
+      "source": "pc0",
+      "target": "pc5",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-1747",
+      "destinationIp": "192.168.10.70",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-34.json"
+    },
+    {
+      "fromSegment": "students",
+      "toSegment": "students",
+      "source": "pc0",
+      "target": "pc1",
+      "verdict": "Local",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-31",
+      "destinationIp": "192.168.10.9",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-01.json"
+    },
+    {
+      "fromSegment": "students",
+      "toSegment": "services",
+      "source": "pc0",
+      "target": "server0",
+      "verdict": "Allow",
+      "reason": "Local switching, campus service access, or Administration diagnostic permission",
+      "recordId": "PING3-1019",
+      "destinationIp": "192.168.10.130",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-20.json"
+    },
+    {
+      "fromSegment": "students",
+      "toSegment": "external",
+      "source": "pc0",
+      "target": "server1",
+      "verdict": "Allow",
+      "reason": "Client ACL permits external Echo; OSPF supplies the route and PAT enables return traffic",
+      "recordId": "PING3-1071",
+      "destinationIp": "203.0.113.10",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-21.json"
+    },
+    {
+      "fromSegment": "services",
+      "toSegment": "admin",
+      "source": "server0",
+      "target": "pc8",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-103",
+      "destinationIp": "192.168.10.98",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-02.json"
+    },
+    {
+      "fromSegment": "services",
+      "toSegment": "faculty",
+      "source": "server0",
+      "target": "pc5",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-727",
+      "destinationIp": "192.168.10.70",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-14.json"
+    },
+    {
+      "fromSegment": "services",
+      "toSegment": "students",
+      "source": "server0",
+      "target": "pc0",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-1663",
+      "destinationIp": "192.168.10.11",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-32.json"
+    },
+    {
+      "fromSegment": "services",
+      "toSegment": "external",
+      "source": "server0",
+      "target": "server1",
+      "verdict": "Block",
+      "reason": "Source VLAN ingress ACL denies this newly initiated request",
+      "recordId": "PING3-51",
+      "destinationIp": "203.0.113.10",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-01.json"
+    },
+    {
+      "fromSegment": "external",
+      "toSegment": "admin",
+      "source": "server1",
+      "target": "pc8",
+      "verdict": "No route",
+      "reason": "R2 has no route to the private campus destination; this is a routing failure, not an ACL match",
+      "recordId": "PING3-52",
+      "destinationIp": "192.168.10.98",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-01.json"
+    },
+    {
+      "fromSegment": "external",
+      "toSegment": "faculty",
+      "source": "server1",
+      "target": "pc5",
+      "verdict": "No route",
+      "reason": "R2 has no route to the private campus destination; this is a routing failure, not an ACL match",
+      "recordId": "PING3-676",
+      "destinationIp": "192.168.10.70",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-13.json"
+    },
+    {
+      "fromSegment": "external",
+      "toSegment": "students",
+      "source": "server1",
+      "target": "pc0",
+      "verdict": "No route",
+      "reason": "R2 has no route to the private campus destination; this is a routing failure, not an ACL match",
+      "recordId": "PING3-1612",
+      "destinationIp": "192.168.10.11",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-31.json"
+    },
+    {
+      "fromSegment": "external",
+      "toSegment": "services",
+      "source": "server1",
+      "target": "server0",
+      "verdict": "No route",
+      "reason": "R2 has no route to the private campus destination; this is a routing failure, not an ACL match",
+      "recordId": "PING3-2652",
+      "destinationIp": "192.168.10.130",
+      "evidenceRef": "evidence/WEBSITE-V3-20261102/batch-51.json"
+    }
+  ]
+}

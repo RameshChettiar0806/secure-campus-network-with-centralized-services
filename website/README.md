@@ -31,6 +31,8 @@ Development normally listens on port 5173 and preview on 4173. Serve the built s
 | `src/data/` and `src/models/` | Typed snapshot loading and generated data indexes |
 | `scripts/` | Synchronize the recorded manifests, verify source identity and prepare browser assets |
 
-The sync step validates the v2 snapshot, ping matrix and allowlisted evidence before dev, build or test. Source changes cancel obsolete fetches. Each source file carries the recorded submission identity and 58 commands. The website checks both before replay and offers retry for load failures.
+The sync step validates the v3 snapshot, ping matrix and allowlisted evidence before dev, build or test. Source changes cancel obsolete fetches. Each source file carries the recorded submission identity and 62 commands. The website checks both before replay and offers retry for load failures.
 
-Use `.\run.ps1 verify-source` to require the current submission to match the recorded SHA-256. A subsequent save can change that hash. A successful website build verifies the recorded assets independently of the current simulation. See [recorded acceptance](../SCALE_50_ACCEPTANCE.md) for the capture history.
+All website sections now use `data/network-snapshot.v3.json` and `data/ping-matrix.v3.json`, captured from the current 58-device, 57-link submission. There are 52 endpoint sources and 62 measured destinations per source, for 3,224 ping cases. The OSPF/PAT walkthrough uses `data/ospf-pat-extension.v3.json`; policy matrix cells use `data/policy-matrix.v3.json` and point to actual recorded commands.
+
+Use `.\run.ps1 verify-source` to require the current submission to match the active capture SHA-256. Current sanitized configurations have `-CURRENT.txt` filenames. The v2 data remains historical on disk and is not loaded by the website. See [current website verification](../WEBSITE_V3_ACCEPTANCE.md).

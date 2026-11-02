@@ -1,0 +1,27 @@
+{
+  "gateway": {
+    "passed": 50,
+    "total": 50
+  },
+  "campusPing": {
+    "passed": 50,
+    "total": 50
+  },
+  "dns": {
+    "passed": 50,
+    "total": 50
+  },
+  "http": {
+    "passed": 50,
+    "total": 50
+  },
+  "policyAllow": {
+    "passed": 4,
+    "total": 4
+  },
+  "policyDeny": {
+    "passed": 5,
+    "total": 5
+  },
+  "allPassed": true
+}

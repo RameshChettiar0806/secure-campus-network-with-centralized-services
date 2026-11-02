@@ -1,0 +1,8 @@
+{
+  "dhcpRenewal": true,
+  "sshAllowed": 5,
+  "sshDenied": 3,
+  "ospfFull": true,
+  "startupPatPresent": true,
+  "allPassed": true
+}

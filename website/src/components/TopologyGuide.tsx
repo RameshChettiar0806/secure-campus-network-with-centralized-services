@@ -28,6 +28,7 @@ export default function TopologyGuide({ snapshot, inspect }: { snapshot: Network
       <p><strong>Local subnet</strong> <code>{vlan.subnet}</code> · <strong>Default gateway</strong> <code>{vlan.gateway}</code></p>
       <button className={styles.outlineButton} onClick={() => inspect(example.id, selected)}>Locate {example.label} on the topology →</button>
     </article>
+    {snapshot.routing && <article className={guide.panel}><h3>The external branch</h3><p>Client traffic crosses its access switch and SW1 to R1. An OSPF-learned route sends permitted requests to R2. PAT changes the private source to 198.51.100.1; R2 then forwards to the external server. Replies use the PAT entry to return to the original client.</p><div className={guide.flow}><div><DeviceSymbol model="1941"/><strong>R1-CAMPUS</strong><small>PAT · 198.51.100.1</small></div><span>↔</span><div><DeviceSymbol model="1941"/><strong>R2-EXTERNAL</strong><small>OSPF area 0 · .2</small></div><span>→</span><div><DeviceSymbol model="Server-PT"/><strong>SRV-EXTERNAL</strong><small>203.0.113.10 · HTTP</small></div></div><button className={styles.outlineButton} onClick={() => inspect('r2',null)}>Locate R2 and the external branch →</button></article>}
     <h3>What the components do</h3>
     <div className={guide.cards}>{[
       ['Client PC', 'A PC sends and receives traffic. Its subnet mask tells it whether a destination is local. For a remote subnet, it sends the frame to its default gateway.'],
@@ -36,6 +37,7 @@ export default function TopologyGuide({ snapshot, inspect }: { snapshot: Network
       ['Router and gateway', 'R1 has one physical link to SW1 and a logical interface for each VLAN. When a Student reaches the server, SW1 sends the frame up to R1 in VLAN 30. R1 routes it back down the same cable in VLAN 40.'],
       ['Services server', 'A new PC requests settings from DHCP. R1 relays that request to the server. Later the PC asks DNS for the portal address and opens an HTTP connection to that address.'],
       ['Access rules and management', 'An access control list (ACL) at R1 checks traffic arriving from each VLAN. A separate rule on each router or switch management terminal restricts SSH to PC8-MGMT, including connections switched locally.'],
+      ['OSPF and PAT boundary', 'R1 and R2 exchange OSPF information on 198.51.100.0/30. R2 advertises the server LAN but receives no private campus prefixes. PAT allows replies to return to R1’s outside address; WAN-IN filters incoming traffic.'],
     ].map(([title, body]) => <article key={title}><h4>{title}</h4><p>{body}</p></article>)}</div>
   </section>;
 }
