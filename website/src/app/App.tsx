@@ -9,17 +9,18 @@ import Inspector from '../components/Inspector';
 import Addressing from '../views/Addressing';
 import Policies from '../views/Policies';
 import LabResults from '../views/LabResults';
+import Introduction from '../views/Introduction';
 import sourceCheck from '../data/source-check.json';
 import styles from './App.module.css';
 
-const tabs = [{ id: 'topology', icon: '⌘', name: 'Topology' }, { id: 'guide', icon: '◇', name: 'Topology guide' }, { id: 'addressing', icon: '▦', name: 'Addressing table' }, { id: 'ping', icon: '↗', name: 'Ping lab' }, { id: 'policy', icon: '⇄', name: 'Access policy' }, { id: 'tests', icon: '✓', name: 'Lab results' }] as const;
+const tabs = [{ id: 'introduction', icon: '◎', name: 'Introduction' }, { id: 'topology', icon: '⌘', name: 'Topology' }, { id: 'guide', icon: '◇', name: 'Topology guide' }, { id: 'addressing', icon: '▦', name: 'Addressing table' }, { id: 'ping', icon: '↗', name: 'Ping lab' }, { id: 'policy', icon: '⇄', name: 'Access policy' }, { id: 'tests', icon: '✓', name: 'Lab results' }] as const;
 const TopologyCanvas = lazy(() => import('../components/TopologyCanvas'));
 const PingLab = lazy(() => import('../components/PingLab'));
 type Tab = typeof tabs[number]['id'];
 
 export default function App() {
   const snapshot = useMemo(() => { const s = loadSnapshot(); const errors = validateNetwork(s); if (errors.length) throw new Error(errors.join('\n')); return s; }, []);
-  const [tab, setTab] = useState<Tab>('topology');
+  const [tab, setTab] = useState<Tab>('introduction');
   const [pingPair, setPingPair] = useState<PingPair>({source:'pc0',target:'server0'});
   const [selected, setSelected] = useState('r1');
   const [linkId, setLinkId] = useState<string | null>(null);
@@ -44,7 +45,7 @@ export default function App() {
     <div className={styles.stats}><div><span>DEVICES</span><strong>{snapshot.devices.length}<small>1 router · {switchCount} switches · {endpointCount} endpoints</small></strong></div><div><span>PHYSICAL LINKS</span><strong>{snapshot.links.length}<small>{trunkCount} trunks · {snapshot.links.length - trunkCount} access links</small></strong></div><div><span>NETWORK SEGMENTS</span><strong>{snapshot.vlans.length}<small>VLSM · /26, /27 and /28</small></strong></div><button onClick={() => openTest('A05')} aria-label="View campus portal verification"><span>CENTRALIZED SERVICES ↗</span><strong>3<small className={styles.statusUp}>DHCP · DNS · HTTP</small></strong></button></div>
     <nav className={styles.tabs} aria-label="Viewer sections">{tabs.map(item => <button key={item.id} aria-current={tab === item.id ? 'page' : undefined} className={tab === item.id ? styles.activeTab : ''} onClick={() => setTab(item.id)}><span>{item.icon}</span>{item.name}{item.id === 'tests' && <small>{snapshot.recordedTests.length}</small>}</button>)}</nav>
     <main id="main-content" tabIndex={-1}>
-      {tab === 'topology' ? <>
+      {tab === 'introduction' ? <Introduction snapshot={snapshot} openTopology={() => setTab('topology')} openPing={() => { setPingPair({ source: 'pc0', target: 'server0' }); setTab('ping'); }}/> : tab === 'topology' ? <>
         <div className={styles.topologyToolbar}><div><strong>Physical topology</strong><span>Choose a department to focus its devices and connections</span></div><div className={styles.filters} aria-label="VLAN highlights"><button aria-pressed={vlan === null} onClick={() => setVlan(null)}>All VLANs</button>{snapshot.vlans.map(v => <button key={v.id} aria-pressed={vlan === v.id} onClick={() => setVlan(vlan === v.id ? null : v.id)}><i style={{ background: vlanColors[v.id] }}/>{shortName(v.name)}<small>{v.id}</small></button>)}<button aria-pressed={expanded} onClick={() => setExpanded(v => !v)}>{expanded ? 'Show panels' : 'Expand topology'}</button></div></div>
         <div className={`${styles.workspace} ${expanded ? styles.workspaceWide : ''}`}>
           <aside className={styles.inventory} aria-label="Keyboard accessible device inventory"><div className={styles.inventoryHeading}><span className={styles.sectionLabel}>DEVICE INVENTORY</span><span>{snapshot.devices.length}</span></div><label className={styles.search}><span>⌕</span><input aria-label="Find a device" placeholder="Find a device…" value={query} onChange={e => setQuery(e.target.value)}/>{query && <button aria-label="Clear device search" onClick={() => setQuery('')}>×</button>}</label><div className={styles.deviceList}>{devices.sort((a, b) => { const order = (id: string) => id === 'r1' ? 0 : id.startsWith('sw') ? 1 : id === 'server0' ? 2 : 3; return order(a.id) - order(b.id); }).map(d => <button key={d.id} aria-pressed={selected === d.id && !linkId} className={`${selected === d.id && !linkId ? styles.deviceActive : ''} ${!isDeviceHighlighted(d, vlan) ? styles.inventoryDimmed : ''}`} onClick={() => select(d.id)}><DeviceSymbol model={d.model} size={22}/><span><strong>{d.label}</strong><small>{d.model}</small></span><span className={styles.deviceVlan} style={{ color: vlanColors[d.vlanId ?? 0] }}>{d.vlanId ?? '↗'}</span></button>)}{!devices.length && <p className={styles.help}>No devices match “{query}”.</p>}</div>

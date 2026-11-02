@@ -4,6 +4,7 @@
 
 | Section | What to demonstrate |
 | --- | --- |
+| Introduction | Explain the campus need and objective, walk through a Student opening the portal, then introduce each networking technology and why it is used. |
 | Topology | Filter to Students, find PC0, inspect its port, then select its uplink. Use **Fit all** for the 56-device overview. |
 | Topology guide | Select a VLAN to explain a client, its access switch, subnet and gateway. **Locate** opens that device in the topology. |
 | Addressing table | Search a label or IP address. Compare a DHCP lease with PC8-MGMT’s reserved static address and the switches’ management interfaces. |
