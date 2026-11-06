@@ -1,4 +1,10 @@
 .app {max-width:1800px;margin:auto;padding:0 36px;color:var(--text)}
+.versionBar {display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:.45rem;padding:.55rem 1rem;border-bottom:1px solid var(--border);background:var(--canvas)}
+.versionBar>span {color:var(--muted);font-size:.73rem;margin-right:.5rem}
+.versionBar a {text-decoration:none;color:var(--text);font-size:.77rem;font-weight:650;padding:.38rem .55rem;border:1px solid transparent;border-radius:.45rem}
+.versionBar a small {color:var(--muted);font-weight:400;margin-left:.35rem}
+.versionBar a[aria-current] {border-color:var(--accent);background:var(--surface);color:var(--accent)}
+@media(max-width:480px){.versionBar>span,.versionBar a small{display:none}}
 .header {height:90px;display:flex;align-items:center;gap:36px;border-bottom:1px solid var(--border)}
 .brand {display:flex;gap:10px;align-items:center}
 .brandMark {height:38px;width:38px;border:1px solid #3c776f;border-radius:11px;display:grid;place-items:center;color:var(--accent);background:#36c4aa12;font-size:27px}

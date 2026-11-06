@@ -1,0 +1,12 @@
+{
+  "iteration": 5,
+  "submissionSha256": "bc58c17d019ee8f021545f71cee222abf22931778569364fe33d9e1e8b7ae24c",
+  "capturedAt": "2026-11-06T22:49:16+05:30",
+  "endpointCases": 2652,
+  "policyMatches": 2652,
+  "sha256": {
+    "data/audit-release.json": "5c2445f144c0199918a4779ebe7f99b121af11c37765c1b43a9160c01b0fe683",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/release-live-state.json": "dbdcf2199f5e750163435bc169b1c855d28e47b3eca9572ae792b6f9149ef2de",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/release-ping-commands.json": "0a58a4863bbcb2f6444a42ea6c87497614288363d692229d33712f5322632de5"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "file": "Secure_Campus_Network_Submission.pkt",
+  "sha256": "bc58c17d019ee8f021545f71cee222abf22931778569364fe33d9e1e8b7ae24c",
+  "bytes": 150027,
+  "savedAt": "2026-11-06T22:35:11+05:30",
+  "iteration": 5,
+  "reopenedAt": "2026-11-06T22:47:46+05:30",
+  "networkDevices": 60,
+  "links": 64,
+  "endpoints": 52,
+  "evidence": {
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-reopened-summary.json": "554623a3a6330b9aad9f8bf54e77fa4c386dec17429eebb8736a218ecd10747b",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-reopened-state.json": "975b98cac962bf4348d4bde53e3323ffd566e5731409aee9df0b85f3b62f62b5",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-submission.json": "aa938202e3c5191511a94830d33fd2667b50123bcc403f25d6f7583612e25e97",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-regression-summary.json": "91fa5123a684c8b7ab079804d26afeae574b2594a8566fbc24a10d73fabeabf7",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-core-failover.json": "694e8e2d60ef980993d5c82c6b14ee72690ff2166ecfb219ce8dbbf73642277b",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-reopened-routing.json": "af05c1246b6c482b4b8c2060bf8f89c9799a9a09a67101451e0fbce79b2094bc",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/R1-CAMPUS.txt": "5a99f566f094930b867011a258ce29f30d91af41f7eebb82312b9bfa4064bb8c",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/R2-EXTERNAL.txt": "f76b867f2b44adeb7c609756cc6a95ca182685b7b18bb57e60d9f136eb81bf20",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/SW1-CORE.txt": "20fbf98e5d9b99987f4ed9cd2add5654d72b3391eae819d43ca31710f6a3472c",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/SW2-ACCESS.txt": "49f0c5f82a3a7ea6f820406188f72fcf07dde8adfcff31ac1fb56f318ea98523",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/SW3-FACULTY.txt": "7270f95cb6a428f67dba7ec5febf33265fe6bfa9e33063f8c713ceb87dd3eb1c",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/SW4-STUDENTS.txt": "87bdcb97eb478652e55a0fc5f6a0e71d337cd9b2fd9e335901e486c9048eec7f",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/SW5-CORE.txt": "4ffe56ae6057f5e999379e49eb926131cc2bd1d6929a36a1f516352411fccb88",
+    "evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/SW6-SERVICES.txt": "34979dedd4318b92f95babfd8e17af897f495c54ea79da1c8994ed0769397773"
+  }
+}

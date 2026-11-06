@@ -1,0 +1,52 @@
+{
+  "SW1-CORE": {
+    "failureRecovery": {
+      "passed": true,
+      "firstSuccessfulProbeBatchSeconds": 43.64,
+      "attempts": 3
+    },
+    "survivingCore": "SW5-CORE",
+    "hsrp": "                     P indicates configured to preempt.\n                     |\nInterface   Grp  Pri P State    Active          Standby         Virtual IP\nVl10        10   100 P Active   local           unknown         192.168.10.97  \nVl20        20   100 P Active   local           unknown         192.168.10.65  \nVl30        30   100 P Active   local           unknown         192.168.10.1   \nVl40        40   100 P Active   local           unknown         192.168.10.129 \nVl99        99   100 P Active   local           unknown         192.168.10.145 \n\n",
+    "campusClients": 50,
+    "externalClients": 49,
+    "dhcpRenewals": 3,
+    "portalClients": 4,
+    "externalHttpClients": 3,
+    "isolationPassed": true,
+    "restoration": {
+      "passed": true,
+      "firstSuccessfulProbeBatchSeconds": 3.28,
+      "attempts": 1
+    },
+    "restoredHsrp": {
+      "SW1-CORE": "                     P indicates configured to preempt.\n                     |\nInterface   Grp  Pri P State    Active          Standby         Virtual IP\nVl10        10   110 P Active   local           192.168.10.99   192.168.10.97  \nVl20        20   110 P Active   local           192.168.10.94   192.168.10.65  \nVl30        30   110 P Active   local           192.168.10.62   192.168.10.1   \nVl40        40   110 P Active   local           192.168.10.132  192.168.10.129 \nVl99        99   110 P Active   local           192.168.10.151  192.168.10.145 \n\n",
+      "SW5-CORE": "                     P indicates configured to preempt.\n                     |\nInterface   Grp  Pri P State    Active          Standby         Virtual IP\nVl10        10   100 P Standby  192.168.10.98   local           192.168.10.97  \nVl20        20   100 P Standby  192.168.10.93   local           192.168.10.65  \nVl30        30   100 P Standby  192.168.10.61   local           192.168.10.1   \nVl40        40   100 P Standby  192.168.10.131  local           192.168.10.129 \nVl99        99   100 P Standby  192.168.10.147  local           192.168.10.145 \n\n"
+    },
+    "restoredPeerRolesSeconds": 35.59
+  },
+  "SW5-CORE": {
+    "failureRecovery": {
+      "passed": true,
+      "firstSuccessfulProbeBatchSeconds": 29.07,
+      "attempts": 3
+    },
+    "survivingCore": "SW1-CORE",
+    "hsrp": "                     P indicates configured to preempt.\n                     |\nInterface   Grp  Pri P State    Active          Standby         Virtual IP\nVl10        10   110 P Active   local           192.168.10.99   192.168.10.97  \nVl20        20   110 P Active   local           192.168.10.94   192.168.10.65  \nVl30        30   110 P Active   local           192.168.10.62   192.168.10.1   \nVl40        40   110 P Active   local           192.168.10.132  192.168.10.129 \nVl99        99   110 P Active   local           192.168.10.151  192.168.10.145 \n\n",
+    "campusClients": 50,
+    "externalClients": 49,
+    "dhcpRenewals": 3,
+    "portalClients": 4,
+    "externalHttpClients": 3,
+    "isolationPassed": true,
+    "restoration": {
+      "passed": true,
+      "firstSuccessfulProbeBatchSeconds": 3.49,
+      "attempts": 1
+    },
+    "restoredHsrp": {
+      "SW1-CORE": "                     P indicates configured to preempt.\n                     |\nInterface   Grp  Pri P State    Active          Standby         Virtual IP\nVl10        10   110 P Active   local           192.168.10.99   192.168.10.97  \nVl20        20   110 P Active   local           192.168.10.94   192.168.10.65  \nVl30        30   110 P Active   local           192.168.10.62   192.168.10.1   \nVl40        40   110 P Active   local           192.168.10.132  192.168.10.129 \nVl99        99   110 P Active   local           192.168.10.151  192.168.10.145 \n\n",
+      "SW5-CORE": "                     P indicates configured to preempt.\n                     |\nInterface   Grp  Pri P State    Active          Standby         Virtual IP\nVl10        10   100 P Standby  192.168.10.98   local           192.168.10.97  \nVl20        20   100 P Standby  192.168.10.93   local           192.168.10.65  \nVl30        30   100 P Standby  192.168.10.61   local           192.168.10.1   \nVl40        40   100 P Standby  192.168.10.131  local           192.168.10.129 \nVl99        99   100 P Standby  192.168.10.147  local           192.168.10.145 \n\n"
+    },
+    "restoredPeerRolesSeconds": 39.89
+  }
+}

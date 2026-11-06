@@ -15,6 +15,65 @@ let currentHash = null;
 try { currentHash = hash(await readFile(resolve(root, snapshot.submissionFile))); }
 catch (error) { if (error.code !== 'ENOENT') throw error; }
 const recordedHash = snapshot.submissionSha256;
+const requireCurrent = process.argv.includes('--require-current-submission');
+const releasePath = 'data/audit-release.json';
+const remediationPath = 'evidence/AUDIT-REMEDIATION-20261105-182333';
+let releaseBytes;
+try { releaseBytes = await readFile(resolve(root, releasePath)); }
+catch (error) { if (error.code !== 'ENOENT') throw error; }
+let remediationSourceCheck = null;
+if (releaseBytes) {
+  const release = JSON.parse(releaseBytes);
+  const manifest = JSON.parse(await readFile(resolve(root, remediationPath, 'release-manifest.json'), 'utf8'));
+  const checkpoint = JSON.parse(await readFile(resolve(root, remediationPath, 'verified-submission.json'), 'utf8'));
+  if (manifest.sha256[releasePath] !== hash(releaseBytes) || release.iteration !== checkpoint.iteration ||
+      release.submissionSha256 !== manifest.submissionSha256 || release.submissionSha256 !== checkpoint.sha256 ||
+      release.nodes.length !== checkpoint.networkDevices || release.links.length !== checkpoint.links) {
+    throw new Error('The remediation release does not match the verified checkpoint');
+  }
+  const endpoints = new Set(release.endpoints.map(item => item.name));
+  const pairs = new Set(release.ping.rows.map(row => JSON.stringify([row.source, row.target])));
+  const expectedCases = endpoints.size * (endpoints.size - 1);
+  if (endpoints.size !== checkpoint.endpoints || pairs.size !== expectedCases ||
+      release.ping.rows.length !== expectedCases || release.ping.total !== expectedCases ||
+      manifest.endpointCases !== expectedCases ||
+      release.ping.matched !== manifest.policyMatches ||
+      release.ping.matched !== release.ping.rows.filter(row => row.expected === row.observed).length ||
+      release.ping.rows.some(row => !endpoints.has(row.source) || !endpoints.has(row.target) || row.source === row.target)) {
+    throw new Error('Invalid remediation endpoint coverage');
+  }
+  const readCheckpointEvidence = async name => {
+    const path = `${remediationPath}/iteration${checkpoint.iteration}-${name}.json`;
+    const bytes = await readFile(resolve(root, path));
+    if (checkpoint.evidence[path] !== hash(bytes)) throw new Error(`Evidence hash mismatch: ${path}`);
+    return JSON.parse(bytes);
+  };
+  const [regression, failover] = await Promise.all([
+    readCheckpointEvidence('regression-summary'),
+    readCheckpointEvidence('core-failover'),
+  ]);
+  const checks = [
+    ['Campus reachability', regression.campus],
+    ['External reachability', regression.external],
+    ['Campus portal (HTTP)', regression.http],
+    ['DNS resolution', regression.dns],
+    ['Gateway reachability', regression.gateways],
+    ['Authorized SSH', regression.ssh],
+    ['Unauthorized SSH blocked', regression.sshDenied],
+  ].map(([name, { passed, total }]) => ({ name, passed, total }));
+  const outages = Object.entries(failover).map(([core, run]) => ({
+    core,
+    campusClients: run.campusClients,
+    externalClients: run.externalClients,
+    dhcpRenewals: run.dhcpRenewals,
+    isolationPassed: run.isolationPassed,
+    firstRepliesSeconds: run.failureRecovery.firstSuccessfulProbeBatchSeconds,
+  }));
+  remediationSourceCheck = {
+    ...checkSourceIdentity(release.submissionSha256, manifest.submissionSha256, currentHash, requireCurrent),
+    verification: { checks, outages },
+  };
+}
 const walkthrough = JSON.parse(await readFile(resolve(root, 'data/ospf-pat-extension.v3.json'), 'utf8'));
 if (walkthrough.submissionSha256 !== recordedHash) throw new Error('OSPF/PAT walkthrough uses another submission');
 const policyMatrix = JSON.parse(await readFile(resolve(root, 'data/policy-matrix.v3.json'), 'utf8'));
@@ -23,8 +82,13 @@ for (const example of policyMatrix.examples) {
   const record = matrix.records.find(r => r.id === example.recordId);
   if (!record?.passed || record.sourceDeviceId !== example.source || record.destinationDeviceId !== example.target || record.destinationIp !== example.destinationIp || (['Block','No route'].includes(example.verdict)) !== (record.expected === 'deny')) throw new Error('Policy matrix cell differs from its captured command');
 }
-const sourceCheck = checkSourceIdentity(recordedHash, matrix.submissionSha256, currentHash, process.argv.includes('--require-current-submission'));
-if (!sourceCheck.matchesRecordedSubmission) console.warn('Source notice: the current .pkt differs from the verified current-network capture. The website presents recorded measurements.');
+const sourceCheck = checkSourceIdentity(recordedHash, matrix.submissionSha256, currentHash, requireCurrent && !releaseBytes);
+if (!sourceCheck.matchesRecordedSubmission) console.warn('Source notice: the November 2 topology and ping replay are historical.');
+if (remediationSourceCheck) {
+  console.log(remediationSourceCheck.matchesRecordedSubmission
+    ? 'The remediation release matches the local Packet Tracer file.'
+    : 'The remediation release is a recorded checkpoint. Its local Packet Tracer file is absent or differs.');
+}
 const endpoints = snapshot.devices.filter(d => ['PC-PT', 'Server-PT'].includes(d.model));
 const targetAddresses = new Map(snapshot.devices.map(d => [d.id, [...new Set(d.interfaces.flatMap(p => [p.ipv4, p.observedLease?.ipv4].filter(Boolean)))]]));
 const perSource = [...targetAddresses.values()].reduce((total, addresses) => total + addresses.length, 0) - 1;
@@ -43,7 +107,10 @@ for (const asset of [...snapshot.evidence, ...matrix.evidence, ...walkthrough.ev
     if (assets.get(asset.path).sha256 !== asset.sha256) throw new Error('Conflicting evidence hashes');
     continue;
   }
-  const source = await realpath(resolve(root, asset.path));
+  const capturePath = asset.path.startsWith('configs/')
+    ? resolve(root, 'evidence/WEBSITE-V3-20261102', asset.path)
+    : resolve(root, asset.path);
+  const source = await realpath(capturePath);
   const rel = relative(root, source);
   if (rel.startsWith('..') || isAbsolute(rel)) throw new Error('Evidence escapes the project');
   const bytes = await readFile(source);
@@ -107,5 +174,5 @@ for (const [id, records] of Object.entries(sources)) {
   index.sources[id] = path;
 }
 await writeFile(resolve(root, 'website/src/data/ping-index.json'), JSON.stringify(index, null, 2) + '\n');
-await writeFile(resolve(root, 'website/src/data/source-check.json'), JSON.stringify({ checkedAt: new Date().toISOString(), ...sourceCheck }, null, 2) + '\n');
+await writeFile(resolve(root, 'website/src/data/source-check.json'), JSON.stringify({ checkedAt: new Date().toISOString(), ...sourceCheck, remediation: remediationSourceCheck }, null, 2) + '\n');
 console.log(`Prepared ${snapshot.devices.length} devices, ${snapshot.links.length} links, ${matrix.cases} verified pings in ${endpoints.length} source files, and ${assets.size} hash-verified evidence assets.`);
