@@ -116,9 +116,24 @@
 .block { color: light-dark(#9c3a28, #ffa68f); }
 .command { display: flex; gap: .55rem; flex-wrap: wrap; margin: .75rem 0; }
 .command span { color: var(--muted); }
-.flow { display: flex; flex-wrap: wrap; gap: .5rem; padding: 0; list-style: none; counter-reset: hop; }
-.flow li { counter-increment: hop; display: flex; gap: .4rem; align-items: center; padding: .45rem .55rem; border: 1px solid var(--border); border-radius: .45rem; font-size: .77rem; }
-.flow li::before { content: counter(hop, decimal-leading-zero); color: var(--accent); font: .7rem Consolas, monospace; }
+.packetReplay { margin: 1.15rem 0; }
+.playback { display: flex; flex-wrap: wrap; gap: .45rem; margin-bottom: .65rem; }
+.playback button:disabled { opacity: .46; }
+.packetStatus { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .3rem .75rem; margin-bottom: .45rem; padding: .55rem .7rem; border: 1px solid var(--border); border-radius: .45rem; background: var(--canvas); font-size: .8rem; }
+.packetStatus span { color: var(--muted); }
+.packetStatus[data-phase], .device[data-phase] { --packet-color: var(--accent); }
+.packetStatus[data-phase=reply], .device[data-phase=reply] { --packet-color: light-dark(#225caa, #90baff); }
+.packetStatus[data-phase=blocked], .device[data-phase=blocked] { --packet-color: light-dark(#9c3a28, #ffa68f); }
+.packetStatus strong { color: var(--packet-color, var(--text)); }
+.graph.packetMap { height: clamp(15rem, 38vw, 22rem); min-height: 0; }
+.device[data-phase] { border-color: var(--packet-color); box-shadow: 0 0 0 4px color-mix(in srgb, var(--packet-color) 18%, transparent); }
+.device[data-dimmed=true] { opacity: .5; }
+.packetMarker { position: absolute; right: 0; bottom: 100%; margin-bottom: .2rem; padding: .13rem .35rem; white-space: nowrap; background: var(--surface); border: 1px solid var(--packet-color); border-radius: .28rem; color: var(--packet-color); font-size: .62rem; }
+.hopList { margin: .65rem 0; font-size: .78rem; }
+.hopList ol { display: flex; flex-wrap: wrap; gap: .35rem; list-style: none; padding: 0; margin: .35rem 0; }
+.hopList button { padding: .35rem .45rem; border: 1px solid var(--border); border-radius: .38rem; font-size: .74rem; text-align: left; }
+.hopList button[aria-pressed=true] { border-color: var(--accent); background: var(--surface-raised); }
+.hopList button[data-phase=blocked] { color: light-dark(#9c3a28, #ffa68f); }
 .details { border-top: 1px solid var(--border); padding-top: .75rem; }
 .details summary { cursor: pointer; font-size: .85rem; }
 .details .tableWrap { margin-top: .65rem; }
@@ -143,12 +158,40 @@
 .identity { margin-top: 1rem; justify-content: flex-start; color: var(--muted); font-size: .76rem; }
 .identity code { overflow-wrap: anywhere; }
 .footer { border-top: 1px solid var(--border); color: var(--muted); padding-block: 1rem; font-size: .78rem; }
+.pingWorkspace { display: grid; grid-template-columns: minmax(15rem, .85fr) minmax(0, 2.15fr); gap: 1rem; align-items: start; }
+.consoleFields { display: grid; gap: .75rem; }
+.pingConsole { margin: 1rem 0; padding: .85rem; border: 1px solid var(--border); border-radius: .5rem; background: var(--canvas); }
+.pingConsole > div { display: flex; gap: .4rem; align-items: center; font: .85rem Consolas, monospace; margin-block: .4rem .8rem; }
+.pingConsole input { width: 100%; font: inherit; }
+.presets { display: flex; flex-wrap: wrap; gap: .4rem; margin: 1rem 0; }
+.presets h4 { flex-basis: 100%; margin: 0 0 .3rem; }
+.guideChoices { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1rem; }
+.guideChoices button[aria-pressed=true] { border-color: var(--accent); color: var(--accent); }
+.guidePanel { border: 1px solid var(--border); background: var(--surface); padding: clamp(1rem, 3vw, 1.65rem); border-radius: .75rem; margin-bottom: 1rem; }
+.guidePath { display: flex; flex-wrap: wrap; gap: .75rem; padding: 0; list-style: none; margin-block: 1.25rem; }
+.guidePath li { display: flex; align-items: center; gap: .65rem; padding: .85rem; border: 1px solid var(--border); border-radius: .6rem; background: var(--canvas); }
+.guidePath svg { color: var(--accent); flex-shrink: 0; }
+.guidePath small { display: block; color: var(--muted); }
+.guideFacts { display: flex; gap: .6rem 2rem; flex-wrap: wrap; margin: 1rem 0 1.5rem; }
+.guideFacts dt { font-size: .78rem; color: var(--muted); }
+.guideFacts dd { margin: .3rem 0 0; }
+.guideCards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); gap: 1.25rem; margin: 1.5rem 0; }
+.guideCards article { border-top: 1px solid var(--border); padding-top: 1rem; }
+.guideCards h3 { font-size: 1rem; }
+.guideCards p { color: var(--muted); font-size: .9rem; }
+.policyMatrix table { min-width: 1000px; }
+.policyMatrix th { white-space: normal; }
+.policyMatrix td { padding: .35rem; text-align: center; }
+.policyCell { width: 100%; height: 100%; padding: .5rem .3rem; border: 1px solid var(--border); border-radius: .4rem; }
+.policyCell small { display: block; color: var(--muted); font-size: .68rem; margin-top: .15rem; }
+.policyCell:hover { background: var(--surface-raised); border-color: currentColor; }
 @media (max-width: 720px) {
-  .hero, .overviewDetails, .lab, .topologyDetail { grid-template-columns: 1fr; }
+  .hero, .overviewDetails, .lab, .topologyDetail, .pingWorkspace { grid-template-columns: 1fr; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .scenarios .fieldGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .scenarioList { max-height: 12rem; }
 }
 @media (max-width: 480px) {
   .scenarioDetail .fieldGrid { grid-template-columns: 1fr; }
+  .graph.packetMap { height: 18rem; }
 }

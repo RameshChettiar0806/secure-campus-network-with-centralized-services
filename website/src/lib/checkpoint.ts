@@ -10,7 +10,18 @@ export interface Capture {
 }
 
 export type Endpoint = Capture['endpoints'][number];
-type Probe = { source: string; target: string; expected: string; observed: string; sent: number; received: number };
+export type Probe = { source: string; target: string; expected: string; observed: string; sent: number; received: number };
+export type EndpointPair = Pick<Probe, 'source' | 'target'>;
+
+export function resolveCheckpointPing(capture: Capture, source: string, command: string) {
+  const match = /^\s*ping\s+(\S+)\s*$/i.exec(command);
+  if (!match) return { error: 'Enter a command in the form ping followed by a captured IPv4 address.' };
+  const destination = capture.endpoints.find(endpoint => endpoint.ip === match[1]);
+  if (!destination) return { error: 'That address has no endpoint test in this capture. Choose a destination from the list.' };
+  if (destination.name === source) return { error: 'Choose a destination other than the source device.' };
+  const record = capture.ping.rows.find(row => row.source === source && row.target === destination.name);
+  return record ? { record } : { error: 'This source and destination pair has no recorded test.' };
+}
 
 export const groups = [
   { segment: 30, name: 'Student', workstation: 'Student' },
@@ -87,26 +98,36 @@ export function flowFor(capture: Capture, source: Endpoint, target: Endpoint, ex
   };
   const ingress = attachment(source);
   const egress = attachment(target);
-  const access = [source.name, ingress];
+  const route = (hops: (string | undefined)[]) => hops.filter((id): id is string => id !== undefined);
+  const access = route([source.name, ingress]);
   const campus = [...access, 'SW1-CORE'];
-  if (source.segment === target.segment) return {
-    path: [...new Set([...access, egress, target.name])],
-    explanation: 'Both workstations share a VLAN. The access switch forwards the echo request locally at Layer 2. The reply stays in the same VLAN.',
-  };
+  const destination = route([egress, target.name]);
+  if (source.segment === target.segment) {
+    const local = [...new Set([...access, ...destination])];
+    return { path: local, route: local,
+      explanation: 'Both workstations share a VLAN. The access switch forwards the echo request locally at Layer 2. The reply stays in the same VLAN.' };
+  }
   if (source.segment === 'External') return {
     path: access,
+    route: [...access, 'R1-CAMPUS', 'SW1-CORE', ...destination],
     explanation: 'The external router has no route to the private campus subnets. This externally initiated echo request stops before reaching the campus edge.',
   };
+  const fullRoute = target.segment === 'External'
+    ? [...campus, 'R1-CAMPUS', ...destination]
+    : [...campus, ...destination];
   if (expected === 'deny') return {
     path: campus,
+    route: fullRoute,
     explanation: 'The source sends the echo request to its campus gateway. The source VLAN’s ingress policy on the active core denies this direction.',
   };
   if (target.segment === 'External') return {
-    path: [...campus, 'R1-CAMPUS', egress, target.name],
+    path: fullRoute,
+    route: fullRoute,
     explanation: 'The primary core routes toward the campus edge. The edge translates the client source with PAT and forwards via the OSPF route to the external router. The echo reply follows the translation back to the client.',
   };
   return {
-    path: [...campus, egress, target.name],
+    path: fullRoute,
+    route: fullRoute,
     explanation: 'The active core routes the echo request between the two VLANs. The campus policy permits the request in this direction and the corresponding echo reply.',
   };
 }

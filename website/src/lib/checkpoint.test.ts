@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildScenarios, deviceLabelsFor, flowFor, type Capture } from './checkpoint';
+import { buildScenarios, deviceLabelsFor, flowFor, resolveCheckpointPing, type Capture } from './checkpoint';
 
 const files = import.meta.glob<Capture>('../../../data/audit-release.json', { eager: true, import: 'default' });
 const capture = Object.values(files)[0];
@@ -23,11 +23,34 @@ describe.skipIf(!capture)('Version 02 scenario coverage', () => {
     expect(path).toEqual([source.name, 'SW2-ACCESS', 'SW1-CORE', 'SW2-ACCESS', target.name]);
   });
 
+  it('uses captured physical links and stops blocked requests before their destination', () => {
+    const endpoints = new Map(capture.endpoints.map(endpoint => [endpoint.name, endpoint]));
+    const key = (a: string, b: string) => [a, b].sort().join(':');
+    const links = new Set(capture.links.map(link => key(link.from, link.to)));
+    const invalid = capture.ping.rows.filter(row => {
+      const flow = flowFor(capture, endpoints.get(row.source)!, endpoints.get(row.target)!, row.expected);
+      return flow.path[0] !== row.source || flow.route.at(-1) !== row.target ||
+        flow.route.slice(1).some((id, index) => !links.has(key(flow.route[index], id))) ||
+        flow.path.at(-1) !== (row.expected === 'allow' ? row.target : row.source === 'SRV-EXTERNAL' ? 'R2-EXTERNAL' : 'SW1-CORE');
+    });
+    expect(invalid).toEqual([]);
+  });
+
   it('gives every physical device a unique display name', () => {
     const labels = deviceLabelsFor(capture.endpoints);
     expect(capture.nodes.filter(node => !labels.has(node.name))).toEqual([]);
     expect(new Set(labels.values()).size).toBe(capture.nodes.length);
     expect(labels.get('SRV-CAMPUS')).toBe('Campus Services Server');
     expect(labels.get('SW5-CORE')).toBe('Standby Core Switch');
+  });
+
+  it('resolves captured commands using the chosen source and rejects unavailable or invalid commands', () => {
+    const student = capture.endpoints.find(endpoint => endpoint.name === 'PC0')!;
+    const external = capture.endpoints.find(endpoint => endpoint.segment === 'External')!;
+    expect(resolveCheckpointPing(capture, student.name, `ping ${external.ip}`).record?.observed).toBe('allow');
+    expect(resolveCheckpointPing(capture, external.name, `ping ${student.ip}`).record?.observed).toBe('deny');
+    expect(resolveCheckpointPing(capture, student.name, `ping ${student.ip}`).error).toBeTruthy();
+    expect(resolveCheckpointPing(capture, student.name, 'ping 1.2.3.4').error).toBeTruthy();
+    expect(resolveCheckpointPing(capture, student.name, `ping ${external.ip} -t`).error).toBeTruthy();
   });
 });

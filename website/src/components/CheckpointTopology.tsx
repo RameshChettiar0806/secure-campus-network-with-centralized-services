@@ -1,21 +1,9 @@
 import { useMemo, useState } from 'react';
-import { Background, ConnectionMode, Controls, Handle, Position, ReactFlow, type Edge, type Node, type NodeProps } from '@xyflow/react';
+import { Background, ConnectionMode, Controls, Position, ReactFlow, type Edge } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
-import DeviceSymbol from './DeviceSymbol';
+import { checkpointNodeTypes, type CampusNode } from './CheckpointDevice';
 import type { Capture } from '../lib/checkpoint';
 import styles from '../views/Remediation.module.css';
-
-type CampusNode = Node<{ label: string; model: string }, 'campusDevice'>;
-const sides = [Position.Top, Position.Right, Position.Bottom, Position.Left];
-const nodeTypes = { campusDevice: CampusDevice };
-
-function CampusDevice({ data, selected }: NodeProps<CampusNode>) {
-  return <div className={`${styles.device} ${selected ? styles.selectedDevice : ''}`}>
-    {sides.map(side => <Handle key={side} id={side} type="source" position={side}/>)}
-    <DeviceSymbol model={data.model} size={22}/>
-    <span><strong>{data.label}</strong><small>{data.model}</small></span>
-  </div>;
-}
 
 const infrastructure: Record<string, [number, number]> = {
   'R1-CAMPUS': [515, 30], 'R2-EXTERNAL': [760, 30], 'SRV-EXTERNAL': [1005, 30],
@@ -77,7 +65,7 @@ export default function CheckpointTopology({ capture, labels, theme }: {
       }}/> Show all workstations
     </label>
     <div className={styles.graph} aria-label="Verified physical topology">
-      <ReactFlow key={String(showPCs)} nodes={nodes} edges={edges} nodeTypes={nodeTypes} fitView colorMode={theme}
+      <ReactFlow key={String(showPCs)} nodes={nodes} edges={edges} nodeTypes={checkpointNodeTypes} fitView colorMode={theme}
         connectionMode={ConnectionMode.Loose} nodesDraggable={false} nodesConnectable={false} minZoom={0.12} fitViewOptions={{ padding: .13 }}
         onNodeClick={(_, node) => setSelected(node.id)}>
         <Background/><Controls showInteractive={false}/>

@@ -1,10 +1,13 @@
 import { useMemo, useState } from 'react';
-import { buildScenarios, flowFor, groups, type Capture, type Scenario } from '../lib/checkpoint';
+import { buildScenarios, groups, type Capture, type Scenario } from '../lib/checkpoint';
+import CheckpointPingResult from './CheckpointPingResult';
 import styles from '../views/Remediation.module.css';
 
 const scenarioId = (number: number) => String(number).padStart(2, '0');
 
-export default function ScenarioLab({ capture, labels }: { capture: Capture; labels: ReadonlyMap<string, string> }) {
+export default function ScenarioLab({ capture, labels, theme }: {
+  capture: Capture; labels: ReadonlyMap<string, string>; theme: 'dark' | 'light';
+}) {
   const scenarios = useMemo(() => buildScenarios(capture), [capture]);
   const [active, setActive] = useState(1);
   const [sourceFilter, setSourceFilter] = useState('');
@@ -42,14 +45,14 @@ export default function ScenarioLab({ capture, labels }: { capture: Capture; lab
         </div>
         {!filtered.length && <p className={styles.muted}>This combination has no distinct endpoint pair.</p>}
       </aside>
-      {selected && <ScenarioDetail key={selected.number} scenario={selected} capture={capture} labels={labels}
+      {selected && <ScenarioDetail key={selected.number} scenario={selected} capture={capture} labels={labels} theme={theme}
         reverse={reverse ? () => { setSourceFilter(''); setTargetFilter(''); setActive(reverse.number); } : undefined}/>}
     </div>
   </section>;
 }
 
-function ScenarioDetail({ scenario, capture, labels, reverse }: {
-  scenario: Scenario; capture: Capture; labels: ReadonlyMap<string, string>; reverse?: () => void;
+function ScenarioDetail({ scenario, capture, labels, theme, reverse }: {
+  scenario: Scenario; capture: Capture; labels: ReadonlyMap<string, string>; theme: 'dark' | 'light'; reverse?: () => void;
 }) {
   const name = (id: string) => labels.get(id) ?? id;
   const sorted = (ids: string[]) => [...new Set(ids)].sort((a, b) => name(a).localeCompare(name(b), 'en', { numeric: true }));
@@ -59,12 +62,7 @@ function ScenarioDetail({ scenario, capture, labels, reverse }: {
   const [target, setTarget] = useState(targets[0]);
   const activeTarget = targets.includes(target) ? target : targets[0];
   const result = scenario.rows.find(row => row.source === source && row.target === activeTarget)!;
-  const from = capture.endpoints.find(endpoint => endpoint.name === source)!;
-  const to = capture.endpoints.find(endpoint => endpoint.name === activeTarget)!;
-  const flow = flowFor(capture, from, to, result.expected);
   const matchCount = scenario.rows.filter(row => row.expected === row.observed).length;
-  const allowed = result.observed === 'allow';
-  const outcome = allowed ? 'Reachable' : result.observed === 'deny' ? 'Blocked' : 'Incomplete';
   return <article className={styles.scenarioDetail} aria-labelledby="scenario-title">
     <div className={styles.scenarioTitle}>
       <div>
@@ -82,18 +80,7 @@ function ScenarioDetail({ scenario, capture, labels, reverse }: {
         {targets.map(id => <option key={id} value={id}>{name(id)}</option>)}
       </select></label>
     </div>
-    <div className={styles.result} aria-live="polite">
-      <div><span className={styles.muted}>Observed outcome</span><strong className={allowed ? styles.allow : styles.block}>{outcome}</strong></div>
-      <div><span className={styles.muted}>Echo replies</span><strong>{result.received} / {result.sent}</strong></div>
-      <div><span className={styles.muted}>Expected policy</span><strong>{result.expected === 'allow' ? 'Allow' : 'Deny'}</strong></div>
-    </div>
-    <p className={styles.command}><code>{from.ip}</code><span aria-hidden="true">→</span><code>ping {to.ip}</code></p>
-    <h4>Illustrated request path</h4>
-    <p className={styles.muted}>Derived from the normal topology and policy for this direction. The recorded test measures end-to-end ICMP replies.</p>
-    <ol className={styles.flow} aria-label="Illustrated request path">
-      {flow.path.map((id, index) => id && <li key={index}>{name(id)}</li>)}
-    </ol>
-    <p>{flow.explanation}</p>
+    <CheckpointPingResult capture={capture} labels={labels} result={result} theme={theme}/>
     <details className={styles.details}>
       <summary>View all {scenario.rows.length} recorded {scenario.rows.length === 1 ? 'pair' : 'pairs'}</summary>
       <div className={styles.tableWrap}><table>

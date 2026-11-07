@@ -1,16 +1,22 @@
 import { lazy, Suspense, useState } from 'react';
 import ScenarioLab from '../components/ScenarioLab';
-import { deviceLabelsFor, segmentLabel, type Capture } from '../lib/checkpoint';
+import { deviceLabelsFor, segmentLabel, type Capture, type EndpointPair } from '../lib/checkpoint';
 import styles from './Remediation.module.css';
 
 const Topology = lazy(() => import('../components/CheckpointTopology'));
+const TopologyGuide = lazy(() => import('./CheckpointGuide'));
+const PingLab = lazy(() => import('./CheckpointPingLab'));
+const AccessPolicy = lazy(() => import('./CheckpointPolicy'));
 const files = import.meta.glob<Capture>('../../../data/audit-release.json', { eager: true, import: 'default' });
 const capture = Object.values(files)[0];
 const labels = deviceLabelsFor(capture?.endpoints ?? []);
 const sections = [
   { id: 'overview', label: 'Overview' },
   { id: 'topology', label: 'Topology' },
+  { id: 'guide', label: 'Topology Guide' },
   { id: 'addressing', label: 'Addressing' },
+  { id: 'ping', label: 'Ping Lab' },
+  { id: 'policy', label: 'Access Policy' },
   { id: 'scenarios', label: 'Packet scenarios' },
   { id: 'verification', label: 'Verification' },
 ] as const;
@@ -28,6 +34,8 @@ export default function Remediation({ theme, source, toggleTheme }: {
   theme: 'dark' | 'light'; source: CheckpointSource; toggleTheme: () => void;
 }) {
   const [section, setSection] = useState<Section>('overview');
+  const [pingPair, setPingPair] = useState<EndpointPair>({ source: 'PC0', target: 'SRV-EXTERNAL' });
+  const openPing = (pair: EndpointPair) => { setPingPair({ source: pair.source, target: pair.target }); setSection('ping'); };
   if (!capture) return <main className="fatal"><h1>Checkpoint unavailable</h1><p>The Version 02 capture could not be loaded.</p></main>;
   return <div className={styles.release}>
     <a className={styles.skip} href="#current-main">Skip to content</a>
@@ -42,8 +50,11 @@ export default function Remediation({ theme, source, toggleTheme }: {
     <main id="current-main" tabIndex={-1} className={styles.main}>
       {section === 'overview' && <Overview capture={capture} onNavigate={setSection}/>}
       {section === 'topology' && <Suspense fallback={<p>Loading the topology…</p>}><Topology capture={capture} labels={labels} theme={theme}/></Suspense>}
+      {section === 'guide' && <Suspense fallback={<p>Loading the topology guide…</p>}><TopologyGuide capture={capture} labels={labels} onPing={openPing} onTopology={() => setSection('topology')}/></Suspense>}
       {section === 'addressing' && <Addressing capture={capture}/>}
-      {section === 'scenarios' && <ScenarioLab capture={capture} labels={labels}/>}
+      {section === 'ping' && <Suspense fallback={<p>Loading Ping Lab…</p>}><PingLab key={`${pingPair.source}:${pingPair.target}`} capture={capture} labels={labels} theme={theme} initial={pingPair}/></Suspense>}
+      {section === 'policy' && <Suspense fallback={<p>Loading access policies…</p>}><AccessPolicy capture={capture} onPing={openPing}/></Suspense>}
+      {section === 'scenarios' && <ScenarioLab capture={capture} labels={labels} theme={theme}/>}
       {section === 'verification' && <Verification capture={capture} source={source}/>}
     </main>
     <footer className={styles.footer}>
