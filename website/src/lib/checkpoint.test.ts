@@ -44,6 +44,19 @@ describe.skipIf(!capture)('Version 02 scenario coverage', () => {
     expect(labels.get('SW5-CORE')).toBe('Standby Core Switch');
   });
 
+  it('matches the submission PC names at each physical access port', () => {
+    const labels = deviceLabelsFor(capture.endpoints);
+    const endpointLinks = capture.links.filter(link => link.from.startsWith('PC'));
+    expect(endpointLinks).toHaveLength(50);
+    for (const link of endpointLinks) {
+      const port = Number(link.peer.split('/').at(-1));
+      const expected = link.to === 'SW4-STUDENTS' ? `PC${port - 1}`
+        : link.to === 'SW3-FACULTY' ? `PC${port + 19}`
+        : port === 1 ? 'PC49-MGMT' : `PC${port + 36}`;
+      expect(labels.get(link.from)).toBe(expected);
+    }
+  });
+
   it('resolves captured commands using the chosen source and rejects unavailable or invalid commands', () => {
     const student = capture.endpoints.find(endpoint => endpoint.name === 'PC0')!;
     const external = capture.endpoints.find(endpoint => endpoint.segment === 'External')!;

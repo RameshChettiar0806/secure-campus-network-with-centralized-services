@@ -41,7 +41,7 @@ const deviceLabels: Record<string, string> = {
   'SW3-FACULTY': 'Faculty Access Switch',
   'SW4-STUDENTS': 'Student Access Switch',
   'SW6-SERVICES': 'Campus Services Switch',
-  'PC8-MGMT': 'Management Workstation',
+  'PC8-MGMT': 'PC49-MGMT',
   'SRV-CAMPUS': 'Campus Services Server',
   'SRV-EXTERNAL': 'External Server',
 };
@@ -52,10 +52,11 @@ export function segmentLabel(segment: Endpoint['segment']) {
 
 export function deviceLabelsFor(endpoints: Endpoint[]) {
   const labels = new Map(Object.entries(deviceLabels));
-  for (const group of groups) {
-    endpoints.filter(endpoint => endpoint.segment === group.segment && !labels.has(endpoint.name))
+  // Keep historical capture keys; display the submission's November 7 PC numbering.
+  for (const [segment, firstNumber] of [[30, 0], [20, 20], [10, 38]] as const) {
+    endpoints.filter(endpoint => endpoint.segment === segment)
       .sort((a, b) => a.name.localeCompare(b.name, 'en', { numeric: true }))
-      .forEach((endpoint, index) => labels.set(endpoint.name, `${group.workstation} Workstation ${String(index + 1).padStart(2, '0')}`));
+      .forEach((endpoint, index) => labels.set(endpoint.name, `PC${firstNumber + index}`));
   }
   return labels;
 }
