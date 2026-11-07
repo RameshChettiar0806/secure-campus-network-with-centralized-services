@@ -185,13 +185,73 @@
 .policyCell { width: 100%; height: 100%; padding: .5rem .3rem; border: 1px solid var(--border); border-radius: .4rem; }
 .policyCell small { display: block; color: var(--muted); font-size: .68rem; margin-top: .15rem; }
 .policyCell:hover { background: var(--surface-raised); border-color: currentColor; }
+.topologySection { --topology-trunk: light-dark(#7650ab, #b69aea); --topology-routed: light-dark(#246db5, #83b9f0); --topology-mask: light-dark(#edf1f5cc, #09111bcc); }
+.topologyViews { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; margin-bottom: 1rem; }
+.topologyViews button { border: 1px solid var(--border); border-radius: .65rem; background: var(--surface); padding: 1rem 1.2rem; text-align: left; }
+.topologyViews button[aria-pressed=true] { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 7%, var(--surface)); }
+.topologyViews span, .topologyViews strong, .topologyViews small { display: block; }
+.topologyViews span { color: var(--accent); font: .7rem Consolas, monospace; text-transform: uppercase; letter-spacing: .08em; margin-bottom: .3rem; }
+.topologyViews strong { font-size: 1rem; }
+.topologyViews small { font-size: .78rem; color: var(--muted); margin-top: .3rem; }
+.topologyToolbar, .selectedSummary, .deviceGuideHeader { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .7rem 1.2rem; }
+.topologyToolbar { margin-top: 1.3rem; }
+.topologyToolbar p { margin: 0; font-size: .85rem; }
+.topologyToolbar p span { display: block; color: var(--muted); font-size: .78rem; margin-top: .2rem; }
+.topologyToolbar .toggle { margin: 0 .5rem 0 0; }
+.topologyHint { font-size: .8rem; color: var(--muted); margin: .65rem 0 1rem; max-width: 95ch; }
+.graph.completeGraph { height: min(76vh, 48rem); min-height: 25rem; }
+.topologySection :global(.react-flow__minimap) { background: var(--surface); border: 1px solid var(--border); }
+.topologyLegend { display: flex; flex-wrap: wrap; gap: .5rem 1.4rem; margin: .85rem 0; font-size: .73rem; color: var(--muted); }
+.topologyLegend span { display: flex; align-items: center; gap: .4rem; }
+.topologyLegend span::before { content: ''; width: 1.25rem; height: 2px; background: var(--muted); }
+.topologyLegend [data-kind=trunk]::before { background: var(--topology-trunk); }
+.topologyLegend [data-kind=routed]::before { background: var(--topology-routed); }
+.topologyLegend [data-kind=selected]::before { background: var(--accent); height: 3px; }
+.selectedSummary { margin: 1.3rem 0 .7rem; font-size: .84rem; }
+.selectedSummary p { margin: 0; }
+.selectedSummary a { color: var(--accent); }
+.deviceGuide { border: 1px solid var(--border); border-radius: .8rem; background: var(--surface); padding: clamp(1rem, 2.5vw, 1.75rem); scroll-margin-top: 1rem; }
+.deviceGuideHeader { padding-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+.deviceGuideHeader > label { width: min(100%, 20rem); }
+.deviceIdentity { display: flex; align-items: center; gap: .9rem; }
+.deviceIdentity > svg { color: var(--accent); flex-shrink: 0; }
+.deviceIdentity .eyebrow { margin: 0 0 .25rem; }
+.deviceIdentity h3 { margin: 0; font-size: clamp(1.2rem, 3vw, 1.75rem); letter-spacing: -.025em; }
+.deviceIdentity p:last-child { color: var(--muted); font-size: .82rem; margin: .3rem 0 0; }
+.deviceLesson { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 1.5rem 2.5rem; padding-block: 1.4rem; }
+.deviceGuide h4 { margin: 0 0 .4rem; font-size: .95rem; }
+.deviceExplanation { display: grid; align-content: start; gap: 1.15rem; }
+.deviceExplanation p, .learningQuestion p, .deviceConnections > p { margin: 0; font-size: .86rem; color: var(--muted); }
+.deviceFacts { border-left: 1px solid var(--border); padding-left: 1.5rem; min-width: 0; }
+.deviceFacts dl { display: grid; gap: .8rem; margin: .7rem 0 1.4rem; }
+.deviceFacts dt { font-size: .73rem; color: var(--muted); }
+.deviceFacts dd { margin: .2rem 0 0; font: .8rem/1.6 Consolas, monospace; overflow-wrap: anywhere; }
+.conceptTags { display: flex; gap: .35rem; flex-wrap: wrap; list-style: none; padding: 0; margin: .65rem 0 1.25rem; }
+.conceptTags li { padding: .2rem .5rem; border: 1px solid var(--border); border-radius: .35rem; font-size: .72rem; }
+.learningQuestion { border-top: 1px solid var(--border); padding-top: .75rem; }
+.learningQuestion summary { cursor: pointer; font-size: .83rem; color: var(--accent); }
+.learningQuestion p { margin-top: .65rem; }
+.deviceConnections { border-top: 1px solid var(--border); padding-top: 1.25rem; }
+.deviceConnections h4 span { color: var(--muted); font-size: .75rem; font-weight: 400; margin-left: .5rem; }
+.deviceConnections > p { margin-bottom: .8rem; }
+.deviceConnections table { min-width: 660px; }
+.deviceConnections td code { white-space: nowrap; }
+.deviceConnections th button { text-align: left; color: var(--accent); font-size: .8rem; }
+.deviceConnections td strong { display: block; font-size: .76rem; font-weight: 500; }
+.deviceConnections td small { display: block; color: var(--muted); font-size: .72rem; margin-top: .2rem; }
+.captureNote { font-size: .72rem; color: var(--muted); margin: 1rem 0 0; }
 @media (max-width: 720px) {
-  .hero, .overviewDetails, .lab, .topologyDetail, .pingWorkspace { grid-template-columns: 1fr; }
+  .hero, .overviewDetails, .lab, .topologyDetail, .pingWorkspace, .deviceLesson { grid-template-columns: 1fr; }
+  .deviceFacts { border-left: 0; padding-left: 0; border-top: 1px solid var(--border); padding-top: 1.2rem; }
   .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .scenarios .fieldGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .scenarioList { max-height: 12rem; }
 }
 @media (max-width: 480px) {
+  .topologyViews button { padding: .8rem; }
+  .topologyViews strong { font-size: .9rem; }
+  .topologyViews small { font-size: .7rem; }
+  .topologySection :global(.react-flow__minimap) { width: 105px; height: 75px; }
   .scenarioDetail .fieldGrid { grid-template-columns: 1fr; }
   .graph.packetMap { height: 18rem; }
 }
