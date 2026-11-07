@@ -1,0 +1,290 @@
+Building configuration...
+
+Current configuration : 6570 bytes
+!
+version 12.2
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW2-ACCESS
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+ip ssh version 2
+ip ssh authentication-retries 2
+ip ssh time-out 60
+no ip domain-lookup
+ip domain-name campus.test
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+ip dhcp snooping vlan 10,20,30
+no ip dhcp snooping information option
+ip dhcp snooping
+!
+spanning-tree mode rapid-pvst
+spanning-tree extend system-id
+!
+interface FastEthernet0/1
+ description PC8-MGMT_VLAN99
+ switchport access vlan 99
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0060.5C0B.D6C2
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/2
+ description PC9-ADMIN_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 000C.CF72.8060
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/3
+ description PC40_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0001.963B.94E8
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/4
+ description PC41_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 000A.419A.A858
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/5
+ description PC42_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 000B.BE35.1777
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/6
+ description PC43_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0090.2116.AE42
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/7
+ description PC44_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 00D0.BCD0.6B51
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/8
+ description PC45_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0001.4342.5D11
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/9
+ description PC46_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 00E0.F959.4E34
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/10
+ description PC47_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0004.9A6A.1B96
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/11
+ description PC48_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0006.2A6E.4DC4
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/12
+ description PC49_VLAN10
+ switchport access vlan 10
+ switchport mode access
+ switchport port-security
+ switchport port-security violation restrict 
+ switchport port-security mac-address 0010.113B.AD2D
+ spanning-tree portfast
+ spanning-tree bpduguard enable
+!
+interface FastEthernet0/13
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ spanning-tree portfast
+ shutdown
+!
+interface FastEthernet0/14
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ spanning-tree portfast
+ shutdown
+!
+interface FastEthernet0/15
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/16
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/17
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/18
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/19
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/20
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/21
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/22
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/23
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface FastEthernet0/24
+ description UNUSED_SHUTDOWN
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet0/1
+ description TRUNK_TO_SW1-CORE
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,99
+ ip arp inspection trust
+ ip dhcp snooping trust
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet0/2
+ description TRUNK_TO_SW5-CORE
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,99
+ ip arp inspection trust
+ ip dhcp snooping trust
+ switchport mode trunk
+ switchport nonegotiate
+ spanning-tree vlan 10 cost 200
+ spanning-tree cost 203
+ spanning-tree vlan 99 cost 204
+ spanning-tree link-type point-to-point
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ no ip address
+ shutdown
+!
+interface Vlan99
+ ip address 192.168.10.148 255.255.255.240
+!
+ip default-gateway 192.168.10.145
+!
+logging 192.168.10.130
+!
+!
+!
+access-list 1 permit host 192.168.10.146
+access-list 1 deny any
+line con 0
+ login local
+ exec-timeout 5 0
+!
+line vty 0 4
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+line vty 5 15
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+!
+ntp server 192.168.10.130
+!
+end
+
+
+
+

@@ -1,0 +1,9 @@
+{
+  "observedAt": "2026-11-06T22:46:09+05:30",
+  "model": "2911",
+  "requestedPackage": "securityk9",
+  "observedPrompt": "ACCEPT? [yes/no]:",
+  "condition": "Cisco software evaluation license agreement shown in the interactive IOS console",
+  "accepted": false,
+  "effect": "Verified Iteration 5 simulation retained"
+}

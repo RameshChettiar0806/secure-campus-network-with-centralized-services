@@ -1,0 +1,32 @@
+{
+  "method": "Wall-clock output events from 30-probe ping sequences; no fast-forward during measurement. First post-failure reply is an observed bound, not exact protocol convergence.",
+  "measurements": {
+    "PC0": {
+      "sent": 30,
+      "received": "30",
+      "shutdownWallMs": 1793875122326,
+      "lastReplyBeforeWallMs": 1793875121501,
+      "firstReplyAfterWallMs": 1793875122538,
+      "firstReplyAfterFailureMs": 212,
+      "observedReplyGapMs": 1037
+    },
+    "PC5": {
+      "sent": 30,
+      "received": "30",
+      "shutdownWallMs": 1793875122326,
+      "lastReplyBeforeWallMs": 1793875121498,
+      "firstReplyAfterWallMs": 1793875122555,
+      "firstReplyAfterFailureMs": 229,
+      "observedReplyGapMs": 1057
+    },
+    "PC9-ADMIN": {
+      "sent": 30,
+      "received": "30",
+      "shutdownWallMs": 1793875122326,
+      "lastReplyBeforeWallMs": 1793875121498,
+      "firstReplyAfterWallMs": 1793875122533,
+      "firstReplyAfterFailureMs": 207,
+      "observedReplyGapMs": 1035
+    }
+  }
+}

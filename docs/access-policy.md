@@ -1,5 +1,7 @@
 # Access policy
 
+> Historical scope: these are Version 01 policies, including the old management address. Current VLAN 99 and core SVI policies are in [Version 02 access controls](versions/version-02/access-controls.md).
+
 The [OSPF/PAT extension](ospf-pat-extension.md) retains these campus rules and adds only client TCP/80 and ICMP Echo access to 203.0.113.10. The WAN ingress ACL permits OSPF and selected replies and denies other traffic.
 
 | Initiator and destination | Decision and reason |

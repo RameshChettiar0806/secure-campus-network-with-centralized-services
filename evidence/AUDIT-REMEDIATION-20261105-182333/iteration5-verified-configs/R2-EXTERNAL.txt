@@ -1,0 +1,106 @@
+Building configuration...
+
+Current configuration : 1257 bytes
+!
+version 15.1
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname R2-EXTERNAL
+!
+!
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+!
+!
+!
+ip cef
+no ipv6 cef
+!
+!
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+license udi pid CISCO1941/K9 sn FTX15247885-
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+no ip domain-lookup
+ip domain-name campus.test
+!
+!
+spanning-tree mode pvst
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet0/0
+ description OSPF_TRANSIT_TO_R1_Gi0_1
+ ip address 198.51.100.2 255.255.255.252
+ ip ospf authentication message-digest
+[REDACTED LAB CREDENTIAL]
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet0/1
+ description EXTERNAL_WEB_SERVER
+ ip address 203.0.113.1 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+router ospf 1
+ router-id 2.2.2.2
+ log-adjacency-changes
+ passive-interface default
+ no passive-interface GigabitEthernet0/0
+ network 198.51.100.0 0.0.0.3 area 0
+ network 203.0.113.0 0.0.0.255 area 0
+!
+ip classless
+!
+ip flow-export version 9
+!
+!
+!
+!
+!
+!
+!
+line con 0
+ exec-timeout 5 0
+ login local
+!
+line aux 0
+ exec-timeout 0 0
+!
+line vty 0 4
+ exec-timeout 5 0
+ login local
+ transport input none
+!
+!
+!
+end
+
+
+
+

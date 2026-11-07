@@ -1,0 +1,27 @@
+{
+  "R1-CAMPUS": {
+    "running": true,
+    "startup": true,
+    "ntp": "Clock is synchronized, stratum 2, reference is 192.168.10.130\nnominal freq is 250.0000 Hz, actual freq is 249.9990 Hz, precision is 2**24\nreference time is EE4BA729.00000190 (9:36:41.400 UTC Tue Oct 13 2026)\nclock offset is 1.00 msec, root delay is 0.00  msec\nroot dispersion is 13.11 msec, peer dispersion is 0.12 msec.\nloopfilter state is 'CTRL' (Normal Controlled Loop), drift is - 0.000001193 s/s system poll interval is 4, last update was 3 sec ago.\n\n"
+  },
+  "SW1-CORE": {
+    "running": false,
+    "startup": true,
+    "ntp": "Clock is unsynchronized, stratum 16, no reference clock\nnominal freq is 250.0000 Hz, actual freq is 249.9990 Hz, precision is 2**24\nreference time is 00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1990)\nclock offset is 0.00 msec, root delay is 0.00  msec\nroot dispersion is 0.00 msec, peer dispersion is 0.00 msec.\nloopfilter state is 'FSET' (Drift set from file), drift is - 0.000001193 s/s system poll interval is 4, never updated.\n\n"
+  },
+  "SW2-ACCESS": {
+    "running": false,
+    "startup": true,
+    "ntp": "Clock is unsynchronized, stratum 16, no reference clock\nnominal freq is 250.0000 Hz, actual freq is 249.9990 Hz, precision is 2**24\nreference time is 00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1990)\nclock offset is 0.00 msec, root delay is 0.00  msec\nroot dispersion is 0.00 msec, peer dispersion is 0.00 msec.\nloopfilter state is 'FSET' (Drift set from file), drift is - 0.000001193 s/s system poll interval is 4, never updated.\n\n"
+  },
+  "SW3-FACULTY": {
+    "running": false,
+    "startup": true,
+    "ntp": "Clock is unsynchronized, stratum 16, no reference clock\nnominal freq is 250.0000 Hz, actual freq is 249.9990 Hz, precision is 2**24\nreference time is 00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1990)\nclock offset is 0.00 msec, root delay is 0.00  msec\nroot dispersion is 0.00 msec, peer dispersion is 0.00 msec.\nloopfilter state is 'FSET' (Drift set from file), drift is - 0.000001193 s/s system poll interval is 4, never updated.\n\n"
+  },
+  "SW4-STUDENTS": {
+    "running": false,
+    "startup": true,
+    "ntp": "Clock is unsynchronized, stratum 16, no reference clock\nnominal freq is 250.0000 Hz, actual freq is 249.9990 Hz, precision is 2**24\nreference time is 00000000.00000000 (00:00:00.000 UTC Mon Jan 1 1990)\nclock offset is 0.00 msec, root delay is 0.00  msec\nroot dispersion is 0.00 msec, peer dispersion is 0.00 msec.\nloopfilter state is 'FSET' (Drift set from file), drift is - 0.000001193 s/s system poll interval is 4, never updated.\n\n"
+  }
+}

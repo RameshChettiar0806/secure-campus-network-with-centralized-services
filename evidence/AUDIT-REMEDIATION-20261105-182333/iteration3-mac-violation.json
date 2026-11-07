@@ -1,0 +1,4 @@
+{
+  "passed": true,
+  "portSecurity": "Port Security              : Enabled\nPort Status                : Secure-up\nViolation Mode             : Restrict\nAging Time                 : 0 mins\nAging Type                 : Absolute\nSecureStatic Address Aging : Disabled\nMaximum MAC Addresses      : 1\nTotal MAC Addresses        : 1\nConfigured MAC Addresses   : 1\nSticky MAC Addresses       : 0\nLast Source Address:Vlan   : 0200.0000.0099:99\nSecurity Violation Count   : 10\n\n\n"
+}

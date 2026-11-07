@@ -44,3 +44,11 @@ Version 02 also provides a **Topology Guide**, a standalone **Ping Lab**, and a 
 The **Topology** tab has two views: **View 01 — Simplified view** retains the compact infrastructure layout; **View 02 — Complete topology** includes all 60 devices and 64 links, using the captured Packet Tracer coordinates with uniform spacing expansion. Select any device on the map or in the device selector to read its purpose, forwarding behavior, failure dependencies, addressing, concepts and learning question. The direct-connections table shows both port names, trunk VLAN allowlists or routed subnets, and clickable neighbors. Selecting a hidden workstation automatically opens the complete view. Interface labels, device focus, fit and a complete-map overview support inspection.
 
 Teaching notes are checked against the [saved Iteration 5 configuration exports](../evidence/AUDIT-REMEDIATION-20261105-182333/iteration5-verified-configs/). Coordinates, physical links and endpoint addresses come from the [Version 02 capture](../data/audit-release.json). Connection highlighting does not claim current STP forwarding or live device health; the recorded source remains unchanged.
+
+## Versioned documentation and source validation
+
+The [version index](../docs/versions/README.md) separates the two captured editions, their architecture, access policies and verification. See the [codebase review](../docs/CODEBASE_REVIEW.md) for the November 7 refinements.
+
+Before generating browser assets, scripts/validate-release.mjs validates Version 02 node and endpoint identity, physical ports, IP addresses, directed-pair coverage, packet counts and verdict totals. scripts/sync-data.mjs also checks the release hash and the checkpoint identity. The test suite includes malformed-capture cases alongside the existing routing and presentation tests.
+
+From the project root, run `python -m unittest discover -s scripts/tests -v` for offline bridge-client and checkpoint-verifier regressions. Run `python scripts/check_docs.py` to check local links in the maintained documentation set. These commands do not require a connected Packet Tracer session.

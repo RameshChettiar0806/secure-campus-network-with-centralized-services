@@ -1,0 +1,6 @@
+{
+  "configured": false,
+  "unsolicitedPositiveControl": true,
+  "passed": false,
+  "reason": "IOS image rejected zone firewall policy"
+}

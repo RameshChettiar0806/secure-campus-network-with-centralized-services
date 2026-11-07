@@ -1,0 +1,22 @@
+{
+  "SW1-CORE": {
+    "clientAuthentication": "key lost on reopening",
+    "localPeerAclAccepted": false,
+    "routerServiceAclRetained": true
+  },
+  "SW2-ACCESS": {
+    "clientAuthentication": "key lost on reopening",
+    "localPeerAclAccepted": false,
+    "routerServiceAclRetained": true
+  },
+  "SW3-FACULTY": {
+    "clientAuthentication": "key lost on reopening",
+    "localPeerAclAccepted": false,
+    "routerServiceAclRetained": true
+  },
+  "SW4-STUDENTS": {
+    "clientAuthentication": "key lost on reopening",
+    "localPeerAclAccepted": false,
+    "routerServiceAclRetained": true
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "configs": {
+    "SW1-CORE": true,
+    "R1-CAMPUS": true,
+    "SW2-ACCESS": true,
+    "SW3-FACULTY": true,
+    "SW4-STUDENTS": true,
+    "R2-EXTERNAL": true
+  },
+  "topology": true,
+  "deviceNames": true,
+  "enabledServices": true,
+  "sha256": "fc2821bd44b5d4eb2ac568e6e50607f4c7c4a73b11efe466903b62e0ab5242fe"
+}

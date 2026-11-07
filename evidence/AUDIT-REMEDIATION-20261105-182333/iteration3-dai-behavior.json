@@ -1,0 +1,13 @@
+{
+  "bindings": {
+    "SW2-ACCESS": 11,
+    "SW3-FACULTY": 18,
+    "SW4-STUDENTS": 20
+  },
+  "configured": false,
+  "spoofBlocked": false,
+  "statistics": "\n Vlan      Forwarded        Dropped     DHCP Drops     ACL Drops\n ----      ---------        -------     ----------     ---------\n   10              0              0              0             0\n\n Vlan   DHCP Permits    ACL Permits   Source MAC Failures\n ----   ------------    -----------   -------------------\n   10              0              0                     0\n\n Vlan   Dest MAC Failures   IP Validation Failures\n ----   -----------------   ----------------------\n   10                   0                        0\n\n\n",
+  "restoredLease": "192.168.10.104",
+  "restoredTraffic": true,
+  "reason": "DAI behavior did not meet all simulator checks"
+}

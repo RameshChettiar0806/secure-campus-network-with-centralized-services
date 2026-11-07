@@ -1,0 +1,1345 @@
+{
+  "coreStatus": "Port      Name               Status       Vlan       Duplex  Speed Type\nFa0/1     ADMINISTRATION_CLI connected    40         a-full  a-100 10/100BaseTX\nFa0/2     BACKUP_TRUNK_TO_SW connected    trunk      a-full  a-100 10/100BaseTX\nFa0/3     BACKUP_TRUNK_TO_SW connected    trunk      a-full  a-100 10/100BaseTX\nFa0/4     BACKUP_TRUNK_TO_SW connected    trunk      a-full  a-100 10/100BaseTX\nFa0/5     UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/6     UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/7     UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/8     UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/9     UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/10    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/11    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/12    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/13    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/14    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/15    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/16    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/17    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/18    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/19    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/20    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/21    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/22    UNUSED_SHUTDOWN    disabled 1          auto    auto  10/100BaseTX\nFa0/23    PRIMARY_TRUNK_TO_S connected    trunk      a-full  a-100 10/100BaseTX\nFa0/24    PRIMARY_TRUNK_TO_S connected    trunk      a-full  a-100 10/100BaseTX\nGig0/1    TRUNK_TO_R1_Gi0_0  connected    trunk      a-full  a-100 10/100/1000BaseTX\nGig0/2    PRIMARY_TRUNK_TO_S connected    trunk      a-full  a-100 10/100/1000BaseTX\n\n\n",
+  "http": {
+    "PC0": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC1": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC10": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC11": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC12": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC13": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC14": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC15": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC16": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC17": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC18": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC19": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC2": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC20": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC21": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC22": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC23": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC24": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC25": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC26": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC27": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC28": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC29": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC3": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC30": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC31": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC32": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC33": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC34": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC35": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC36": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC37": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC38": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC39": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC4": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC40": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC41": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC42": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC43": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC44": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC45": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC46": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC47": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC48": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC49": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC5": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC6": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC7": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC8-MGMT": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    },
+    "PC9-ADMIN": {
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ]
+    }
+  },
+  "leases": {
+    "PC0": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.4",
+      "mask": "255.255.255.192"
+    },
+    "PC1": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.15",
+      "mask": "255.255.255.192"
+    },
+    "PC10": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.10",
+      "mask": "255.255.255.192"
+    },
+    "PC11": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.19",
+      "mask": "255.255.255.192"
+    },
+    "PC12": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.7",
+      "mask": "255.255.255.192"
+    },
+    "PC13": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.3",
+      "mask": "255.255.255.192"
+    },
+    "PC14": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.2",
+      "mask": "255.255.255.192"
+    },
+    "PC15": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.20",
+      "mask": "255.255.255.192"
+    },
+    "PC16": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.16",
+      "mask": "255.255.255.192"
+    },
+    "PC17": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.17",
+      "mask": "255.255.255.192"
+    },
+    "PC18": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.13",
+      "mask": "255.255.255.192"
+    },
+    "PC19": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.11",
+      "mask": "255.255.255.192"
+    },
+    "PC2": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.6",
+      "mask": "255.255.255.192"
+    },
+    "PC20": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.12",
+      "mask": "255.255.255.192"
+    },
+    "PC21": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.18",
+      "mask": "255.255.255.192"
+    },
+    "PC22": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.22",
+      "mask": "255.255.255.192"
+    },
+    "PC23": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.9",
+      "mask": "255.255.255.192"
+    },
+    "PC24": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.21",
+      "mask": "255.255.255.192"
+    },
+    "PC25": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.79",
+      "mask": "255.255.255.224"
+    },
+    "PC26": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.68",
+      "mask": "255.255.255.224"
+    },
+    "PC27": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.67",
+      "mask": "255.255.255.224"
+    },
+    "PC28": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.83",
+      "mask": "255.255.255.224"
+    },
+    "PC29": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.82",
+      "mask": "255.255.255.224"
+    },
+    "PC3": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.8",
+      "mask": "255.255.255.192"
+    },
+    "PC30": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.78",
+      "mask": "255.255.255.224"
+    },
+    "PC31": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.86",
+      "mask": "255.255.255.224"
+    },
+    "PC32": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.76",
+      "mask": "255.255.255.224"
+    },
+    "PC33": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.80",
+      "mask": "255.255.255.224"
+    },
+    "PC34": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.85",
+      "mask": "255.255.255.224"
+    },
+    "PC35": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.87",
+      "mask": "255.255.255.224"
+    },
+    "PC36": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.84",
+      "mask": "255.255.255.224"
+    },
+    "PC37": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.81",
+      "mask": "255.255.255.224"
+    },
+    "PC38": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.69",
+      "mask": "255.255.255.224"
+    },
+    "PC39": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.66",
+      "mask": "255.255.255.224"
+    },
+    "PC4": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.14",
+      "mask": "255.255.255.192"
+    },
+    "PC40": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.115",
+      "mask": "255.255.255.224"
+    },
+    "PC41": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.103",
+      "mask": "255.255.255.224"
+    },
+    "PC42": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.108",
+      "mask": "255.255.255.224"
+    },
+    "PC43": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.114",
+      "mask": "255.255.255.224"
+    },
+    "PC44": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.112",
+      "mask": "255.255.255.224"
+    },
+    "PC45": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.113",
+      "mask": "255.255.255.224"
+    },
+    "PC46": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.104",
+      "mask": "255.255.255.224"
+    },
+    "PC47": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.116",
+      "mask": "255.255.255.224"
+    },
+    "PC48": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.106",
+      "mask": "255.255.255.224"
+    },
+    "PC49": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.110",
+      "mask": "255.255.255.224"
+    },
+    "PC5": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.73",
+      "mask": "255.255.255.224"
+    },
+    "PC6": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.70",
+      "mask": "255.255.255.224"
+    },
+    "PC7": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.77",
+      "mask": "255.255.255.224"
+    },
+    "PC8-MGMT": {
+      "dhcp": false,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.98",
+      "mask": "255.255.255.224"
+    },
+    "PC9-ADMIN": {
+      "dhcp": true,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.105",
+      "mask": "255.255.255.224"
+    },
+    "SRV-CAMPUS": {
+      "dhcp": false,
+      "dns": "192.168.10.130",
+      "ip": "192.168.10.130",
+      "mask": "255.255.255.240"
+    },
+    "SRV-EXTERNAL": {
+      "dhcp": false,
+      "dns": "192.168.10.130",
+      "ip": "203.0.113.10",
+      "mask": "255.255.255.0"
+    }
+  },
+  "links": [
+    {
+      "from": "R1-CAMPUS",
+      "peer": "GigabitEthernet0/1",
+      "port": "GigabitEthernet0/0",
+      "to": "SW1-CORE"
+    },
+    {
+      "from": "SW1-CORE",
+      "peer": "GigabitEthernet0/1",
+      "port": "GigabitEthernet0/2",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "SW1-CORE",
+      "peer": "GigabitEthernet0/1",
+      "port": "FastEthernet0/23",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "SW1-CORE",
+      "peer": "GigabitEthernet0/1",
+      "port": "FastEthernet0/24",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "SRV-CAMPUS",
+      "peer": "FastEthernet0/1",
+      "port": "FastEthernet0",
+      "to": "SW1-CORE"
+    },
+    {
+      "from": "PC8-MGMT",
+      "peer": "FastEthernet0/1",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC9-ADMIN",
+      "peer": "FastEthernet0/2",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC40",
+      "peer": "FastEthernet0/3",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC41",
+      "peer": "FastEthernet0/4",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC42",
+      "peer": "FastEthernet0/5",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC43",
+      "peer": "FastEthernet0/6",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC44",
+      "peer": "FastEthernet0/7",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC45",
+      "peer": "FastEthernet0/8",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC46",
+      "peer": "FastEthernet0/9",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC47",
+      "peer": "FastEthernet0/10",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC48",
+      "peer": "FastEthernet0/11",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC49",
+      "peer": "FastEthernet0/12",
+      "port": "FastEthernet0",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "PC5",
+      "peer": "FastEthernet0/1",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC6",
+      "peer": "FastEthernet0/2",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC7",
+      "peer": "FastEthernet0/3",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC25",
+      "peer": "FastEthernet0/4",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC26",
+      "peer": "FastEthernet0/5",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC27",
+      "peer": "FastEthernet0/6",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC28",
+      "peer": "FastEthernet0/7",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC29",
+      "peer": "FastEthernet0/8",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC30",
+      "peer": "FastEthernet0/9",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC31",
+      "peer": "FastEthernet0/10",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC32",
+      "peer": "FastEthernet0/11",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC33",
+      "peer": "FastEthernet0/12",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC34",
+      "peer": "FastEthernet0/13",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC35",
+      "peer": "FastEthernet0/14",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC36",
+      "peer": "FastEthernet0/15",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC37",
+      "peer": "FastEthernet0/16",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC38",
+      "peer": "FastEthernet0/17",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC39",
+      "peer": "FastEthernet0/18",
+      "port": "FastEthernet0",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "PC0",
+      "peer": "FastEthernet0/1",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC1",
+      "peer": "FastEthernet0/2",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC2",
+      "peer": "FastEthernet0/3",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC3",
+      "peer": "FastEthernet0/4",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC4",
+      "peer": "FastEthernet0/5",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC10",
+      "peer": "FastEthernet0/6",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC11",
+      "peer": "FastEthernet0/7",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC12",
+      "peer": "FastEthernet0/8",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC13",
+      "peer": "FastEthernet0/9",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC14",
+      "peer": "FastEthernet0/10",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC15",
+      "peer": "FastEthernet0/11",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC16",
+      "peer": "FastEthernet0/12",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC17",
+      "peer": "FastEthernet0/13",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC18",
+      "peer": "FastEthernet0/14",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC19",
+      "peer": "FastEthernet0/15",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC20",
+      "peer": "FastEthernet0/16",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC21",
+      "peer": "FastEthernet0/17",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC22",
+      "peer": "FastEthernet0/18",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC23",
+      "peer": "FastEthernet0/19",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "PC24",
+      "peer": "FastEthernet0/20",
+      "port": "FastEthernet0",
+      "to": "SW4-STUDENTS"
+    },
+    {
+      "from": "R1-CAMPUS",
+      "peer": "GigabitEthernet0/0",
+      "port": "GigabitEthernet0/1",
+      "to": "R2-EXTERNAL"
+    },
+    {
+      "from": "R2-EXTERNAL",
+      "peer": "FastEthernet0",
+      "port": "GigabitEthernet0/1",
+      "to": "SRV-EXTERNAL"
+    },
+    {
+      "from": "SW1-CORE",
+      "peer": "GigabitEthernet0/2",
+      "port": "FastEthernet0/2",
+      "to": "SW2-ACCESS"
+    },
+    {
+      "from": "SW1-CORE",
+      "peer": "GigabitEthernet0/2",
+      "port": "FastEthernet0/3",
+      "to": "SW3-FACULTY"
+    },
+    {
+      "from": "SW1-CORE",
+      "peer": "GigabitEthernet0/2",
+      "port": "FastEthernet0/4",
+      "to": "SW4-STUDENTS"
+    }
+  ],
+  "pings": {
+    "PC0": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=4ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 4ms, Average = 1ms\n\nC:\\>"
+    },
+    "PC1": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=118ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 118ms, Average = 42ms\n\nC:\\>"
+    },
+    "PC10": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+    },
+    "PC11": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=258ms TTL=127\nReply from 192.168.10.130: bytes=32 time=47ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 258ms, Average = 76ms\n\nC:\\>"
+    },
+    "PC12": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 67ms\n\nC:\\>"
+    },
+    "PC13": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 64ms\n\nC:\\>"
+    },
+    "PC14": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=36ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=7ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 75ms\n\nC:\\>"
+    },
+    "PC15": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 10ms, Maximum = 12ms, Average = 11ms\n\nC:\\>"
+    },
+    "PC16": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>"
+    },
+    "PC17": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=38ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 75ms\n\nC:\\>"
+    },
+    "PC18": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=324ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 324ms, Average = 81ms\n\nC:\\>"
+    },
+    "PC19": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=324ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 324ms, Average = 81ms\n\nC:\\>"
+    },
+    "PC2": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=118ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 118ms, Average = 39ms\n\nC:\\>"
+    },
+    "PC20": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=324ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 324ms, Average = 81ms\n\nC:\\>"
+    },
+    "PC21": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=118ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 118ms, Average = 40ms\n\nC:\\>"
+    },
+    "PC22": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=117ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 117ms, Average = 39ms\n\nC:\\>"
+    },
+    "PC23": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=4ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 4ms, Average = 1ms\n\nC:\\>"
+    },
+    "PC24": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 10ms, Maximum = 15ms, Average = 12ms\n\nC:\\>"
+    },
+    "PC25": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=96ms TTL=127\nReply from 192.168.10.130: bytes=32 time=21ms TTL=127\nReply from 192.168.10.130: bytes=32 time=36ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 21ms, Maximum = 96ms, Average = 51ms\n\nC:\\>"
+    },
+    "PC26": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 12ms, Average = 6ms\n\nC:\\>"
+    },
+    "PC27": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=96ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 96ms, Average = 33ms\n\nC:\\>"
+    },
+    "PC28": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=89ms TTL=127\nReply from 192.168.10.130: bytes=32 time=14ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 89ms, Average = 34ms\n\nC:\\>"
+    },
+    "PC29": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=95ms TTL=127\nReply from 192.168.10.130: bytes=32 time=20ms TTL=127\nReply from 192.168.10.130: bytes=32 time=36ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 20ms, Maximum = 95ms, Average = 50ms\n\nC:\\>"
+    },
+    "PC3": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+    },
+    "PC30": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 5ms\n\nC:\\>"
+    },
+    "PC31": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=8ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 66ms\n\nC:\\>"
+    },
+    "PC32": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 71ms\n\nC:\\>"
+    },
+    "PC33": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=36ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 257ms, Average = 78ms\n\nC:\\>"
+    },
+    "PC34": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 64ms\n\nC:\\>"
+    },
+    "PC35": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=95ms TTL=127\nReply from 192.168.10.130: bytes=32 time=20ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 95ms, Average = 39ms\n\nC:\\>"
+    },
+    "PC36": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 12ms, Average = 6ms\n\nC:\\>"
+    },
+    "PC37": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 33ms\n\nC:\\>"
+    },
+    "PC38": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=95ms TTL=127\nReply from 192.168.10.130: bytes=32 time=19ms TTL=127\nReply from 192.168.10.130: bytes=32 time=31ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 19ms, Maximum = 95ms, Average = 48ms\n\nC:\\>"
+    },
+    "PC39": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=94ms TTL=127\nReply from 192.168.10.130: bytes=32 time=20ms TTL=127\nReply from 192.168.10.130: bytes=32 time=31ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 20ms, Maximum = 94ms, Average = 48ms\n\nC:\\>"
+    },
+    "PC4": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 5ms\n\nC:\\>"
+    },
+    "PC40": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=94ms TTL=127\nReply from 192.168.10.130: bytes=32 time=19ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 94ms, Average = 37ms\n\nC:\\>"
+    },
+    "PC41": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 33ms\n\nC:\\>"
+    },
+    "PC42": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=94ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 94ms, Average = 33ms\n\nC:\\>"
+    },
+    "PC43": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=94ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 94ms, Average = 33ms\n\nC:\\>"
+    },
+    "PC44": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=89ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=21ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 21ms, Maximum = 89ms, Average = 46ms\n\nC:\\>"
+    },
+    "PC45": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 29ms\n\nC:\\>"
+    },
+    "PC46": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=32ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 257ms, Average = 73ms\n\nC:\\>"
+    },
+    "PC47": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 64ms\n\nC:\\>"
+    },
+    "PC48": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=36ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 73ms\n\nC:\\>"
+    },
+    "PC49": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=257ms TTL=127\nReply from 192.168.10.130: bytes=32 time=28ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 257ms, Average = 71ms\n\nC:\\>"
+    },
+    "PC5": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=164ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 164ms, Average = 41ms\n\nC:\\>"
+    },
+    "PC6": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=100ms TTL=127\nReply from 192.168.10.130: bytes=32 time=17ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 100ms, Average = 39ms\n\nC:\\>"
+    },
+    "PC7": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=36ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 30ms, Maximum = 88ms, Average = 51ms\n\nC:\\>"
+    },
+    "PC8-MGMT": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=88ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 88ms, Average = 33ms\n\nC:\\>"
+    },
+    "PC9-ADMIN": {
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 2, Lost = 2 (50% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>"
+    }
+  },
+  "routers": {
+    "R1-CAMPUS": {
+      "config": "Building configuration...\n\nCurrent configuration : 6345 bytes\n!\nversion 15.1\nno service timestamps log datetime msec\nno service timestamps debug datetime msec\n!\nhostname R1-CAMPUS\n!\n!\n!\n!\n!\n!\n!\n!\n!\nno ip cef\nno ipv6 cef\n!\n!\n!\n!\n!\nlicense udi pid CISCO1941/K9 sn FTX1524UJSK-\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nip ssh version 2\nip ssh authentication-retries 2\nip ssh time-out 60\nno ip domain-lookup\nip domain-name campus.test\n!\n!\nspanning-tree mode pvst\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet0/0\n description TRUNK_TO_SW1_Gi0_1\n no ip address\n duplex auto\n speed auto\n!\ninterface GigabitEthernet0/0.10\n description VLAN10_ADMINISTRATION\n encapsulation dot1Q 10\n ip address 192.168.10.97 255.255.255.224\n ip helper-address 192.168.10.130\n ip nat inside\n ip access-group ADMIN-IN in\n!\ninterface GigabitEthernet0/0.20\n description VLAN20_FACULTY\n encapsulation dot1Q 20\n ip address 192.168.10.65 255.255.255.224\n ip helper-address 192.168.10.130\n ip nat inside\n ip access-group FACULTY-IN in\n!\ninterface GigabitEthernet0/0.30\n description VLAN30_STUDENTS\n encapsulation dot1Q 30\n ip address 192.168.10.1 255.255.255.192\n ip helper-address 192.168.10.130\n ip nat inside\n ip access-group STUDENTS-IN in\n!\ninterface GigabitEthernet0/0.40\n description VLAN40_SERVICES\n encapsulation dot1Q 40\n ip address 192.168.10.129 255.255.255.240\n ip access-group SERVICES-IN in\n!\ninterface GigabitEthernet0/1\n description OSPF_PAT_TRANSIT_TO_R2_EXTERNAL\n ip address 198.51.100.1 255.255.255.252\n ip nat outside\n ip access-group WAN-IN in\n duplex auto\n speed auto\n!\ninterface Vlan1\n no ip address\n shutdown\n!\nrouter ospf 1\n router-id 1.1.1.1\n log-adjacency-changes\n passive-interface default\n no passive-interface GigabitEthernet0/1\n network 198.51.100.0 0.0.0.3 area 0\n!\nip nat inside source list NAT-CLIENTS interface GigabitEthernet0/1 overload\nip classless\n!\nip flow-export version 9\n!\n!\naccess-list 1 permit host 192.168.10.98\naccess-list 1 deny any\nip access-list extended ADMIN-IN\n permit udp any eq bootpc host 255.255.255.255 eq bootps\n permit udp any eq bootpc host 192.168.10.127 eq bootps\n permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo\n permit tcp host 192.168.10.98 host 192.168.10.97 eq 22\n permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain\n permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www\n permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo\n permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo\n permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo\n permit tcp 192.168.10.96 0.0.0.31 host 203.0.113.10 eq www\n permit icmp 192.168.10.96 0.0.0.31 host 203.0.113.10 echo\n deny ip any any\nip access-list extended FACULTY-IN\n permit udp any eq bootpc host 255.255.255.255 eq bootps\n permit udp any eq bootpc host 192.168.10.95 eq bootps\n permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps\n permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo\n permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain\n permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www\n permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo\n permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply\n permit tcp 192.168.10.64 0.0.0.31 host 203.0.113.10 eq www\n permit icmp 192.168.10.64 0.0.0.31 host 203.0.113.10 echo\n deny ip any any\nip access-list extended STUDENTS-IN\n permit udp any eq bootpc host 255.255.255.255 eq bootps\n permit udp any eq bootpc host 192.168.10.63 eq bootps\n permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps\n permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo\n permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain\n permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www\n permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo\n permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply\n permit tcp 192.168.10.0 0.0.0.63 host 203.0.113.10 eq www\n permit icmp 192.168.10.0 0.0.0.63 host 203.0.113.10 echo\n deny ip any any\nip access-list extended SERVICES-IN\n permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps\n permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc\n permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31\n permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established\n permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established\n permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply\n permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps\n permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc\n permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31\n permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established\n permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established\n permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply\n permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps\n permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc\n permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63\n permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established\n permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established\n permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply\n permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc\n permit icmp host 192.168.10.130 host 192.168.10.129 echo\n permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply\n deny ip any any\nip access-list standard NAT-CLIENTS\n permit 192.168.10.0 0.0.0.63\n permit 192.168.10.64 0.0.0.31\n permit 192.168.10.96 0.0.0.31\nip access-list extended WAN-IN\n permit ospf host 198.51.100.2 any\n permit tcp host 203.0.113.10 eq www host 198.51.100.1 established\n permit icmp host 203.0.113.10 host 198.51.100.1 echo-reply\n deny ip any any\n!\n!\n!\n!\n!\nline con 0\n login local\n!\nline aux 0\n!\nline vty 0 4\n access-class 1 in\n exec-timeout 5 0\n login local\n transport input ssh\n!\n!\n!\nend\n\n\n\n",
+      "ospf": "\n\nNeighbor ID     Pri   State           Dead Time   Address         Interface\n2.2.2.2           1   FULL/DR         00:00:36    198.51.100.2    GigabitEthernet0/1\n\n",
+      "routes": "Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP\n       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area\n       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2\n       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP\n       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area\n       * - candidate default, U - per-user static route, o - ODR\n       P - periodic downloaded static route\n\nGateway of last resort is not set\n\n     192.168.10.0/24 is variably subnetted, 8 subnets, 4 masks\nC       192.168.10.0/26 is directly connected, GigabitEthernet0/0.30\nL       192.168.10.1/32 is directly connected, GigabitEthernet0/0.30\nC       192.168.10.64/27 is directly connected, GigabitEthernet0/0.20\nL       192.168.10.65/32 is directly connected, GigabitEthernet0/0.20\nC       192.168.10.96/27 is directly connected, GigabitEthernet0/0.10\nL       192.168.10.97/32 is directly connected, GigabitEthernet0/0.10\nC       192.168.10.128/28 is directly connected, GigabitEthernet0/0.40\nL       192.168.10.129/32 is directly connected, GigabitEthernet0/0.40\n     198.51.100.0/24 is variably subnetted, 2 subnets, 2 masks\nC       198.51.100.0/30 is directly connected, GigabitEthernet0/1\nL       198.51.100.1/32 is directly connected, GigabitEthernet0/1\nO    203.0.113.0/24 [110/2] via 198.51.100.2, 00:02:59, GigabitEthernet0/1\n\n\n"
+    },
+    "R2-EXTERNAL": {
+      "config": "Building configuration...\n\nCurrent configuration : 938 bytes\n!\nversion 15.1\nno service timestamps log datetime msec\nno service timestamps debug datetime msec\n!\nhostname R2-EXTERNAL\n!\n!\n!\n!\n!\n!\n!\n!\nip cef\nno ipv6 cef\n!\n!\n!\n!\nlicense udi pid CISCO1941/K9 sn FTX15247885-\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\nno ip domain-lookup\n!\n!\nspanning-tree mode pvst\n!\n!\n!\n!\n!\n!\ninterface GigabitEthernet0/0\n description OSPF_TRANSIT_TO_R1_Gi0_1\n ip address 198.51.100.2 255.255.255.252\n duplex auto\n speed auto\n!\ninterface GigabitEthernet0/1\n description EXTERNAL_WEB_SERVER\n ip address 203.0.113.1 255.255.255.0\n duplex auto\n speed auto\n!\ninterface Vlan1\n no ip address\n shutdown\n!\nrouter ospf 1\n router-id 2.2.2.2\n log-adjacency-changes\n passive-interface default\n no passive-interface GigabitEthernet0/0\n network 198.51.100.0 0.0.0.3 area 0\n network 203.0.113.0 0.0.0.255 area 0\n!\nip classless\n!\nip flow-export version 9\n!\n!\n!\n!\n!\n!\n!\nline con 0\n!\nline aux 0\n!\nline vty 0 4\n login\n!\n!\n!\nend\n\n\n\n",
+      "ospf": "\n\nNeighbor ID     Pri   State           Dead Time   Address         Interface\n1.1.1.1           1   FULL/BDR        00:00:35    198.51.100.1    GigabitEthernet0/0\n\n",
+      "routes": "Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP\n       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area\n       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2\n       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP\n       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area\n       * - candidate default, U - per-user static route, o - ODR\n       P - periodic downloaded static route\n\nGateway of last resort is not set\n\n     198.51.100.0/24 is variably subnetted, 2 subnets, 2 masks\nC       198.51.100.0/30 is directly connected, GigabitEthernet0/0\nL       198.51.100.2/32 is directly connected, GigabitEthernet0/0\n     203.0.113.0/24 is variably subnetted, 2 subnets, 2 masks\nC       203.0.113.0/24 is directly connected, GigabitEthernet0/1\nL       203.0.113.1/32 is directly connected, GigabitEthernet0/1\n\n\n"
+    }
+  }
+}

@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { dirname, resolve, relative, isAbsolute } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { checkSourceIdentity } from './source-identity.mjs';
+import { validateRelease } from './validate-release.mjs';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '../..');
 const publicRoot = resolve(root, 'website/public');
@@ -26,22 +27,10 @@ if (releaseBytes) {
   const release = JSON.parse(releaseBytes);
   const manifest = JSON.parse(await readFile(resolve(root, remediationPath, 'release-manifest.json'), 'utf8'));
   const checkpoint = JSON.parse(await readFile(resolve(root, remediationPath, 'verified-submission.json'), 'utf8'));
-  if (manifest.sha256[releasePath] !== hash(releaseBytes) || release.iteration !== checkpoint.iteration ||
-      release.submissionSha256 !== manifest.submissionSha256 || release.submissionSha256 !== checkpoint.sha256 ||
-      release.nodes.length !== checkpoint.networkDevices || release.links.length !== checkpoint.links) {
+  if (manifest.sha256[releasePath] !== hash(releaseBytes)) {
     throw new Error('The remediation release does not match the verified checkpoint');
   }
-  const endpoints = new Set(release.endpoints.map(item => item.name));
-  const pairs = new Set(release.ping.rows.map(row => JSON.stringify([row.source, row.target])));
-  const expectedCases = endpoints.size * (endpoints.size - 1);
-  if (endpoints.size !== checkpoint.endpoints || pairs.size !== expectedCases ||
-      release.ping.rows.length !== expectedCases || release.ping.total !== expectedCases ||
-      manifest.endpointCases !== expectedCases ||
-      release.ping.matched !== manifest.policyMatches ||
-      release.ping.matched !== release.ping.rows.filter(row => row.expected === row.observed).length ||
-      release.ping.rows.some(row => !endpoints.has(row.source) || !endpoints.has(row.target) || row.source === row.target)) {
-    throw new Error('Invalid remediation endpoint coverage');
-  }
+  validateRelease(release, checkpoint, manifest);
   const readCheckpointEvidence = async name => {
     const path = `${remediationPath}/iteration${checkpoint.iteration}-${name}.json`;
     const bytes = await readFile(resolve(root, path));

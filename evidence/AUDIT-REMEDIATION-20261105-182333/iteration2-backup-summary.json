@@ -1,0 +1,1254 @@
+{
+  "stp": {
+    "SW1-CORE": "VLAN0001\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4097\n             Address     00E0.F7B4.B209\n             This bridge is the root\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    4097  (priority 4096 sys-id-ext 1)\n             Address     00E0.F7B4.B209\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/2            Desg FWD 19        128.2    P2p\nFa0/4            Desg FWD 19        128.4    P2p\nFa0/3            Desg FWD 19        128.3    P2p\nGi0/2            Desg FWD 4         128.26   P2p\nGi0/1            Desg FWD 4         128.25   P2p\nFa0/24           Desg FWD 19        128.24   P2p\nFa0/23           Desg FWD 19        128.23   P2p\n\nVLAN0010\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4106\n             Address     00E0.F7B4.B209\n             This bridge is the root\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    4106  (priority 4096 sys-id-ext 10)\n             Address     00E0.F7B4.B209\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/2            Desg FWD 19        128.2    P2p\nFa0/4            Desg FWD 19        128.4    P2p\nFa0/3            Desg FWD 19        128.3    P2p\nGi0/1            Desg FWD 4         128.25   P2p\n\nVLAN0020\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4116\n             Address     00E0.F7B4.B209\n             This bridge is the root\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    4116  (priority 4096 sys-id-ext 20)\n             Address     00E0.F7B4.B209\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/3            Desg FWD 19        128.3    P2p\nGi0/1            Desg FWD 4         128.25   P2p\n\nVLAN0030\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4126\n             Address     00E0.F7B4.B209\n             This bridge is the root\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    4126  (priority 4096 sys-id-ext 30)\n             Address     00E0.F7B4.B209\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/4            Desg FWD 19        128.4    P2p\nGi0/1            Desg FWD 4         128.25   P2p\n\nVLAN0040\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4136\n             Address     00E0.F7B4.B209\n             This bridge is the root\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    4136  (priority 4096 sys-id-ext 40)\n             Address     00E0.F7B4.B209\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/1            Desg FWD 19        128.1    P2p\nGi0/1            Desg FWD 4         128.25   P2p\n\nVLAN0099\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4195\n             Address     00E0.F7B4.B209\n             This bridge is the root\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    4195  (priority 4096 sys-id-ext 99)\n             Address     00E0.F7B4.B209\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/2            Desg FWD 19        128.2    P2p\nFa0/4            Desg FWD 19        128.4    P2p\nFa0/3            Desg FWD 19        128.3    P2p\nGi0/1            Desg FWD 4         128.25   P2p\n\n\n",
+    "SW2-ACCESS": "VLAN0001\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4097\n             Address     00E0.F7B4.B209\n             Cost        4\n             Port        25(GigabitEthernet0/1)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)\n             Address     000C.CFA0.6CE5\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/1            Root FWD 4         128.25   P2p\nGi0/2            Altn BLK 203       128.26   P2p\n\nVLAN0010\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4106\n             Address     00E0.F7B4.B209\n             Cost        200\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32778  (priority 32768 sys-id-ext 10)\n             Address     000C.CFA0.6CE5\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Root FWD 200       128.26   P2p\nFa0/2            Desg FWD 19        128.2    P2p\nFa0/3            Desg FWD 19        128.3    P2p\nFa0/7            Desg FWD 19        128.7    P2p\nFa0/4            Desg FWD 19        128.4    P2p\nFa0/5            Desg FWD 19        128.5    P2p\nFa0/6            Desg FWD 19        128.6    P2p\nFa0/8            Desg FWD 19        128.8    P2p\nFa0/10           Desg FWD 19        128.10   P2p\nFa0/9            Desg FWD 19        128.9    P2p\nFa0/12           Desg FWD 19        128.12   P2p\nFa0/11           Desg FWD 19        128.11   P2p\n\nVLAN0099\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4195\n             Address     00E0.F7B4.B209\n             Cost        204\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32867  (priority 32768 sys-id-ext 99)\n             Address     000C.CFA0.6CE5\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Root FWD 204       128.26   P2p\nFa0/1            Desg FWD 19        128.1    P2p\n\n\n",
+    "SW3-FACULTY": "VLAN0001\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4097\n             Address     00E0.F7B4.B209\n             Cost        19\n             Port        25(GigabitEthernet0/1)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)\n             Address     0030.F2E4.5016\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Altn BLK 203       128.26   P2p\nGi0/1            Root FWD 19        128.25   P2p\n\nVLAN0010\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4106\n             Address     00E0.F7B4.B209\n             Cost        200\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32778  (priority 32768 sys-id-ext 10)\n             Address     0030.F2E4.5016\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Root FWD 200       128.26   P2p\n\nVLAN0020\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4116\n             Address     00E0.F7B4.B209\n             Cost        201\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32788  (priority 32768 sys-id-ext 20)\n             Address     0030.F2E4.5016\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/2            Desg FWD 19        128.2    P2p\nFa0/1            Desg FWD 19        128.1    P2p\nFa0/4            Desg FWD 19        128.4    P2p\nFa0/6            Desg FWD 19        128.6    P2p\nFa0/8            Desg FWD 19        128.8    P2p\nFa0/3            Desg FWD 19        128.3    P2p\nFa0/5            Desg FWD 19        128.5    P2p\nFa0/7            Desg FWD 19        128.7    P2p\nFa0/12           Desg FWD 19        128.12   P2p\nFa0/9            Desg FWD 19        128.9    P2p\nFa0/10           Desg FWD 19        128.10   P2p\nFa0/11           Desg FWD 19        128.11   P2p\nFa0/16           Desg FWD 19        128.16   P2p\nFa0/14           Desg FWD 19        128.14   P2p\nFa0/15           Desg FWD 19        128.15   P2p\nFa0/13           Desg FWD 19        128.13   P2p\nFa0/17           Desg FWD 19        128.17   P2p\nFa0/18           Desg FWD 19        128.18   P2p\nGi0/2            Root FWD 201       128.26   P2p\n\nVLAN0099\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4195\n             Address     00E0.F7B4.B209\n             Cost        204\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32867  (priority 32768 sys-id-ext 99)\n             Address     0030.F2E4.5016\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Root FWD 204       128.26   P2p\n\n\n",
+    "SW4-STUDENTS": "VLAN0001\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4097\n             Address     00E0.F7B4.B209\n             Cost        19\n             Port        25(GigabitEthernet0/1)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32769  (priority 32768 sys-id-ext 1)\n             Address     0001.43A2.A063\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Altn BLK 203       128.26   P2p\nGi0/1            Root FWD 19        128.25   P2p\n\nVLAN0010\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4106\n             Address     00E0.F7B4.B209\n             Cost        200\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32778  (priority 32768 sys-id-ext 10)\n             Address     0001.43A2.A063\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Root FWD 200       128.26   P2p\n\nVLAN0030\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4126\n             Address     00E0.F7B4.B209\n             Cost        202\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32798  (priority 32768 sys-id-ext 30)\n             Address     0001.43A2.A063\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nFa0/2            Desg FWD 19        128.2    P2p\nFa0/1            Desg FWD 19        128.1    P2p\nFa0/5            Desg FWD 19        128.5    P2p\nFa0/3            Desg FWD 19        128.3    P2p\nFa0/4            Desg FWD 19        128.4    P2p\nFa0/8            Desg FWD 19        128.8    P2p\nFa0/9            Desg FWD 19        128.9    P2p\nFa0/6            Desg FWD 19        128.6    P2p\nFa0/7            Desg FWD 19        128.7    P2p\nFa0/11           Desg FWD 19        128.11   P2p\nFa0/14           Desg FWD 19        128.14   P2p\nFa0/12           Desg FWD 19        128.12   P2p\nFa0/10           Desg FWD 19        128.10   P2p\nFa0/13           Desg FWD 19        128.13   P2p\nFa0/16           Desg FWD 19        128.16   P2p\nFa0/19           Desg FWD 19        128.19   P2p\nFa0/15           Desg FWD 19        128.15   P2p\nFa0/17           Desg FWD 19        128.17   P2p\nFa0/18           Desg FWD 19        128.18   P2p\nFa0/20           Desg FWD 19        128.20   P2p\nGi0/2            Root FWD 202       128.26   P2p\n\nVLAN0099\n  Spanning tree enabled protocol rstp\n  Root ID    Priority    4195\n             Address     00E0.F7B4.B209\n             Cost        204\n             Port        26(GigabitEthernet0/2)\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n\n  Bridge ID  Priority    32867  (priority 32768 sys-id-ext 99)\n             Address     0001.43A2.A063\n             Hello Time  2 sec  Max Age 20 sec  Forward Delay 15 sec\n             Aging Time  20\n\nInterface        Role Sts Cost      Prio.Nbr Type\n---------------- ---- --- --------- -------- --------------------------------\nGi0/2            Root FWD 204       128.26   P2p\n\n\n"
+  },
+  "campus": {
+    "PC8-MGMT": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=14ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 119ms, Average = 36ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC9-ADMIN": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 15ms, Maximum = 119ms, Average = 44ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC40": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=120ms TTL=127\nReply from 192.168.10.130: bytes=32 time=39ms TTL=127\nReply from 192.168.10.130: bytes=32 time=22ms TTL=127\nReply from 192.168.10.130: bytes=32 time=29ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 22ms, Maximum = 120ms, Average = 52ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC41": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=29ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 25ms, Maximum = 119ms, Average = 50ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC42": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 119ms, Average = 36ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC43": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=17ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 17ms, Maximum = 119ms, Average = 47ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC44": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 119ms, Average = 35ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC45": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=9ms TTL=127\nReply from 192.168.10.130: bytes=32 time=14ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 9ms, Maximum = 119ms, Average = 38ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC46": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 119ms, Average = 29ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC47": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=120ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=4ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 4ms, Maximum = 120ms, Average = 44ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC48": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=119ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 119ms, Average = 30ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC49": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=118ms TTL=127\nReply from 192.168.10.130: bytes=32 time=13ms TTL=127\nReply from 192.168.10.130: bytes=32 time=9ms TTL=127\nReply from 192.168.10.130: bytes=32 time=14ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 9ms, Maximum = 118ms, Average = 38ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC5": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=5ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 5ms, Average = 2ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC6": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=3ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 3ms, Average = 1ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC7": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC25": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=37ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 37ms, Average = 9ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC26": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=92ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 23ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC27": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=82ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 82ms, Average = 20ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC28": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=35ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 35ms, Average = 8ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC29": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=117ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=3ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 3ms, Maximum = 117ms, Average = 35ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC30": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=117ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=9ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 117ms, Average = 34ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC31": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=117ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=13ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 117ms, Average = 40ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC32": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=148ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 148ms, Average = 40ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC33": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=148ms TTL=127\nReply from 192.168.10.130: bytes=32 time=32ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 148ms, Average = 51ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC34": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=148ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=24ms TTL=127\nReply from 192.168.10.130: bytes=32 time=29ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 148ms, Average = 50ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC35": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=148ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 148ms, Average = 37ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC36": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=148ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 148ms, Average = 46ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC37": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=148ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\nReply from 192.168.10.130: bytes=32 time=16ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 148ms, Average = 45ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC38": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=20ms TTL=127\nReply from 192.168.10.130: bytes=32 time=7ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 20ms, Average = 9ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC39": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC0": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 145ms, Average = 40ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC1": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=114ms TTL=127\nReply from 192.168.10.130: bytes=32 time=30ms TTL=127\nReply from 192.168.10.130: bytes=32 time=27ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 12ms, Maximum = 114ms, Average = 45ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC2": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=115ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 115ms, Average = 32ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC3": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time=31ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=17ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 145ms, Average = 48ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC4": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 145ms, Average = 36ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC10": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 145ms, Average = 46ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC11": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\nReply from 192.168.10.130: bytes=32 time=25ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 2ms, Maximum = 145ms, Average = 46ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC12": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 145ms, Average = 36ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC13": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time=37ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 145ms, Average = 48ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC14": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nReply from 192.168.10.130: bytes=32 time=145ms TTL=127\nReply from 192.168.10.130: bytes=32 time=11ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=12ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 145ms, Average = 42ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC15": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 3ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC16": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC17": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=10ms TTL=127\nReply from 192.168.10.130: bytes=32 time=9ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 10ms, Average = 6ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC18": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time=20ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 20ms, Average = 6ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC19": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=9ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 9ms, Average = 3ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC20": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=7ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 7ms, Average = 2ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC21": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=2ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 2ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC22": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=15ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 15ms, Average = 5ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC23": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time=1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    },
+    "PC24": {
+      "command": "ping 192.168.10.130",
+      "output": "ping 192.168.10.130\n\nPinging 192.168.10.130 with 32 bytes of data:\n\nRequest timed out.\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\nReply from 192.168.10.130: bytes=32 time<1ms TTL=127\n\nPing statistics for 192.168.10.130:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:12+05:30",
+      "passed": true
+    }
+  },
+  "external": {
+    "PC9-ADMIN": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=98ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=17ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 98ms, Average = 29ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC40": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=98ms TTL=126\nReply from 203.0.113.10: bytes=32 time=34ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 98ms, Average = 33ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC41": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=98ms TTL=126\nReply from 203.0.113.10: bytes=32 time=33ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 98ms, Average = 34ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC42": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=98ms TTL=126\nReply from 203.0.113.10: bytes=32 time=35ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=8ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 98ms, Average = 35ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC43": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 15ms, Average = 8ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC44": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=7ms TTL=126\nReply from 203.0.113.10: bytes=32 time=12ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 7ms, Maximum = 15ms, Average = 11ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC45": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 0ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC46": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time=14ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=4ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 14ms, Average = 6ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC47": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time=17ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 17ms, Average = 5ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC48": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time=14ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 14ms, Average = 8ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC49": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nRequest timed out.\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=11ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 11ms, Average = 3ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC5": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=16ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 16ms, Average = 4ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC6": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 59ms, Average = 17ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC7": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\nReply from 203.0.113.10: bytes=32 time=18ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 3ms, Maximum = 59ms, Average = 22ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC25": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\nReply from 203.0.113.10: bytes=32 time=11ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 3ms, Maximum = 59ms, Average = 22ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC26": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time=11ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 10ms, Maximum = 59ms, Average = 23ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC27": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=20ms TTL=126\nReply from 203.0.113.10: bytes=32 time=17ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 15ms, Maximum = 59ms, Average = 27ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC28": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\nReply from 203.0.113.10: bytes=32 time=18ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 3ms, Maximum = 59ms, Average = 23ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC29": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=59ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\nReply from 203.0.113.10: bytes=32 time=18ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 3ms, Maximum = 59ms, Average = 23ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC30": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=50ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 37ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC31": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=53ms TTL=126\nReply from 203.0.113.10: bytes=32 time=36ms TTL=126\nReply from 203.0.113.10: bytes=32 time=16ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 16ms, Maximum = 92ms, Average = 49ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC32": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=52ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 37ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC33": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=55ms TTL=126\nReply from 203.0.113.10: bytes=32 time=49ms TTL=126\nReply from 203.0.113.10: bytes=32 time=24ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 24ms, Maximum = 92ms, Average = 55ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC34": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=52ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 39ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC35": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 24ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC36": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=55ms TTL=126\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 92ms, Average = 46ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC37": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=8ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 25ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC38": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=122ms TTL=126\nReply from 203.0.113.10: bytes=32 time=54ms TTL=126\nReply from 203.0.113.10: bytes=32 time=27ms TTL=126\nReply from 203.0.113.10: bytes=32 time=26ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 26ms, Maximum = 122ms, Average = 57ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC39": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=122ms TTL=126\nReply from 203.0.113.10: bytes=32 time=35ms TTL=126\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time=24ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 24ms, Maximum = 122ms, Average = 55ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC0": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 1ms, Average = 0ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC1": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time=11ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 39ms, Average = 14ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC2": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 39ms, Average = 10ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC3": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=40ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time=22ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 10ms, Maximum = 40ms, Average = 20ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC4": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 39ms, Average = 14ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC10": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 39ms, Average = 9ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC11": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time=12ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time=22ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 10ms, Maximum = 39ms, Average = 20ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC12": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=39ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 39ms, Average = 12ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC13": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=92ms TTL=126\nReply from 203.0.113.10: bytes=32 time=32ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 92ms, Average = 32ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC14": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=122ms TTL=126\nReply from 203.0.113.10: bytes=32 time=65ms TTL=126\nReply from 203.0.113.10: bytes=32 time=19ms TTL=126\nReply from 203.0.113.10: bytes=32 time=22ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 19ms, Maximum = 122ms, Average = 57ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC15": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=122ms TTL=126\nReply from 203.0.113.10: bytes=32 time=36ms TTL=126\nReply from 203.0.113.10: bytes=32 time=15ms TTL=126\nReply from 203.0.113.10: bytes=32 time=16ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 15ms, Maximum = 122ms, Average = 47ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC16": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=122ms TTL=126\nReply from 203.0.113.10: bytes=32 time=35ms TTL=126\nReply from 203.0.113.10: bytes=32 time=10ms TTL=126\nReply from 203.0.113.10: bytes=32 time<1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 0ms, Maximum = 122ms, Average = 41ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC17": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=122ms TTL=126\nReply from 203.0.113.10: bytes=32 time=54ms TTL=126\nReply from 203.0.113.10: bytes=32 time=23ms TTL=126\nReply from 203.0.113.10: bytes=32 time=26ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 23ms, Maximum = 122ms, Average = 56ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC18": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=121ms TTL=126\nReply from 203.0.113.10: bytes=32 time=5ms TTL=126\nReply from 203.0.113.10: bytes=32 time=11ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 121ms, Average = 35ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC19": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=120ms TTL=126\nReply from 203.0.113.10: bytes=32 time=53ms TTL=126\nReply from 203.0.113.10: bytes=32 time=27ms TTL=126\nReply from 203.0.113.10: bytes=32 time=1ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 1ms, Maximum = 120ms, Average = 50ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC20": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=120ms TTL=126\nReply from 203.0.113.10: bytes=32 time=55ms TTL=126\nReply from 203.0.113.10: bytes=32 time=3ms TTL=126\nReply from 203.0.113.10: bytes=32 time=8ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 3ms, Maximum = 120ms, Average = 46ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC21": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=120ms TTL=126\nReply from 203.0.113.10: bytes=32 time=54ms TTL=126\nReply from 203.0.113.10: bytes=32 time=5ms TTL=126\nReply from 203.0.113.10: bytes=32 time=17ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 120ms, Average = 49ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC22": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=119ms TTL=126\nReply from 203.0.113.10: bytes=32 time=53ms TTL=126\nReply from 203.0.113.10: bytes=32 time=23ms TTL=126\nReply from 203.0.113.10: bytes=32 time=6ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 6ms, Maximum = 119ms, Average = 50ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC23": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=119ms TTL=126\nReply from 203.0.113.10: bytes=32 time=53ms TTL=126\nReply from 203.0.113.10: bytes=32 time=5ms TTL=126\nReply from 203.0.113.10: bytes=32 time=16ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 5ms, Maximum = 119ms, Average = 48ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    },
+    "PC24": {
+      "command": "ping 203.0.113.10",
+      "output": "ping 203.0.113.10\n\nPinging 203.0.113.10 with 32 bytes of data:\n\nReply from 203.0.113.10: bytes=32 time=119ms TTL=126\nReply from 203.0.113.10: bytes=32 time=53ms TTL=126\nReply from 203.0.113.10: bytes=32 time=4ms TTL=126\nReply from 203.0.113.10: bytes=32 time=16ms TTL=126\n\nPing statistics for 203.0.113.10:\n    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),\nApproximate round trip times in milli-seconds:\n    Minimum = 4ms, Maximum = 119ms, Average = 48ms\n\nC:\\>",
+      "observedAt": "2026-11-06T16:12:23+05:30",
+      "passed": true
+    }
+  },
+  "portal": {
+    "PC8-MGMT": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC9-ADMIN": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC40": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC41": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC42": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC43": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC44": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC45": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC46": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC47": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC48": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC49": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC5": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC6": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC7": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC25": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC26": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC27": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC28": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC29": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC30": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "",
+          "responseType": 7,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true,
+      "retry": {
+        "url": "http://portal.campus.test",
+        "events": [
+          {
+            "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+            "responseType": 3,
+            "serverIp": "192.168.10.130",
+            "url": "http://portal.campus.test"
+          }
+        ],
+        "passed": true
+      }
+    },
+    "PC31": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC32": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC33": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC34": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC35": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC36": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC37": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC38": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC39": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC0": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC1": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC2": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC3": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC4": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC10": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC11": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC12": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "",
+          "responseType": 7,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true,
+      "retry": {
+        "url": "http://portal.campus.test",
+        "events": [
+          {
+            "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+            "responseType": 3,
+            "serverIp": "192.168.10.130",
+            "url": "http://portal.campus.test"
+          }
+        ],
+        "passed": true
+      }
+    },
+    "PC13": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC14": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "",
+          "responseType": 7,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true,
+      "retry": {
+        "url": "http://portal.campus.test",
+        "events": [
+          {
+            "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+            "responseType": 3,
+            "serverIp": "192.168.10.130",
+            "url": "http://portal.campus.test"
+          }
+        ],
+        "passed": true
+      }
+    },
+    "PC15": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC16": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC17": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC18": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC19": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC20": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC21": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC22": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC23": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    },
+    "PC24": {
+      "url": "http://portal.campus.test",
+      "events": [
+        {
+          "content": "<!doctype html>\n<html lang=\"en\">\n<head><meta charset=\"utf-8\"><title>Campus Services</title></head>\n<body>\n  <h1>Secure Campus Services Portal</h1>\n  <p>Administration, Faculty, and Students share this internal service.</p>\n  <p>Host: portal.campus.test | Server: 192.168.10.130 | VLAN: 40</p>\n  <p>Demonstration: DHCP, DNS, HTTP, inter-VLAN routing, and ACLs.</p>\n</body>\n</html>\n",
+          "responseType": 3,
+          "serverIp": "192.168.10.130",
+          "url": "http://portal.campus.test"
+        }
+      ],
+      "passed": true
+    }
+  },
+  "ssh": {
+    "device": "SW4-STUDENTS",
+    "destination": "192.168.10.150",
+    "initial": "ssh -l ramesh-admin 192.168.10.150\n\n[REDACTED LAB CREDENTIAL]",
+    "authenticated": "\n\n\n\nSW4-STUDENTS>",
+    "status": "show ip ssh\nSSH Enabled - version 2.0\nAuthentication timeout: 60 secs; Authentication retries: 2\nSW4-STUDENTS>",
+    "passed": true,
+    "observedAt": "2026-11-06T16:12:42+05:30"
+  },
+  "passed": true
+}

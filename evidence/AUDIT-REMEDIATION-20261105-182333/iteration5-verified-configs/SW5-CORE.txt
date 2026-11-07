@@ -1,0 +1,417 @@
+Building configuration...
+
+Current configuration : 13551 bytes
+!
+version 16.3.2
+service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+!
+hostname SW5-CORE
+!
+!
+no profinet
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+!
+!
+!
+no ip cef
+ip routing
+!
+no ipv6 cef
+!
+!
+!
+[REDACTED LAB CREDENTIAL]
+!
+!
+!
+!
+!
+!
+!
+!
+!
+!
+ip ssh version 2
+ip domain-name campus.test
+!
+!
+spanning-tree mode rapid-pvst
+spanning-tree vlan 10,20,30,40,99 priority 8192
+!
+!
+!
+!
+!
+!
+interface GigabitEthernet1/0/1
+ description TRUNK_TO_SW2-ACCESS
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/2
+ description TRUNK_TO_SW3-FACULTY
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 20,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/3
+ description TRUNK_TO_SW4-STUDENTS
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 30,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/4
+ description TRUNK_TO_SW6-SERVICES
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 40,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/5
+ description INTERCORE_TRUNK
+ switchport trunk native vlan 999
+ switchport trunk allowed vlan 10,20,30,40,99
+ switchport mode trunk
+ switchport nonegotiate
+!
+interface GigabitEthernet1/0/6
+ description ROUTED_TO_R1_CAMPUS
+ no switchport
+ ip address 192.168.10.166 255.255.255.252
+ duplex auto
+ speed auto
+!
+interface GigabitEthernet1/0/7
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/8
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/9
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/10
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/11
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/12
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/13
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/14
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/15
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/16
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/17
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/18
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/19
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/20
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/21
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/22
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/23
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/0/24
+ switchport access vlan 998
+ switchport mode access
+ shutdown
+!
+interface GigabitEthernet1/1/1
+!
+interface GigabitEthernet1/1/2
+!
+interface GigabitEthernet1/1/3
+!
+interface GigabitEthernet1/1/4
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+interface Vlan10
+ mac-address 00e0.f9bb.2c01
+ ip address 192.168.10.99 255.255.255.224
+ ip helper-address 192.168.10.130
+ ip access-group ADMIN-IN in
+ standby 10 ip 192.168.10.97
+ standby 10 preempt
+!
+interface Vlan20
+ mac-address 00e0.f9bb.2c02
+ ip address 192.168.10.94 255.255.255.224
+ ip helper-address 192.168.10.130
+ ip access-group FACULTY-IN in
+ standby 20 ip 192.168.10.65
+ standby 20 preempt
+!
+interface Vlan30
+ mac-address 00e0.f9bb.2c03
+ ip address 192.168.10.62 255.255.255.192
+ ip helper-address 192.168.10.130
+ ip access-group STUDENTS-IN in
+ standby 30 ip 192.168.10.1
+ standby 30 preempt
+!
+interface Vlan40
+ mac-address 00e0.f9bb.2c04
+ ip address 192.168.10.132 255.255.255.240
+ ip access-group SERVICES-IN in
+ standby 40 ip 192.168.10.129
+ standby 40 preempt
+!
+interface Vlan99
+ mac-address 00e0.f9bb.2c05
+ ip address 192.168.10.151 255.255.255.240
+ ip access-group MGMT-IN in
+ standby 99 ip 192.168.10.145
+ standby 99 preempt
+!
+ip classless
+ip route 0.0.0.0 0.0.0.0 192.168.10.165 
+!
+ip flow-export version 9
+!
+!
+access-list 1 permit host 192.168.10.146
+access-list 1 deny any
+ip access-list extended ADMIN-IN
+ permit udp host 192.168.10.98 host 224.0.0.2 eq 1985
+ permit udp any eq bootpc host 255.255.255.255 eq bootps
+ permit udp any eq bootpc host 192.168.10.127 eq bootps
+ permit udp 192.168.10.96 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps
+ permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.97 echo
+ permit udp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.96 0.0.0.31 host 192.168.10.130 eq www
+ permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.130 echo
+ permit icmp 192.168.10.96 0.0.0.31 192.168.10.64 0.0.0.31 echo
+ permit icmp 192.168.10.96 0.0.0.31 192.168.10.0 0.0.0.63 echo
+ permit tcp 192.168.10.96 0.0.0.31 host 203.0.113.10 eq www
+ permit icmp 192.168.10.96 0.0.0.31 host 203.0.113.10 echo
+ permit icmp 192.168.10.96 0.0.0.31 host 192.168.10.146 echo-reply
+ deny ip any any
+ip access-list extended FACULTY-IN
+ permit udp host 192.168.10.93 host 224.0.0.2 eq 1985
+ permit udp any eq bootpc host 255.255.255.255 eq bootps
+ permit udp any eq bootpc host 192.168.10.95 eq bootps
+ permit udp 192.168.10.64 0.0.0.31 eq bootpc host 192.168.10.130 eq bootps
+ permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.65 echo
+ permit udp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.64 0.0.0.31 host 192.168.10.130 eq www
+ permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.130 echo
+ permit icmp 192.168.10.64 0.0.0.31 192.168.10.96 0.0.0.31 echo-reply
+ permit tcp 192.168.10.64 0.0.0.31 host 203.0.113.10 eq www
+ permit icmp 192.168.10.64 0.0.0.31 host 203.0.113.10 echo
+ permit icmp 192.168.10.64 0.0.0.31 host 192.168.10.146 echo-reply
+ deny ip any any
+ip access-list extended STUDENTS-IN
+ permit udp host 192.168.10.61 host 224.0.0.2 eq 1985
+ permit udp any eq bootpc host 255.255.255.255 eq bootps
+ permit udp any eq bootpc host 192.168.10.63 eq bootps
+ permit udp 192.168.10.0 0.0.0.63 eq bootpc host 192.168.10.130 eq bootps
+ permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.1 echo
+ permit udp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq domain
+ permit tcp 192.168.10.0 0.0.0.63 host 192.168.10.130 eq www
+ permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.130 echo
+ permit icmp 192.168.10.0 0.0.0.63 192.168.10.96 0.0.0.31 echo-reply
+ permit tcp 192.168.10.0 0.0.0.63 host 203.0.113.10 eq www
+ permit icmp 192.168.10.0 0.0.0.63 host 203.0.113.10 echo
+ permit icmp 192.168.10.0 0.0.0.63 host 192.168.10.146 echo-reply
+ deny ip any any
+ip access-list extended SERVICES-IN
+ permit udp host 192.168.10.131 host 224.0.0.2 eq 1985
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.97 eq bootps
+ permit udp host 192.168.10.130 eq bootps 192.168.10.96 0.0.0.31 eq bootpc
+ permit udp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31
+ permit tcp host 192.168.10.130 eq domain 192.168.10.96 0.0.0.31 established
+ permit tcp host 192.168.10.130 eq www 192.168.10.96 0.0.0.31 established
+ permit icmp host 192.168.10.130 192.168.10.96 0.0.0.31 echo-reply
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.65 eq bootps
+ permit udp host 192.168.10.130 eq bootps 192.168.10.64 0.0.0.31 eq bootpc
+ permit udp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31
+ permit tcp host 192.168.10.130 eq domain 192.168.10.64 0.0.0.31 established
+ permit tcp host 192.168.10.130 eq www 192.168.10.64 0.0.0.31 established
+ permit icmp host 192.168.10.130 192.168.10.64 0.0.0.31 echo-reply
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.1 eq bootps
+ permit udp host 192.168.10.130 eq bootps 192.168.10.0 0.0.0.63 eq bootpc
+ permit udp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63
+ permit tcp host 192.168.10.130 eq domain 192.168.10.0 0.0.0.63 established
+ permit tcp host 192.168.10.130 eq www 192.168.10.0 0.0.0.63 established
+ permit icmp host 192.168.10.130 192.168.10.0 0.0.0.63 echo-reply
+ permit udp host 192.168.10.130 eq bootps host 255.255.255.255 eq bootpc
+ permit icmp host 192.168.10.130 host 192.168.10.129 echo
+ permit icmp host 192.168.10.130 host 192.168.10.129 echo-reply
+ permit udp host 192.168.10.130 eq domain host 192.168.10.146
+ permit tcp host 192.168.10.130 eq domain host 192.168.10.146 established
+ permit tcp host 192.168.10.130 eq www host 192.168.10.146 established
+ permit icmp host 192.168.10.130 host 192.168.10.146 echo-reply
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.129
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.129
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.147
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.147
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.148
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.148
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.149
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.149
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.150
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.150
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.98 eq bootps
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.99 eq bootps
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.93 eq bootps
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.94 eq bootps
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.61 eq bootps
+ permit udp host 192.168.10.130 eq bootps host 192.168.10.62 eq bootps
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.131
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.131
+ permit udp host 192.168.10.130 eq 1812 host 192.168.10.131
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.132
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.132
+ permit udp host 192.168.10.130 eq 1812 host 192.168.10.132
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.161
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.161
+ permit udp host 192.168.10.130 eq 1812 host 192.168.10.161
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.165
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.165
+ permit udp host 192.168.10.130 eq 1812 host 192.168.10.165
+ permit udp host 192.168.10.130 eq 123 host 192.168.10.152
+ permit udp host 192.168.10.130 eq 1645 host 192.168.10.152
+ permit udp host 192.168.10.130 eq 1812 host 192.168.10.152
+ deny ip any any
+ip access-list extended MGMT-IN
+ permit udp host 192.168.10.147 host 224.0.0.2 eq 1985
+ permit tcp host 192.168.10.146 host 192.168.10.145 eq 22
+ permit udp host 192.168.10.146 host 192.168.10.130 eq domain
+ permit tcp host 192.168.10.146 host 192.168.10.130 eq domain
+ permit tcp host 192.168.10.146 host 192.168.10.130 eq www
+ permit icmp host 192.168.10.146 host 192.168.10.130 echo
+ permit icmp host 192.168.10.146 host 192.168.10.145 echo
+ permit icmp host 192.168.10.146 192.168.10.96 0.0.0.31 echo
+ permit icmp host 192.168.10.146 192.168.10.64 0.0.0.31 echo
+ permit icmp host 192.168.10.146 192.168.10.0 0.0.0.63 echo
+ permit udp host 192.168.10.147 host 192.168.10.130 eq 514
+ permit udp host 192.168.10.147 host 192.168.10.130 eq 123
+ permit udp host 192.168.10.147 host 192.168.10.130 eq 1645
+ permit udp host 192.168.10.148 host 192.168.10.130 eq 514
+ permit udp host 192.168.10.148 host 192.168.10.130 eq 123
+ permit udp host 192.168.10.148 host 192.168.10.130 eq 1645
+ permit udp host 192.168.10.149 host 192.168.10.130 eq 514
+ permit udp host 192.168.10.149 host 192.168.10.130 eq 123
+ permit udp host 192.168.10.149 host 192.168.10.130 eq 1645
+ permit udp host 192.168.10.150 host 192.168.10.130 eq 514
+ permit udp host 192.168.10.150 host 192.168.10.130 eq 123
+ permit udp host 192.168.10.150 host 192.168.10.130 eq 1645
+ permit tcp host 192.168.10.146 host 192.168.10.147 eq 22
+ permit icmp host 192.168.10.146 host 192.168.10.147 echo
+ permit tcp host 192.168.10.146 host 192.168.10.151 eq 22
+ permit icmp host 192.168.10.146 host 192.168.10.151 echo
+ permit tcp host 192.168.10.146 host 192.168.10.161 eq 22
+ permit icmp host 192.168.10.146 host 192.168.10.161 echo
+ permit tcp host 192.168.10.146 host 192.168.10.165 eq 22
+ permit icmp host 192.168.10.146 host 192.168.10.165 echo
+ permit udp host 192.168.10.151 host 192.168.10.130 eq 123
+ permit udp host 192.168.10.151 host 192.168.10.130 eq 514
+ permit udp host 192.168.10.151 host 192.168.10.130 eq 1645
+ permit udp host 192.168.10.151 host 192.168.10.130 eq 1812
+ permit udp host 192.168.10.152 host 192.168.10.130 eq 123
+ permit udp host 192.168.10.152 host 192.168.10.130 eq 514
+ permit udp host 192.168.10.152 host 192.168.10.130 eq 1645
+ permit udp host 192.168.10.152 host 192.168.10.130 eq 1812
+ deny ip any any
+!
+!
+!
+!
+!
+logging 192.168.10.130
+line con 0
+ exec-timeout 5 0
+ login local
+!
+line aux 0
+!
+line vty 0 4
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+line vty 5 15
+ access-class 1 in
+ exec-timeout 5 0
+ login local
+ transport input ssh
+!
+!
+!
+ntp server 192.168.10.130
+!
+end
+
+
+
+

@@ -1,0 +1,158 @@
+{
+  "run": "FAULT-TOLERANCE-20261105",
+  "excluded": [
+    "manifest.json",
+    "verification.json",
+    "private recovery ZIPs and lab credentials"
+  ],
+  "files": [
+    {
+      "path": "configs/R1-CAMPUS-CURRENT.txt",
+      "sha256": "9ec8b4e0c3145c643a016ccc9f70b8db0f60bb03b610bbc81a35616642efa371"
+    },
+    {
+      "path": "configs/R2-EXTERNAL-CURRENT.txt",
+      "sha256": "f4c2f9e5f535b25d2d167ceb6040f467a8a94d4f71726549f287f916d14f6d73"
+    },
+    {
+      "path": "configs/SW1-CORE-CURRENT.txt",
+      "sha256": "45115f33fbe1b6650bc2acd7c460f8d885817de3b7999d7f3555b1758731751f"
+    },
+    {
+      "path": "configs/SW2-ACCESS-CURRENT.txt",
+      "sha256": "55ae90d6118b82209ae73e77fd5835629797949e730871574bb1a68b6b965ff4"
+    },
+    {
+      "path": "configs/SW3-FACULTY-CURRENT.txt",
+      "sha256": "8d808c73406056a407000645f5dcfe3c972bf64092525739693468cffef5cadf"
+    },
+    {
+      "path": "configs/SW4-STUDENTS-CURRENT.txt",
+      "sha256": "606779a403f8d46f22f319c004b6ccaf2e3594f992f58c0bf0b8ac0d52dbcc4e"
+    },
+    {
+      "path": "docs/fault-tolerance.md",
+      "sha256": "c4fb9cb9a5493d5b61d3bebdefad38467bd41588e409ed1d56c15c0bc4021631"
+    },
+    {
+      "path": "docs/topology.md",
+      "sha256": "1f3658b89dd8fd9931c1b94fb13bd23647d8a6f3b1602536f005d4b083585e54"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/after-build.json",
+      "sha256": "d1ed16451a322afab9ac4eed250161307eedb08922bd83f4c11c0ad2d700a889"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-campus-pings.json",
+      "sha256": "b16dee076c29f9ba6382c12b83bdd1378f055228d822110716e5303b3b864e63"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-dhcp-dns-management.json",
+      "sha256": "ff6d465fbb0eb37a3c2bb0a888a727400d1fedbc16bff910aaa9216ee139d4bc"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-external-http-retry.json",
+      "sha256": "00b2dc40fe865e7b0689ffc4eb5b46cac581043a2bf16f231a53b36373797b24"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-external-http.json",
+      "sha256": "cb6392494bf6bc9321ce7437925185ebd7b0f61c93a169e8e93f6c3068403466"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-external-pings.json",
+      "sha256": "c6e25c32c4c0ec78aae59ddcb835e326c9e9d7e87005ac4231897a8e2bfd1e68"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-http-retry.json",
+      "sha256": "70adb8f525b44af8dfb5c0e9e503f4c529d6cf9b54a1777091bf5aaab2bcaac3"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-http.json",
+      "sha256": "4dcdb101a521eef3083ec345cc84e0378c0fc882a95d3cc3e992dccc0b29de21"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-policy-dhcp-stp.json",
+      "sha256": "729cbe03246b5e1bf020f57ddbed9373d5b0918318fa7a5c23580ec9c7e71cdd"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-ssh-authorized.json",
+      "sha256": "8397da3d853561583389e95b44c980cebe4182f464eae170f8b685ba09336717"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/backup-path-ssh-denied.json",
+      "sha256": "63c799a82689b45abb7b8d06c85c7374efd5ead5c15f12c31127338799ad2e2b"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/baseline-campus-pings.json",
+      "sha256": "f7409f86e79ded71451c308f4304bbdf60ce8b36fdb20b8a63255fc80e49feb4"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/before-state.json",
+      "sha256": "2f8dd19fc56914a2ea1ef1cbc666b724db9ff9db0f2bd617d9ba47827ea92ec0"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/build-commands.json",
+      "sha256": "85190a35793c4c9de7baa47e5a42e60d6bee65ab27889104617962285892f315"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/failure-measurements.json",
+      "sha256": "27b435661453a72593cd85dd6884e9cb0e3153ed2e2508bcfeca29bb318625db"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/final-configurations.json",
+      "sha256": "6a60d7603417daef266b76614e840059bc1db2fd67a6477fa4144145f16ab11c"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/primary-restoration.json",
+      "sha256": "edf430af332f23de4dc79552e5400f009c23194d70dc5a257af2bd17275666db"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/reopened-checks.json",
+      "sha256": "18200cdf8e56132b4d8930201ecd2821a638cf2c9b7042363015592ed8532462"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/reopened-external-pings.json",
+      "sha256": "51bac64fa939fca17310c4871e905623b093655f233095b1e5860a7bf5f6b538"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/reopened-state.json",
+      "sha256": "0de6fd3e180e3bdfd2dc1dd741b62d3b3190c5d308550e22cbd65e75ae7cab64"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/restored-connectivity.json",
+      "sha256": "c39dccbefbea377ca3f4cd11013079e3b2e9fef9165fa17ea72001f217a6480e"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/settled-stp.json",
+      "sha256": "290b7032968b96a348989387035d6b6aeabfba7029773a2749ebcc24b88f863d"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/simultaneous-primary-failure.json",
+      "sha256": "1b1cb2cbb8b093f3c6dbac5ebcc18c395a680a97349b06b04755bbfa8714f017"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/submission.json",
+      "sha256": "586643f3a24db07e4ad75811579df0536d0d590aeea06bc1188af829492b8871"
+    },
+    {
+      "path": "evidence/FAULT-TOLERANCE-20261105/topology-preservation.json",
+      "sha256": "9462fabd46b5ac3d285670c3ece98765b9e6e912b31cbdcf961f98142a4be3f5"
+    },
+    {
+      "path": "FAULT_TOLERANCE_ACCEPTANCE.md",
+      "sha256": "4df193717d5ed6472bf06d1fd25eacdc7d0413a78febf2d0bf0fb4bdd549252c"
+    },
+    {
+      "path": "README.md",
+      "sha256": "84d6deb0ecce8de77c90b825858d7d35806cc11362be125e6fcdd134ff48adac"
+    },
+    {
+      "path": "scripts/verify_fault_tolerance.py",
+      "sha256": "6148434717bdb264887dc7f2cfbb5c7cd70d3756525148ae7ff5368a08a8691a"
+    },
+    {
+      "path": "SUBMISSION_SHA256.txt",
+      "sha256": "4b0603a602d3c574a2fbc3f2d8507ef8231228128c1b458e26c209d0586fb2b8"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "source": "PC8-MGMT",
+  "destination": "192.168.10.102",
+  "device": "SW4-STUDENTS",
+  "initial": "ssh -l netadmin 192.168.10.102\n\nPassword: ",
+  "authenticated": "\n\n\n\nSW4-STUDENTS>",
+  "status": "show ip ssh\nSSH Enabled - version 2.0\nAuthentication timeout: 60 secs; Authentication retries: 2\nSW4-STUDENTS>",
+  "passed": true
+}
